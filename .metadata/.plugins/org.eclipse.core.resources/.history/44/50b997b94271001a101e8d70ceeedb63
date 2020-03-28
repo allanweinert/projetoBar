@@ -1,0 +1,23 @@
+package br.inf.ids.bar.api.pessoa1.itens.telefone;
+
+import br.inf.ids.bar.api.pessoa1.Pessoa;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
+@StaticMetamodel(Telefone.class)
+public abstract class Telefone_ {
+
+	public static volatile SingularAttribute<Telefone, String> tipo;
+	public static volatile SingularAttribute<Telefone, Pessoa> pessoa;
+	public static volatile SingularAttribute<Telefone, String> numero;
+	public static volatile SingularAttribute<Telefone, Long> id;
+
+	public static final String TIPO = "tipo";
+	public static final String PESSOA = "pessoa";
+	public static final String NUMERO = "numero";
+	public static final String ID = "id";
+
+}
+

@@ -1,0 +1,9 @@
+package br.inf.ids.bar.api.pessoa1.enums;
+
+public enum Sexo {
+
+	NAO_INFORMADO,
+	MASCULINO,
+	FEMININO;
+	
+}

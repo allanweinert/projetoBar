@@ -1,0 +1,25 @@
+package br.inf.ids.bar.api.curso;
+
+import br.inf.ids.bar.api.curso.itens.conteudo.Conteudo;
+import br.inf.ids.bar.api.materia.Materia;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.ListAttribute;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
+@StaticMetamodel(Curso.class)
+public abstract class Curso_ {
+
+	public static volatile ListAttribute<Curso, Conteudo> conteudos;
+	public static volatile SingularAttribute<Curso, String> nome;
+	public static volatile SingularAttribute<Curso, Materia> materia;
+	public static volatile SingularAttribute<Curso, Long> id;
+
+	public static final String CONTEUDOS = "conteudos";
+	public static final String NOME = "nome";
+	public static final String MATERIA = "materia";
+	public static final String ID = "id";
+
+}
+
