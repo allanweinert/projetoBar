@@ -1,8 +1,0 @@
-package br.inf.ids.treina1.api.entradaProduto.enums;
-
-public enum Situacao {
-
-	ATIVO,
-	INATIVO;
-	
-}
