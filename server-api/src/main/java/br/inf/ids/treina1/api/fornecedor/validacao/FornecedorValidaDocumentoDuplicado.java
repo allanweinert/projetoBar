@@ -17,20 +17,20 @@ public class FornecedorValidaDocumentoDuplicado {
 	
 	public void executa(Fornecedor fornecedor) {
 		
-		if (fornecedor!=null && fornecedor.getNumeroDocumento()!=null) {
+		if (fornecedor!=null && fornecedor.getCpf()!=null) {
 			
-			Fornecedor mesmoDocumento = new QueryBuilder(em)
+			Fornecedor mesmoCpf = new QueryBuilder(em)
 				.select(Fornecedor.class)
 				.where(w -> {
 					if (fornecedor.getId()!=null) {
 						w.field(Fornecedor_.id).ne(fornecedor.getId());
 					}
-					w.field(Fornecedor_.numeroDocumento).eq(fornecedor.getNumeroDocumento());
+					w.field(Fornecedor_.cpf).eq(fornecedor.getCpf());
 				})
 				.getSingleResult();
 			
-			if (mesmoDocumento!=null) {
-				throw new RuntimeException("Outro fornecedor contem o mesmo número de documento: " + mesmoDocumento.getId() + " - " + mesmoDocumento.getRazaoSocial());
+			if (mesmoCpf!=null) {
+				throw new RuntimeException("Outro fornecedor contem o mesmo número de documento: " + mesmoCpf.getId() + " - " + mesmoCpf.getRazaoSocial());
 			}
 			
 		}
