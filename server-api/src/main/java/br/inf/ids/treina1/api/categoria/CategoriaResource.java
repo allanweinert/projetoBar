@@ -15,39 +15,39 @@ import javax.ws.rs.core.MediaType;
 
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
-import br.inf.ids.treina1.api.curso.Curso;
-import br.inf.ids.treina1.api.curso.CursoService;
+import br.inf.ids.treina1.api.categoria.Categoria;
+import br.inf.ids.treina1.api.categoria.CategoriaService;
 
-@Tag(name = "Curso")
-@Path("/curso")
+@Tag(name = "Categoria")
+@Path("/categoria")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 
 public class CategoriaResource {
 	
 	@Inject
-	CursoService categoriaService;
+	CategoriaService categoriaService;
 	
 	@POST
-	public Long post(Curso curso) {
-		return categoriaService.gravar(curso);
+	public Long post(Categoria categoria) {
+		return categoriaService.gravar(categoria);
 	}
 	
 	@GET
 	@Path("/{id}")
-	public Curso get(@PathParam("id") Long id) {
+	public Categoria get(@PathParam("id") Long id) {
 		return categoriaService.busca(id);
 	}
 	
 	@GET
 	@Path("/tudo")
-	public List<Curso> getTodas() {
+	public List<Categoria> getTodas() {
 		return categoriaService.tudo();
 	}
 	
 	@PUT
-	public void put(Curso curso) {
-		categoriaService.atualizar(curso);
+	public void put(Categoria categoria) {
+		categoriaService.atualizar(categoria);
 	}
 	
 	@DELETE

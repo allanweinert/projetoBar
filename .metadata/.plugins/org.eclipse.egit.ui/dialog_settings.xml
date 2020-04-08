@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="CommitDialog.authorValues">
+		<item value="Allan Weinert &lt;allan_weinert@hotmail.com&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="Allan Weinert &lt;allan_weinert@hotmail.com&gt;"/>
+	</list>
 	<section name="GitCommitSearchPage">
 		<item key="HISTORY_SIZE" value="0"/>
 	</section>
@@ -10,13 +16,7 @@
 	</section>
 	<section name="GitCommitMessageComponent">
 		<list key="C:\repositorio\projetoBar\.git">
-			<item value="false"/>
-			<item value="Allan Weinert &lt;allan_weinert@hotmail.com&gt;"/>
-			<item value="Ajuste em validação de documento."/>
-			<item value="Allan Weinert &lt;allan_weinert@hotmail.com&gt;"/>
-			<item value="7d7674a97d1a4e95bea175cec9efea9ada78b7e0"/>
-			<item value="0"/>
-			<item value="false"/>
+			<item value="empty"/>
 		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">

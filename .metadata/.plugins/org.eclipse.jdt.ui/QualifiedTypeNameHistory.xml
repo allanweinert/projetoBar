@@ -3,4 +3,8 @@
 <fullyQualifiedTypeName name="br.inf.ids.bar.api.config.Config"/>
 <fullyQualifiedTypeName name="br.inf.ids.bar.api.materia.Situacao"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.fornecedor.Fornecedor"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
 </qualifiedTypeNameHistroy>
