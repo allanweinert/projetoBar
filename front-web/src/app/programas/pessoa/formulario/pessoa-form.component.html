@@ -1,0 +1,55 @@
+<h3>Pessoa / Cadastro</h3>
+<div class='controles'>
+    <button pButton type="button" label="Pesquisar" routerLink='/pessoa/pesquisa'
+        class="ui-button-secondary"></button>
+    <button pButton type="button" label="Novo" (click)="novo()" class="ui-button-secondary"></button>
+    <button pButton type="button" label="Excluir" (click)="excluir()" class="ui-button-danger"
+        *ngIf='editando'></button>
+</div>
+<p-panel header="Identificação">
+    <form [formGroup]="formPessoa">
+        <div class="ui-fluid">
+            <div class="p-grid">
+                <div class="p-col-2">
+                    Código
+                    <input type="text" pInputText formControlName="id">
+                </div>
+                <div class="p-col-10">
+                    Nome (obrigatório)
+                    <input type="text" pInputText formControlName="nome">
+                </div>
+                <div class="p-col-3">
+                    CPF
+                    <p-inputMask formControlName="cpf" mask="999.999.999-99" unmask='true'></p-inputMask>
+                </div>
+                <div class="p-col-3">
+                    Sexo
+                    <p-dropdown [options]="sexos" formControlName="sexo"></p-dropdown>
+                </div>
+                <div class="p-col-3">
+                    Data de Nascimento
+                    <p-calendar formControlName="nascimento" dateFormat="dd/mm/yy" [locale]="ptBR" [showIcon]="true"></p-calendar>
+                </div>
+                <div class="p-col-3">
+                    Município de Nascimento
+                    <p-autoComplete formControlName="municipioDeNascimento"
+                                    forceSelection="true"
+                                    field="nome"
+                                    dropdown="true"
+                                    dataKey="id"
+                                    [suggestions]="municipios"
+                                    (completeMethod)="pesquisarMunicipio($event)"></p-autoComplete>
+                </div>
+            </div>
+        </div>
+    </form>
+</p-panel>
+<br>
+<p-panel header="Contato">
+    <app-telefone [telefones]='listaTelefones'></app-telefone>
+</p-panel>
+<br>
+<div class='controles'>
+    <button pButton type="button" label="Salvar" (click)="salvar()" class="ui-button-success"></button>
+    <button pButton type="button" label="Cancelar" (click)="cancelar()" class="ui-button-secondary"></button>
+</div>
