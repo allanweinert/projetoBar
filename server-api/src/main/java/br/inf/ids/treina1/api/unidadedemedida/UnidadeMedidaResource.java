@@ -1,4 +1,4 @@
-package br.inf.ids.treina1.api.categoria;
+package br.inf.ids.treina1.api.unidadedemedida;
 
 import java.util.List;
 
@@ -19,53 +19,53 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-import br.inf.ids.treina1.api.categoria.Categoria;
-import br.inf.ids.treina1.api.categoria.CategoriaService;
+import br.inf.ids.treina1.api.unidadedemedida.UnidadeMedida;
+import br.inf.ids.treina1.api.unidadedemedida.UnidadeMedidaService;
 
 @Tag(name = "UnidadeMedida")
-@Path("/categoria")
+@Path("/unidademedida")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 
-public class CategoriaResource {
+public class UnidadeMedidaResource {
 	
 	@Inject
-	CategoriaService categoriaService;
+	UnidadeMedidaService unidademedidaService;
 	
 	@POST
-	public Long post(Categoria categoria) {
-		return categoriaService.gravar(categoria);
+	public Long post(UnidadeMedida unidademedida) {
+		return unidademedidaService.gravar(unidademedida);
 	}
 	
 	@GET
 	@Path("/{id}")
-	public Categoria get(@PathParam("id") Long id) {
-		return categoriaService.busca(id);
+	public UnidadeMedida get(@PathParam("id") Long id) {
+		return unidademedidaService.busca(id);
 	}
 	
 	@GET
 	@Path("/tudo")
-	public List<Categoria> getTodas() {
-		return categoriaService.tudo();
+	public List<UnidadeMedida> getTodas() {
+		return unidademedidaService.tudo();
 	}
 	
 	@PUT
-	public void put(Categoria categoria) {
-		categoriaService.atualizar(categoria);
+	public void put(UnidadeMedida unidademedida) {
+		unidademedidaService.atualizar(unidademedida);
 	}
 	
 	@DELETE
 	@Path("/{id}")
 	public void delete(@PathParam("id") Long id) {
-		categoriaService.remover(id);
+		unidademedidaService.remover(id);
 	}
 	
 	@GET
 	@Path("/pesquisa")
-	public PaginationResult<Categoria> pesquisa(
+	public PaginationResult<UnidadeMedida> pesquisa(
 			@QueryParam("pagina") Integer pagina,
 			@Parameter(required = false, name = "valor") @QueryParam("valor") String valor) {
-		return categoriaService.pesquisa(pagina, valor);
+		return unidademedidaService.pesquisa(pagina, valor);
 	}
 	
 	
