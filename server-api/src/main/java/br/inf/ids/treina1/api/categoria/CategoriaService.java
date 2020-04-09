@@ -12,8 +12,10 @@ import javax.validation.ConstraintViolationException;
 import javax.validation.Validator;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.QueryBuilder;
+import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
 import br.inf.ids.treina1.api.categoria.Categoria;
+import br.inf.ids.treina1.api.categoria.Categoria_;
 
 @RequestScoped
 public class CategoriaService {
@@ -59,5 +61,26 @@ public class CategoriaService {
 	public void remover(Long id) {
 		em.remove(busca(id));
 	}
+	
+	public PaginationResult<Categoria> pesquisa(Integer pagina, String valor) {
+		
+		return new QueryBuilder(em)
+			.select(Categoria.class)
+			.where().orGroup(w -> {
+				
+				if (valor!=null) {
+					try {
+						Long produtoId = Long.valueOf(valor);
+						w.field(Categoria_.id).eq(produtoId);
+					} catch (Exception e) {}
+					w.field(Categoria_.nome).ilike("%"+valor+"%");
+				}
+			})
+			.pagination()
+				.numRows(10)
+				.page(pagina)
+			.getResultList();
+			
+		}
 
 }

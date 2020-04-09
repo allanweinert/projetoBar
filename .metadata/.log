@@ -4134,3 +4134,118 @@ java.io.IOException: O processo não pode acessar o arquivo porque outro process
 	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:240)
 	at org.eclipse.egit.ui.internal.staging.StagingView$52.run(StagingView.java:3404)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2020-04-08 20:04:52.447
+!MESSAGE O processo não pode acessar o arquivo porque outro processo bloqueou parte do arquivo
+!STACK 0
+java.io.IOException: O processo não pode acessar o arquivo porque outro processo bloqueou parte do arquivo
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:290)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:141)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:122)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:240)
+	at org.eclipse.egit.ui.internal.staging.StagingView$52.run(StagingView.java:3404)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:24:03.249
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:24:03.281
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:24:10.266
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:24:10.297
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:24:41.939
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:24:41.970
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:25:07.299
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:25:07.377
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:25:38.544
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:25:38.559
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:26:12.577
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:26:12.592
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jface 2 0 2020-04-08 20:26:12.717
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1965)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:656)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:632)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1595)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:47:55.667
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:47:55.698
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:49:01.866
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:49:01.913
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:55:51.610
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:55:51.642
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-08 20:55:51.704
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/categoria/Categoria_.java
+
+!ENTRY org.eclipse.egit.ui 4 0 2020-04-08 21:01:38.560
+!MESSAGE O processo não pode acessar o arquivo porque outro processo bloqueou parte do arquivo
+!STACK 0
+java.io.IOException: O processo não pode acessar o arquivo porque outro processo bloqueou parte do arquivo
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:290)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:141)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:122)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:240)
+	at org.eclipse.egit.ui.internal.staging.StagingView$52.run(StagingView.java:3404)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2020-04-08 21:01:44.107
+!MESSAGE O processo não pode acessar o arquivo porque outro processo bloqueou parte do arquivo
+!STACK 0
+java.io.IOException: O processo não pode acessar o arquivo porque outro processo bloqueou parte do arquivo
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at org.eclipse.jgit.util.IO.readFully(IO.java:290)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:141)
+	at org.eclipse.jgit.internal.storage.file.ObjectDirectoryInserter.insert(ObjectDirectoryInserter.java:122)
+	at org.eclipse.jgit.api.AddCommand.call(AddCommand.java:240)
+	at org.eclipse.egit.ui.internal.staging.StagingView$52.run(StagingView.java:3404)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
