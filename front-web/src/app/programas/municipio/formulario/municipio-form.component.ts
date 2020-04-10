@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api';
 import { MunicipioCrudService } from '../services/municipio-crud.service';
 import { MunicipioPesquisaService } from '../services/municipio-pesquisa.service';
 import { Municipio } from '../modelos/municipio';

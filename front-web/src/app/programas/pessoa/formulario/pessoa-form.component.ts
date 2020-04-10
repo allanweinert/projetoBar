@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api';
 import { PessoaCrudService } from '../services/pessoa-crud.service';
 import { Pessoa } from '../modelos/pessoa';
 import { PessoaPesquisaService } from '../services/pessoa-pesquisa.service';
@@ -91,7 +91,7 @@ export class PessoaFormComponent implements OnInit {
   getPessoaDoForm(): Pessoa {
     const pessoa = this.formPessoa.getRawValue();
     pessoa.telefones = this.listaTelefones;
-    pessoa.cpf = pessoa.cpf !== '' ? pessoa.cpf : null; 
+    pessoa.cpf = pessoa.cpf !== '' ? pessoa.cpf : null;
     return pessoa;
   }
 

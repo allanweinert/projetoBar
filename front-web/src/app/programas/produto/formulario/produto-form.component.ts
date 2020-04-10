@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api';
 import { ProdutoCrudService } from '../services/produto-crud.service';
 import { Produto } from '../modelos/produto';
 import { ProdutoPesquisaService } from '../services/produto-pesquisa.service';
