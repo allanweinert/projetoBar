@@ -303,3 +303,266 @@
 2020-03-28 20:28:19,745 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2020-03-28 20:28:19,759 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-03-28 20:28:19,774 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\projetos\projetoBar\ids-treina1\treina1-api\src\test\resources
+2020-04-04 22:02:49,296 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-04-04 22:11:00,847 [Worker-14: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-04-04 22:11:26,946 [Worker-14: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.inf.ids:api:1.0-SNAPSHOT @ C:\repositorio\projetoBar\server-api\pom.xml.
+2020-04-04 22:12:08,859 [Worker-14: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /server-api/src/main/java
+2020-04-04 22:12:08,861 [Worker-14: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /server-api/src/main/resources
+2020-04-04 22:12:09,011 [Worker-14: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /server-api/src/test/java
+2020-04-04 22:13:09,966 [Worker-14: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 129 sec
+2020-04-04 22:13:15,965 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-04 22:13:16,003 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-04 22:13:16,680 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-04 22:13:16,681 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 19:34:23,884 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-04-07 19:58:46,810 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 19:58:46,832 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 19:58:46,861 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 19:58:46,861 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 19:59:09,408 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 19:59:09,445 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 19:59:09,458 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 19:59:09,459 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 20:00:58,987 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:00:58,999 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 20:00:59,014 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:00:59,014 [Worker-17: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 20:02:57,119 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:02:57,127 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 20:02:57,138 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:02:57,139 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 20:17:34,440 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:17:34,456 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 20:17:34,456 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:17:34,456 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 20:17:45,726 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:17:45,738 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 20:17:45,755 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:17:45,757 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 20:17:56,296 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:17:56,309 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 20:17:56,321 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:17:56,322 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 20:22:29,869 [Worker-31: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.inf.ids:api:1.0-SNAPSHOT @ C:\repositorio\projetoBar\server-api\pom.xml.
+2020-04-07 20:22:37,505 [Worker-31: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /server-api/src/main/java
+2020-04-07 20:22:37,505 [Worker-31: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /server-api/src/main/resources
+2020-04-07 20:22:37,505 [Worker-31: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /server-api/src/test/java
+2020-04-07 20:22:40,590 [Worker-31: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 21 sec
+2020-04-07 20:22:53,011 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:22:53,026 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 20:22:53,647 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 20:22:53,648 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 21:01:59,748 [Worker-40: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 21:01:59,748 [Worker-40: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 21:01:59,982 [Worker-40: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 21:01:59,982 [Worker-40: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 21:02:30,439 [Worker-44: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 21:02:30,439 [Worker-44: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 21:02:30,642 [Worker-44: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 21:02:30,642 [Worker-44: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 21:05:43,436 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 21:05:43,448 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 21:05:43,455 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 21:05:43,456 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 21:59:01,819 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 21:59:01,819 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-04-07 21:59:01,835 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 21:59:01,835 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 22:27:47,008 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-04-07 23:05:06,730 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:05:06,793 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:05:06,808 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:05:06,808 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:19:58,226 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:19:58,257 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:19:58,273 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:19:58,273 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:31:13,251 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:31:13,267 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:31:13,267 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:31:13,283 [Worker-29: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:36:44,614 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:36:44,630 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:36:44,645 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:36:44,645 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:49:14,114 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:49:14,146 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:49:14,161 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:49:14,161 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:49:39,811 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:49:39,827 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:49:39,827 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:49:39,827 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:53:19,633 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:53:19,649 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:53:19,664 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:53:19,664 [Worker-33: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:53:22,219 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:53:22,235 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:53:22,235 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:53:22,250 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:54:35,836 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:54:35,851 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:54:35,867 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:54:35,867 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:54:45,089 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:54:45,089 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:54:45,105 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:54:45,105 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:56:02,392 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:56:02,400 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2020-04-07 23:56:02,406 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:56:02,408 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:56:47,236 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:56:47,252 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-07 23:56:47,267 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:56:47,283 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-07 23:58:33,426 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:58:33,441 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-07 23:58:33,488 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-07 23:58:33,488 [Worker-26: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 18:06:40,870 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-04-08 18:13:49,725 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 18:13:49,741 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 18:13:49,937 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 18:13:49,938 [Worker-6: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 18:14:14,170 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 18:14:14,196 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 18:14:14,212 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 18:14:14,213 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:29:10,429 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:29:10,429 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:29:10,445 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:29:10,445 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:30:54,450 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:30:54,466 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:30:54,481 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:30:54,481 [Worker-37: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:31:18,265 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:31:18,280 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:31:18,296 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:31:18,296 [Worker-35: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:31:47,688 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:31:47,704 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:31:47,719 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:31:47,719 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:32:06,814 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:32:06,814 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:32:06,830 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:32:06,830 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:33:40,865 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:33:40,880 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:33:40,896 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:33:40,896 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:34:40,068 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:34:40,084 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:34:40,100 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:34:40,100 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:35:27,355 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:35:27,415 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:35:27,432 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:35:27,433 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:35:47,259 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:35:47,275 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:35:47,291 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:35:47,291 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:36:06,198 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:36:06,214 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:36:06,229 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:36:06,229 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:36:27,996 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:36:28,012 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:36:28,027 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:36:28,043 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:36:36,746 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:36:36,762 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:36:36,778 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:36:36,778 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:37:53,312 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:37:53,312 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:37:53,327 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:37:53,327 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:38:14,382 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:38:14,382 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:38:14,398 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:38:14,398 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:38:26,774 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:38:26,789 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:38:26,805 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:38:26,805 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:38:28,086 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:38:28,102 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:38:28,133 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:38:28,133 [Worker-40: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:38:29,727 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:38:29,742 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:38:29,742 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:38:29,742 [Worker-36: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:39:25,777 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:39:25,792 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:39:25,792 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:39:25,792 [Worker-38: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:40:26,133 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:40:26,133 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:40:26,149 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:40:26,149 [Worker-39: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:42:51,172 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:42:51,172 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:42:51,187 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:42:51,187 [Worker-34: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:45:48,826 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:45:48,842 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:45:48,857 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:45:48,857 [Worker-35: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 19:50:15,458 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:50:15,474 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 15 resources
+2020-04-08 19:50:15,474 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 19:50:15,474 [Worker-43: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:06:17,982 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:06:17,982 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-08 20:06:18,029 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:06:18,029 [Worker-48: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:09:51,865 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:09:51,865 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-08 20:09:51,927 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:09:51,927 [Worker-49: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:15:51,851 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:15:51,851 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-04-08 20:15:51,930 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:15:51,930 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:24:03,750 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:24:03,765 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:24:03,765 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:24:03,781 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:24:10,391 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:24:10,391 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:24:10,406 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:24:10,406 [Worker-51: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:24:42,079 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:24:42,095 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:24:42,095 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:24:42,095 [Worker-57: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:25:07,486 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:25:07,502 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:25:07,502 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:25:07,518 [Worker-46: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:25:38,684 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:25:38,700 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:25:38,716 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:25:38,716 [Worker-54: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:26:12,670 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:26:12,686 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:26:12,686 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:26:12,686 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:47:55,870 [Worker-62: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:47:55,870 [Worker-62: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:47:55,886 [Worker-62: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:47:55,886 [Worker-62: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:49:02,038 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:49:02,038 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:49:02,054 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:49:02,054 [Worker-59: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
+2020-04-08 20:55:52,126 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:55:52,142 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 16 resources
+2020-04-08 20:55:52,142 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-04-08 20:55:52,142 [Worker-66: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\repositorio\projetoBar\server-api\src\test\resources
