@@ -18,6 +18,30 @@
           Nome (obrigatório)
           <input type="text" pInputText formControlName="nome">
         </div>
+        <div class="p-col-10">
+          Marca (obrigatório)
+          <input type="text" pInputText formControlName="marca">
+        </div>
+        <div class="p-col-10">
+          Unidade de medida (obrigatório)
+          <input type="text" pInputText formControlName="unidade">
+        </div>
+        <div class="p-col-10">
+          Estoque mínimo (obrigatório)
+          <input type="text" pInputText formControlName="estoque_minimo">
+        </div>
+        <div class="p-col-10">
+          Valor de custo (obrigatório)
+          <input type="text" pInputText formControlName="valor_custo">
+        </div>
+        <div class="p-col-10">
+          Valor de venda (obrigatório)
+          <input type="text" pInputText formControlName="valor_venda">
+        </div>
+        <div class="p-col-10">
+          Situação
+          <p-dropdown [options]="situacao" formControlName="situacao"></p-dropdown>
+        </div>
         <!--
         <div class="p-col-3">
           Data de Nascimento

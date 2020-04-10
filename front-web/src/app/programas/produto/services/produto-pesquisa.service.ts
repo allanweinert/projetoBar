@@ -9,6 +9,13 @@ export class ProdutoPesquisaService {
 
   constructor(private http: HttpClient) { }
 
+  listarSituacao(): {label: string, value: string}[] {
+    return [
+      { label: 'Ativo', value: 'ATIVO' },
+      { label: 'Inativo', value: 'INATIVO' }
+    ];
+  }
+
   pesquisar(valor: any, pagina = 1): Observable<any> {
     const url = `${environment.apiURL}/produto/pesquisa`;
     const options = {
