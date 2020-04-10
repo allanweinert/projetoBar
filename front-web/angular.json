@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "treina1-web"
+    }
+  },
+  "defaultProject": "treina1-web",
+  "cli": {
+    "analytics": false
+  }
 }
