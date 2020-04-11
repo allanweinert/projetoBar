@@ -21,7 +21,7 @@ import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.Paginat
 
 import br.inf.ids.treina1.api.produto.Produto;
 
-@Tag(name = "Produto")
+@Tag(name = "Produto", description = "É o produto uai")
 @Path("/produto")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)

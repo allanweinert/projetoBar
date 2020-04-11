@@ -1,4 +1,4 @@
-package br.inf.ids.treina1.api.unidadedemedida;
+package br.inf.ids.treina1.api.unidademedida;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-import br.inf.ids.treina1.api.unidadedemedida.UnidadeMedida;
-import br.inf.ids.treina1.api.unidadedemedida.UnidadeMedidaService;
+import br.inf.ids.treina1.api.unidademedida.UnidadeMedida;
+import br.inf.ids.treina1.api.unidademedida.UnidadeMedidaService;
 
-@Tag(name = "UnidadeMedida")
+@Tag(name = "UnidadeMedida", description = "Unidade de medida do produto")
 @Path("/unidademedida")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)

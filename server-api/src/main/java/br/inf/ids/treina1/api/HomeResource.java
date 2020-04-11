@@ -28,11 +28,11 @@ public class HomeResource {
     	
         return 
     		  "<head>"
-    		  	+ "<title>IDS Treina 1</title>"
+    		  	+ "<title>Cleos Bar</title>"
     		+ "</head>"
     		+ "<body>"
     		+ "<h1>"+config.getNome()+"</h1>"
-    		+ "<p>Hello World</p>"
+    		+ "<p>Olá!</p>"
     		+ "</body>";
         
     }

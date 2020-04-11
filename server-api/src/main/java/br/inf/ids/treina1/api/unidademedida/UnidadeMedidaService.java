@@ -1,4 +1,4 @@
-package br.inf.ids.treina1.api.unidadedemedida;
+package br.inf.ids.treina1.api.unidademedida;
 
 import java.util.List;
 import java.util.Set;
@@ -14,8 +14,8 @@ import javax.validation.Validator;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.QueryBuilder;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-import br.inf.ids.treina1.api.unidadedemedida.UnidadeMedida;
-import br.inf.ids.treina1.api.unidadedemedida.UnidadeMedida_;
+import br.inf.ids.treina1.api.unidademedida.UnidadeMedida_;
+import br.inf.ids.treina1.api.unidademedida.UnidadeMedida;
 
 
 @RequestScoped

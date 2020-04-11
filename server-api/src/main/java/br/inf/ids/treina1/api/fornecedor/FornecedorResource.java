@@ -19,7 +19,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-@Tag(name = "Fornecedor")
+@Tag(name = "Fornecedor", description = "Fornecedor do produto")
 @Path("/fornecedor")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
