@@ -21,6 +21,7 @@ export class ProdutoFormComponent implements OnInit {
 
   situacao = [];
   unidademedida = [];
+  categoria = [];
   formProduto: FormGroup;
   editando = false;
 
@@ -31,7 +32,6 @@ export class ProdutoFormComponent implements OnInit {
               private produtoPesquisaService: ProdutoPesquisaService,
               private produtoCrudService: ProdutoCrudService) {
     this.configurarFormulario();
-    /*this.configurarCalendar();*/
   }
 
   ngOnInit() {
@@ -44,7 +44,7 @@ export class ProdutoFormComponent implements OnInit {
     this.formProduto = this.formBuilder.group({
       id: '',
       nome: ['', Validators.required],
-      marca: '',
+      categoria: '',
       unidade: ['', Validators.required],
       estoque_minimo: '',
       valor_venda: ['', Validators.required],
@@ -61,20 +61,13 @@ export class ProdutoFormComponent implements OnInit {
       }
     );
   }
-
- /* configurarCalendar() {
-    this.ptBR = {
-      firstDayOfWeek: 0, // iniciar semana no domingo
-      dayNames: [ 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado' ],
-      dayNamesShort: [ 'dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb' ],
-      dayNamesMin: [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
-      monthNames: [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
-                    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
-      monthNamesShort: [ 'jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez' ],
-      today: 'Hoje',
-      clear: 'Limpar'
-    };
-  }*/
+  carregarCategoria() {
+    this.produtoPesquisaService.listarCategoria().subscribe(
+      cat => {
+        this.categoria = cat;
+      }
+    );
+  }
 
   verificarParametroRota(): void {
     const id = +this.route.snapshot.paramMap.get('id');

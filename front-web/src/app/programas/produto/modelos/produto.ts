@@ -2,7 +2,7 @@ export interface Produto {
     id?: number;
     nome?: string;
     marca?: string;
-    unidade?: number;
+    unidade?: string;
     estoque_minimo?: number;
     valor_venda?: number;
     valor_custo?: number;

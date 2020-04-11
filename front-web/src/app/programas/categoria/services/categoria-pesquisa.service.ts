@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
+
 import { environment } from 'src/environments/environment';
-import { Produto } from '../modelos/produto';
 
 @Injectable()
-export class ProdutoPesquisaService {
+export class CategoriaPesquisaService {
 
   constructor(private http: HttpClient) { }
 
@@ -17,30 +17,8 @@ export class ProdutoPesquisaService {
     ];
   }
 
-  listarUnidadeMedida(): Observable<Produto[]> {
-    const url = `${environment.apiURL}/unidademedida/tudo`;
-    return this.http.get<Produto[]>(url).pipe(
-      tap(
-        unm => {
-          return of(unm);
-        }
-      )
-    );
-  }
-
-  listarCategoria(): Observable<Produto[]> {
-    const url = `${environment.apiURL}/categoria/tudo`;
-    return this.http.get<Produto[]>(url).pipe(
-      tap(
-        cat => {
-          return of(cat);
-        }
-      )
-    );
-  }
-
   pesquisar(valor: any, pagina = 1): Observable<any> {
-    const url = `${environment.apiURL}/produto/pesquisa`;
+    const url = `${environment.apiURL}/categoria/pesquisa`;
     const options = {
       params: new HttpParams().set('valor', valor).set('pagina', String(pagina))
     };
