@@ -1,4 +1,4 @@
-package br.inf.ids.treina1.api.unidadedemedida;
+package br.inf.ids.treina1.api.unidademedida;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,14 +12,15 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import br.inf.ids.treina1.api.unidadedemedida.enums.Situacao;
+import br.inf.ids.treina1.api.unidademedida.enums.Situacao;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @SequenceGenerator(name = "SEQ_UNIDADEMEDIDA", sequenceName = "SEQ_UNIDADEMEDIDA", allocationSize = 1)
-@Table(name = "categoria")
+@Table(name = "unidademedida")
 @Getter @Setter
+
 public class UnidadeMedida {
 
 	@Id

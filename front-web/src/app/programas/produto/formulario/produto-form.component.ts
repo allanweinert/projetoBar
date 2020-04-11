@@ -19,6 +19,8 @@ export class ProdutoFormComponent implements OnInit {
 
   ptBR;
 
+  situacao = [];
+  unidademedida = [];
   formProduto: FormGroup;
   editando = false;
 
@@ -26,12 +28,15 @@ export class ProdutoFormComponent implements OnInit {
               private router: Router,
               private route: ActivatedRoute,
               private messageService: MessageService,
+              private produtoPesquisaService: ProdutoPesquisaService,
               private produtoCrudService: ProdutoCrudService) {
     this.configurarFormulario();
     /*this.configurarCalendar();*/
   }
 
   ngOnInit() {
+    this.situacao = this.produtoPesquisaService.listarSituacao();
+    this.carregarUndiadeMedida();
     this.verificarParametroRota();
   }
 
@@ -39,8 +44,22 @@ export class ProdutoFormComponent implements OnInit {
     this.formProduto = this.formBuilder.group({
       id: '',
       nome: ['', Validators.required],
+      marca: '',
+      unidade: ['', Validators.required],
+      estoque_minimo: '',
+      valor_venda: ['', Validators.required],
+      valor_custo: ['', Validators.required],
+      situacao: ''
     });
     this.formProduto.get('id').disable();
+  }
+
+  carregarUndiadeMedida() {
+    this.produtoPesquisaService.listarUnidadeMedida().subscribe(
+      unm => {
+        this.unidademedida = unm;
+      }
+    );
   }
 
  /* configurarCalendar() {
@@ -153,7 +172,9 @@ export class ProdutoFormComponent implements OnInit {
 
   novo() {
     this.editando = false;
-    this.formProduto.reset();
+    this.formProduto.reset({
+      situacao: 'ATIVO'
+    });
     this.router.navigate(['/produto/novo']);
   }
 

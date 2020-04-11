@@ -15,11 +15,11 @@
 		<item key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 	<section name="RefactoringWizard.preview">
-		<item key="width" value="600"/>
-		<item key="height" value="400"/>
+		<item key="width" value="1356"/>
+		<item key="height" value="604"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
-		<item key="renameSubpackages" value="true"/>
+		<item key="renameSubpackages" value="false"/>
 		<item key="updateTextualMatches" value="true"/>
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>

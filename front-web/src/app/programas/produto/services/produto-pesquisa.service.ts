@@ -3,11 +3,30 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { Produto } from '../modelos/produto';
 
 @Injectable()
 export class ProdutoPesquisaService {
 
   constructor(private http: HttpClient) { }
+
+  listarSituacao(): {label: string, value: string}[] {
+    return [
+      { label: 'Ativo', value: 'ATIVO' },
+      { label: 'Inativo', value: 'INATIVO' }
+    ];
+  }
+
+  listarUnidadeMedida(): Observable<Produto[]> {
+    const url = `${environment.apiURL}/unidademedida/tudo`;
+    return this.http.get<Produto[]>(url).pipe(
+      tap(
+        unm => {
+          return of(unm);
+        }
+      )
+    );
+  }
 
   pesquisar(valor: any, pagina = 1): Observable<any> {
     const url = `${environment.apiURL}/produto/pesquisa`;

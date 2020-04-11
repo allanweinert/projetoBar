@@ -22,7 +22,7 @@ import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.Paginat
 import br.inf.ids.treina1.api.categoria.Categoria;
 import br.inf.ids.treina1.api.categoria.CategoriaService;
 
-@Tag(name = "UnidadeMedida")
+@Tag(name = "Categoria", description = "Categoria do produto")
 @Path("/categoria")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
