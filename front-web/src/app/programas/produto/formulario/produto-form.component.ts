@@ -20,6 +20,7 @@ export class ProdutoFormComponent implements OnInit {
   ptBR;
 
   situacao = [];
+  unidademedida = [];
   formProduto: FormGroup;
   editando = false;
 
@@ -35,6 +36,7 @@ export class ProdutoFormComponent implements OnInit {
 
   ngOnInit() {
     this.situacao = this.produtoPesquisaService.listarSituacao();
+    this.carregarUndiadeMedida();
     this.verificarParametroRota();
   }
 
@@ -50,6 +52,14 @@ export class ProdutoFormComponent implements OnInit {
       situacao: ''
     });
     this.formProduto.get('id').disable();
+  }
+
+  carregarUndiadeMedida() {
+    this.produtoPesquisaService.listarUnidadeMedida().subscribe(
+      unm => {
+        this.unidademedida = unm;
+      }
+    );
   }
 
  /* configurarCalendar() {

@@ -22,10 +22,10 @@
           Marca (obrigatório)
           <input type="text" pInputText formControlName="marca">
         </div>
-        <div class="p-col-10">
+        <div class="p-col-3">
           Unidade de medida (obrigatório)
-          <input type="text" pInputText formControlName="unidade">
-        </div>
+          <p-dropdown [options]="unidademedida" optionLabel="value" dataKey="key" formControlName="unidade" filter="true"></p-dropdown>
+      </div>
         <div class="p-col-10">
           Estoque mínimo (obrigatório)
           <input type="text" pInputText formControlName="estoque_minimo">
