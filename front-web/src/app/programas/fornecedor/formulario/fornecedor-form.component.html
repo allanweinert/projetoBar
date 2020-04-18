@@ -1,0 +1,51 @@
+<h3>Fornecedor / Cadastro</h3>
+<div class='controles'>
+    <button pButton type="button" label="Pesquisar" routerLink='/fornecedor/pesquisa'
+        class="ui-button-secondary"></button>
+    <button pButton type="button" label="Novo" (click)="novo()" class="ui-button-secondary"></button>
+    <button pButton type="button" label="Excluir" (click)="excluir()" class="ui-button-danger"
+        *ngIf='editando'></button>
+</div>
+<p-panel header="Identificação">
+    <form [formGroup]="formFornecedor">
+        <div class="ui-fluid">
+            <div class="p-grid">
+                <div class="p-col-10">
+                    Razão Social
+                    <input type="text" pInputText formControlName="razaoSocial">
+                </div>
+                <div class="p-col-10">
+                  Nome Fantasia
+                  <input type="text" pInputText formControlName="nomeFantasia">
+                </div>
+                <div class="p-col-3">
+                    CPF
+                    <p-inputMask formControlName="cpf" mask="999.999.999-99" unmask='true'></p-inputMask>
+                </div>
+                <div class="p-col-3">
+                  CNPJ
+                  <p-inputMask formControlName="cpf" mask="999.999.999-99" unmask='true'></p-inputMask>
+                </div>
+                <div class="p-col-3">
+                    Município do Fornecedor
+                    <p-autoComplete formControlName="municipioFornecedor"
+                                    forceSelection="true"
+                                    field="nome"
+                                    dropdown="true"
+                                    dataKey="id"
+                                    [suggestions]="municipios"
+                                    (completeMethod)="pesquisarMunicipio($event)"></p-autoComplete>
+                </div>
+            </div>
+        </div>
+    </form>
+</p-panel>
+<br>
+<p-panel header="Contato">
+    <app-telefone [telefones]='listaTelefones'></app-telefone>
+</p-panel>
+<br>
+<div class='controles'>
+    <button pButton type="button" label="Salvar" (click)="salvar()" class="ui-button-success"></button>
+    <button pButton type="button" label="Cancelar" (click)="cancelar()" class="ui-button-secondary"></button>
+</div>
