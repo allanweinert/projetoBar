@@ -10,14 +10,6 @@ export class FornecedorPesquisaService {
 
   constructor(private http: HttpClient) { }
 
-  listarSexos(): {label: string, value: string}[] {
-    return [
-      { label: 'Não informado', value: 'NAO_INFORMADO' },
-      { label: 'Masculino', value: 'MASCULINO' },
-      { label: 'Feminino', value: 'FEMININO' }
-    ];
-  }
-
   pesquisar(valor: any, pagina = 1): Observable<any> {
     const url = `${environment.apiURL}/fornecedor/pesquisa`;
     const options = {

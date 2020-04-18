@@ -15,12 +15,6 @@ export class FornecedorCrudService {
     return this.http.get<Fornecedor>(url).pipe(
       tap(
         fornecedor => {
-          if (fornecedor.nascimento) {
-            // TODO: Arrumar
-            // NÃO SEI A FORMA MAIS SIMPLES DE RESOLVER AINDA... HAHAHAHA
-            fornecedor.nascimento = new Date(fornecedor.nascimento);
-            fornecedor.nascimento.setDate(fornecedor.nascimento.getDate() + 1);
-          }
           return of(fornecedor);
         }
       )

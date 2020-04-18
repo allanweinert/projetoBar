@@ -1,8 +1,8 @@
-<h3>Pessoa / Pesquisa</h3>
+<h3>Fornecedor / Pesquisa</h3>
 <div>
     <div class="p-grid">
         <div class="p-col-fixed" style='width: 160px'>
-            <button pButton type="button" label="Incluir" routerLink='/pessoa/novo' class="ui-button-success"></button>
+            <button pButton type="button" label="Incluir" routerLink='/fornecedor/novo' class="ui-button-success"></button>
         </div>
         <div class="p-col ui-fluid">
             <form [formGroup]="formPesquisa">
@@ -22,22 +22,24 @@
     <ng-template pTemplate="header">
         <tr>
             <th>Código</th>
-            <th>Nome</th>
-            <th>Sexo</th>
-            <th>Data de Nascimento</th>
-            <th>Município de Nascimento</th>
+            <th>Razão Social</th>
+            <th>Nome Fantasia</th>
+            <th>CPF</th>
+            <th>CNPJ</th>
+            <th>Município</th>
             <th style='width: 60px'>Ações</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-pessoa>
+    <ng-template pTemplate="body" let-fornecedor>
         <tr>
-            <td>{{pessoa.id}}</td>
-            <td>{{pessoa.nome}}</td>
-            <td>{{getDescricaoSexo(pessoa.sexo)}}</td>
-            <td>{{pessoa.nascimento | date:'dd/MM/yyyy' }}</td>
-            <td>{{pessoa.municipioDeNascimento ? pessoa.municipioDeNascimento.nome : 'Não informado'}}</td>
+            <td>{{fornecedor.id}}</td>
+            <td>{{fornecedor.razaoSocial}}</td>
+            <td>{{fornecedor.nomeFantasia}}</td>
+            <td>{{fornecedor.cpf}}</td>
+            <td>{{fornecedor.cnpj}}</td>
+            <td>{{fornecedor.municipioDoFornecedor ? fornecedor.municipioDoFornecedor.nome : 'Não informado'}}</td>
             <td style='text-align: center;'>
-                <a routerLink='/pessoa/{{ pessoa.id }}'>
+                <a routerLink='/fornecedor/{{ fornecedor.id }}'>
                     <span class='pi pi-pencil' style='font-size: x-large'></span>
                 </a>
             </td>

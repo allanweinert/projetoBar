@@ -38,7 +38,6 @@ export class FornecedorFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sexos = this.fornecedorPesquisaService.listarSexos();
     this.verificarParametroRota();
   }
 
@@ -49,7 +48,7 @@ export class FornecedorFormComponent implements OnInit {
       nomeFantasia: [''],
       cpf: '',
       cnpj: '',
-      municipioFornecedor: ''
+      municipioDoFornecedor: ''
     });
     this.formFornecedor.get('id').disable();
   }

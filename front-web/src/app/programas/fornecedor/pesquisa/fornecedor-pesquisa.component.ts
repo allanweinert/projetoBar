@@ -42,13 +42,4 @@ export class FornecedorPesquisaComponent implements OnInit {
     this.pesquisar();
   }
 
-  getDescricaoSexo(sexoValor: string): string {
-    const sexo = this.fornecedorPesquisaService.listarSexos().find(sexo => sexo.value === sexoValor);
-    if (sexo) {
-      return sexo.label;
-    } else {
-      return '';
-    }
-  }
-
 }
