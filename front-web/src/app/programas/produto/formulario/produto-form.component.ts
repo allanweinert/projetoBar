@@ -5,6 +5,8 @@ import { MessageService } from 'primeng/api';
 import { ProdutoCrudService } from '../services/produto-crud.service';
 import { Produto } from '../modelos/produto';
 import { ProdutoPesquisaService } from '../services/produto-pesquisa.service';
+import { CategoriaPesquisaService } from '../../categoria/services/categoria-pesquisa.service';
+import { UnidadeMedidaPesquisaService } from '../../unidadedemedida/services/unidademedida-pesquisa.service';
 
 @Component({
   selector: 'app-produto-form',
@@ -12,7 +14,9 @@ import { ProdutoPesquisaService } from '../services/produto-pesquisa.service';
   styleUrls: ['./produto-form.component.css'],
   providers: [
     ProdutoCrudService,
-    ProdutoPesquisaService
+    ProdutoPesquisaService,
+    CategoriaPesquisaService,
+    UnidadeMedidaPesquisaService
   ]
 })
 export class ProdutoFormComponent implements OnInit {
@@ -20,8 +24,8 @@ export class ProdutoFormComponent implements OnInit {
   ptBR;
 
   situacao = [];
-  unidademedida = [];
-  categoria = [];
+  unidademedidas = [];
+  categorias = [];
   formProduto: FormGroup;
   editando = false;
 
@@ -30,13 +34,15 @@ export class ProdutoFormComponent implements OnInit {
               private route: ActivatedRoute,
               private messageService: MessageService,
               private produtoPesquisaService: ProdutoPesquisaService,
-              private produtoCrudService: ProdutoCrudService) {
+              private produtoCrudService: ProdutoCrudService,
+              public categoriaPesquisaService: CategoriaPesquisaService,
+              public unidadeMedidaPesquisaService: UnidadeMedidaPesquisaService
+              ) {
     this.configurarFormulario();
   }
 
   ngOnInit() {
     this.situacao = this.produtoPesquisaService.listarSituacao();
-    this.carregarUndiadeMedida();
     this.verificarParametroRota();
   }
 
@@ -45,26 +51,25 @@ export class ProdutoFormComponent implements OnInit {
       id: '',
       nome: ['', Validators.required],
       categoria: '',
-      unidade: ['', Validators.required],
+      unidademedida: ['', Validators.required],
       estoque_minimo: '',
-      valor_venda: ['', Validators.required],
-      valor_custo: ['', Validators.required],
       situacao: ''
     });
     this.formProduto.get('id').disable();
   }
 
-  carregarUndiadeMedida() {
-    this.produtoPesquisaService.listarUnidadeMedida().subscribe(
+  pesquisarUnidadeMedida(pesquisa) {
+    this.unidadeMedidaPesquisaService.pesquisar(pesquisa.query).subscribe(
       unm => {
-        this.unidademedida = unm;
+        this.unidademedidas = unm.data;
       }
     );
   }
-  carregarCategoria() {
-    this.produtoPesquisaService.listarCategoria().subscribe(
-      cat => {
-        this.categoria = cat;
+
+  pesquisarCategorias(pesquisa) {
+    this.categoriaPesquisaService.pesquisar(pesquisa.query).subscribe(
+      resultadoado => {
+        this.categorias = resultadoado.data;
       }
     );
   }

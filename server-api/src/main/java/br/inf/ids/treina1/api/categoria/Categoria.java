@@ -20,6 +20,7 @@ import lombok.Setter;
 @SequenceGenerator(name = "SEQ_CATEGORIA", sequenceName = "SEQ_CATEGORIA", allocationSize = 1)
 @Table(name = "categoria")
 @Getter @Setter
+
 public class Categoria {
 
 	@Id

@@ -69,7 +69,7 @@ public class UnidadeMedidaService {
 			.select(UnidadeMedida.class)
 			.where().orGroup(w -> {
 				
-				if (valor!=null) {
+				if (valor!=null && !valor.isEmpty()) {
 					try {
 						Long unidadeMedidaId = Long.valueOf(valor);
 						w.field(UnidadeMedida_.id).eq(unidadeMedidaId);
@@ -78,7 +78,6 @@ public class UnidadeMedidaService {
 				}
 			})
 			.pagination()
-				.numRows(10)
 				.page(pagina)
 			.getResultList();
 			

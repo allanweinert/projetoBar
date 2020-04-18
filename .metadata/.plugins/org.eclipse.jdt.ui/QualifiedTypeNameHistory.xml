@@ -10,4 +10,7 @@
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.unidadedemedida.UnidadeMedida"/>
 <fullyQualifiedTypeName name="lombok.Getter"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.unidademedida.enums.Situacao"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.categoria.Categoria"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.unidademedida.UnidadeMedida"/>
 </qualifiedTypeNameHistroy>

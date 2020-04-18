@@ -68,7 +68,7 @@ public class CategoriaService {
 			.select(Categoria.class)
 			.where().orGroup(w -> {
 				
-				if (valor!=null) {
+				if (valor!=null && !valor.isEmpty()) {
 					try {
 						Long produtoId = Long.valueOf(valor);
 						w.field(Categoria_.id).eq(produtoId);
@@ -77,7 +77,6 @@ public class CategoriaService {
 				}
 			})
 			.pagination()
-				.numRows(10)
 				.page(pagina)
 			.getResultList();
 			
