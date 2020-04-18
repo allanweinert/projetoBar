@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'unidademedida',
+    loadChildren: () => import('./programas/unidadedemedida/unidademedida.module').then(mod => mod.UnidadeMedidaModule),
+  },
+  {
     path: 'categoria',
     loadChildren: () => import('./programas/categoria/categoria.module').then(mod => mod.CategoriaModule),
   },

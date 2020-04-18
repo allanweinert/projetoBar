@@ -1,8 +1,8 @@
-<h3>Categoria / Pesquisa</h3>
+<h3>Unidade de Medida / Pesquisa</h3>
 <div>
     <div class="p-grid">
         <div class="p-col-fixed" style='width: 160px'>
-            <button pButton type="button" label="Incluir" routerLink='/categoria/novo' class="ui-button-success"></button>
+            <button pButton type="button" label="Incluir" routerLink='/unidademedida/novo' class="ui-button-success"></button>
         </div>
         <div class="p-col ui-fluid">
             <form [formGroup]="formPesquisa">
@@ -18,7 +18,7 @@
         </div>
     </div>
 </div>
-<p-table [value]="categorias" autoLayout="true" [paginator]="true" [rows]="50" [loading]='pesquisando'>
+<p-table [value]="unidademedidas" autoLayout="true" [paginator]="true" [rows]="50" [loading]='pesquisando'>
     <ng-template pTemplate="header">
         <tr>
             <th style='width: 60px'>Código</th>
@@ -26,12 +26,12 @@
             <th style='width: 60px'>Ações</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-categoria>
+    <ng-template pTemplate="body" let-unidademedida>
         <tr>
-          <td>{{categoria.id}}</td>
-          <td>{{categoria.nome}}</td>
+          <td>{{unidademedida.id}}</td>
+          <td>{{unidademedida.nome}}</td>
           <td style='text-align: center;'>
-            <a routerLink='/categoria/{{ categoria.id }}'>
+            <a routerLink='/unidademedida/{{ unidademedida.id }}'>
               <span class='pi pi-pencil' style='font-size: x-large'></span>
             </a>
           </td>

@@ -110,6 +110,7 @@ export class CategoriaFormComponent implements OnInit {
           summary: 'Sucesso!',
           detail: 'Categoria ' + categoria.nome + ' incluída com sucesso!'
         });
+        this.novo();
       },
       error => {
         this.messageService.add({
