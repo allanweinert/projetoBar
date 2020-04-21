@@ -8,8 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.validation.Valid;
@@ -18,7 +16,6 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.br.*;
 
-import br.inf.ids.treina1.api.municipio.Municipio;
 import lombok.Getter;
 import lombok.Setter;
 import br.inf.ids.treina1.api.fornecedor.itens.telefone.FornecedorTelefone;
@@ -46,10 +43,6 @@ public class Fornecedor {
 	
 	@CNPJ
 	private String cnpj;
-	
-	@ManyToOne
-	@JoinColumn(name = "MUNICIPIODOFORNECEDORID")
-	private Municipio municipioDoFornecedor;
 	
 	@Valid
 	@OneToMany(mappedBy = "fornecedor", cascade = CascadeType.ALL, orphanRemoval = true)
