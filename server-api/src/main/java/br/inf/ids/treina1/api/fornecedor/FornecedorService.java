@@ -26,14 +26,14 @@ public class FornecedorService {
 	Validator validator;
 	
 	@Inject
-	FornecedorValidaDocumentoDuplicado documentoDuplicado;
+	FornecedorValidaDocumentoDuplicado cpf;
 	
 	private void validar(Fornecedor fornecedor) {
 		Set<ConstraintViolation<Object>> validate = validator.validate(fornecedor);
 		if (!validate.isEmpty()) {
 			throw new ConstraintViolationException(validate);
 		}
-		documentoDuplicado.executa(fornecedor);
+		cpf.executa(fornecedor);
 	}
 	
 	public List<Fornecedor> todas() {

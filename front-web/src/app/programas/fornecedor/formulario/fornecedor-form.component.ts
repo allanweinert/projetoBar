@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
+
 import { FornecedorCrudService } from '../services/fornecedor-crud.service';
 import { Fornecedor } from '../modelos/fornecedor';
 import { FornecedorPesquisaService } from '../services/fornecedor-pesquisa.service';
-import { MunicipioPesquisaService } from '../../municipio/services/municipio-pesquisa.service';
 
 @Component({
   selector: 'app-fornecedor-form',
@@ -14,15 +14,12 @@ import { MunicipioPesquisaService } from '../../municipio/services/municipio-pes
   providers: [
     FornecedorCrudService,
     FornecedorPesquisaService,
-    MunicipioPesquisaService
   ]
 })
 export class FornecedorFormComponent implements OnInit {
 
   ptBR;
 
-  sexos = [];
-  municipios = [];
   listaTelefones = [];
   formFornecedor: FormGroup;
   editando = false;
@@ -31,8 +28,6 @@ export class FornecedorFormComponent implements OnInit {
               private router: Router,
               private route: ActivatedRoute,
               private messageService: MessageService,
-              private municipioPesquisaService: MunicipioPesquisaService,
-              private fornecedorPesquisaService: FornecedorPesquisaService,
               private fornecedorCrudService: FornecedorCrudService) {
     this.configurarFormulario();
   }
@@ -48,7 +43,6 @@ export class FornecedorFormComponent implements OnInit {
       nomeFantasia: [''],
       cpf: '',
       cnpj: '',
-      municipioDoFornecedor: ''
     });
     this.formFornecedor.get('id').disable();
   }
@@ -135,27 +129,12 @@ export class FornecedorFormComponent implements OnInit {
 
   excluir() {
     const id = this.formFornecedor.get('id').value;
-    const confirmacao = confirm('Deseja excluir o Município ' + id + '?');
-    if (confirmacao) {
-      this.fornecedorCrudService.deletar(id).subscribe(
-        resultado => {
-          this.messageService.add({
-            severity: 'success',
-            summary: 'Sucesso!',
-            detail: 'Município ' + id + ' excluído com sucesso!'
-          });
-          this.novo();
-        }
-      );
-    }
   }
 
   novo() {
     this.editando = false;
     this.listaTelefones = [];
-    this.formFornecedor.reset({
-      sexo: 'NAO_INFORMADO'
-    });
+    this.formFornecedor.reset();
     this.router.navigate(['/fornecedor/novo']);
   }
 
@@ -166,14 +145,6 @@ export class FornecedorFormComponent implements OnInit {
     } else {
       this.novo();
     }
-  }
-
-  pesquisarMunicipio(pesquisa) {
-    this.municipioPesquisaService.pesquisar(pesquisa.query).subscribe(
-      resultadoado => {
-        this.municipios = resultadoado.data;
-      }
-    );
   }
 
 }

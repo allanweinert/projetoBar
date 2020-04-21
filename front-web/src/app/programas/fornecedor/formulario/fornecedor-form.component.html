@@ -11,8 +11,8 @@
         <div class="ui-fluid">
             <div class="p-grid">
                 <div class="p-col-10">
-                    Razão Social
-                    <input type="text" pInputText formControlName="razaoSocial">
+                  Razão Social
+                  <input type="text" pInputText formControlName="razaoSocial">
                 </div>
                 <div class="p-col-10">
                   Nome Fantasia
@@ -24,17 +24,7 @@
                 </div>
                 <div class="p-col-3">
                   CNPJ
-                  <p-inputMask formControlName="cnpj"></p-inputMask>
-                </div>
-                <div class="p-col-3">
-                    Município do Fornecedor
-                    <p-autoComplete formControlName="municipioDoFornecedor"
-                                    forceSelection="true"
-                                    field="nome"
-                                    dropdown="true"
-                                    dataKey="id"
-                                    [suggestions]="municipios"
-                                    (completeMethod)="pesquisarMunicipio($event)"></p-autoComplete>
+                  <p-inputMask formControlName="cnpj" mask="99.999.999/9999-99" unmask="true"></p-inputMask>
                 </div>
             </div>
         </div>

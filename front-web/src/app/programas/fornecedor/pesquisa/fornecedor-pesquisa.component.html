@@ -26,7 +26,6 @@
             <th>Nome Fantasia</th>
             <th>CPF</th>
             <th>CNPJ</th>
-            <th>Município</th>
             <th style='width: 60px'>Ações</th>
         </tr>
     </ng-template>
@@ -37,7 +36,6 @@
             <td>{{fornecedor.nomeFantasia}}</td>
             <td>{{fornecedor.cpf}}</td>
             <td>{{fornecedor.cnpj}}</td>
-            <td>{{fornecedor.municipioDoFornecedor ? fornecedor.municipioDoFornecedor.nome : 'Não informado'}}</td>
             <td style='text-align: center;'>
                 <a routerLink='/fornecedor/{{ fornecedor.id }}'>
                     <span class='pi pi-pencil' style='font-size: x-large'></span>

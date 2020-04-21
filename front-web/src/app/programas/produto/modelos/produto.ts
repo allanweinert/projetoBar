@@ -9,5 +9,5 @@ export interface Produto {
     estoque_minimo?: number;
     valor_venda?: number;
     valor_custo?: number;
-    situacao?:string;
+    situacao?: string;
 }
