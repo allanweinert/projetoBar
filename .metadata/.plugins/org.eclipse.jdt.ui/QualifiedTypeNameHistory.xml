@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="br.inf.ids.bar.api.config.Config"/>
 <fullyQualifiedTypeName name="br.inf.ids.bar.api.materia.Situacao"/>
-<fullyQualifiedTypeName name="br.inf.ids.treina1.api.fornecedor.Fornecedor"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
@@ -13,4 +12,11 @@
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.categoria.Categoria"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.unidademedida.UnidadeMedida"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.fornecedor.Fornecedor"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.produto.Produto"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.entradadeproduto.EntradaDeProduto"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.entradadeproduto.itens.ItensDaEntrada"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.entradadeproduto.EntradaDeProduto_"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
 </qualifiedTypeNameHistroy>

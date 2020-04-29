@@ -1,0 +1,43 @@
+<h3>Entrada de Produtos / Cadastro</h3>
+<div class='controles'>
+    <button pButton type="button" label="Pesquisar" routerLink='/entradaproduto/pesquisa'
+        class="ui-button-secondary"></button>
+    <button pButton type="button" label="Novo" (click)="novo()" class="ui-button-secondary"></button>
+    <button pButton type="button" label="Excluir" (click)="excluir()" class="ui-button-danger"
+        *ngIf='editando'></button>
+</div>
+<p-panel header="Identificação">
+<form [formGroup]="formEntradaProduto">
+        <div class="ui-fluid" >
+            <div class="p-grid">
+              <div class="p-col-6">
+                Fornecedor
+                <p-autoComplete formControlName="fornecedor"
+                                forceSelection="true"
+                                field="razaoSocial"
+                                dropdown="true"
+                                dataKey="id"
+                                [suggestions]="fornecedores"
+                                (completeMethod)="pesquisarFornecedores($event)">
+                </p-autoComplete>
+              </div>
+              <div class="p-col-2">
+                Data de Entrada
+                <p-calendar formControlName="dataentrada" dateFormat="dd/mm/yy" [locale]="ptBR" [showIcon]="true"></p-calendar>
+            </div>
+            </div>
+        </div>
+    </form>
+</p-panel>
+<br>
+<p-panel header="Itens da entrada">
+    <app-itens [itens]='listaItens'></app-itens>
+</p-panel>
+<br>
+
+<pre>{{ fornecedores | json }}</pre>
+<pre>{{ listaItens | json }}</pre>
+<div class='controles'>
+    <button pButton type="button" label="Salvar" (click)="salvar()" class="ui-button-success"></button>
+    <button pButton type="button" label="Cancelar" (click)="cancelar()" class="ui-button-secondary"></button>
+</div>

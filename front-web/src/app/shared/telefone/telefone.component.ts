@@ -22,7 +22,8 @@ export class TelefoneComponent implements OnInit {
 
   formTelefone: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private messageService: MessageService) {
+  constructor(private formBuilder: FormBuilder,
+              private messageService: MessageService) {
     this.configurarFormTelefone();
   }
 
@@ -54,7 +55,7 @@ export class TelefoneComponent implements OnInit {
           severity: 'warn',
           summary: 'Não é possível adicionar esse telefone!',
           detail: 'Número ' + novoTelefone.numero + ' já cadastrado.'
-        })
+        });
       } else {
         this.telefones.push(novoTelefone);
         this.novo();
