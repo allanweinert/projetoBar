@@ -14,9 +14,6 @@ import javax.validation.Validator;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.QueryBuilder;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-import br.inf.ids.treina1.api.produto.Produto;
-import br.inf.ids.treina1.api.produto.Produto_;
-
 @RequestScoped
 public class ProdutoService {
 

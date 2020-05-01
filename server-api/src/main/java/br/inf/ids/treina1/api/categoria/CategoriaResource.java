@@ -19,9 +19,6 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-import br.inf.ids.treina1.api.categoria.Categoria;
-import br.inf.ids.treina1.api.categoria.CategoriaService;
-
 @Tag(name = "Categoria", description = "Categoria do produto")
 @Path("/categoria")
 @Produces(MediaType.APPLICATION_JSON)

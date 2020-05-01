@@ -19,8 +19,6 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-import br.inf.ids.treina1.api.produto.Produto;
-
 @Tag(name = "Produto", description = "É o produto uai")
 @Path("/produto")
 @Produces(MediaType.APPLICATION_JSON)

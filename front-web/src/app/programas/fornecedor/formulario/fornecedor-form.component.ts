@@ -70,6 +70,7 @@ export class FornecedorFormComponent implements OnInit {
     const fornecedor = this.formFornecedor.getRawValue();
     fornecedor.telefones = this.listaTelefones;
     fornecedor.cpf = fornecedor.cpf !== '' ? fornecedor.cpf : null;
+    fornecedor.cnpj = fornecedor.cnpj !== '' ? fornecedor.cnpj : null;
     return fornecedor;
   }
 

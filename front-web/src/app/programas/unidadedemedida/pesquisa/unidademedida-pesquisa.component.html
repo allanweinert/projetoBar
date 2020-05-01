@@ -23,6 +23,7 @@
         <tr>
             <th style='width: 60px'>Código</th>
             <th>Nome</th>
+            <th>Situação</th>
             <th style='width: 60px'>Ações</th>
         </tr>
     </ng-template>
@@ -30,6 +31,7 @@
         <tr>
           <td>{{unidademedida.id}}</td>
           <td>{{unidademedida.nome}}</td>
+          <td>{{unidademedida.situacao}}</td>
           <td style='text-align: center;'>
             <a routerLink='/unidademedida/{{ unidademedida.id }}'>
               <span class='pi pi-pencil' style='font-size: x-large'></span>

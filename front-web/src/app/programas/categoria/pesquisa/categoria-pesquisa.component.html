@@ -23,6 +23,7 @@
         <tr>
             <th style='width: 60px'>Código</th>
             <th>Nome</th>
+            <th>Situação</th>
             <th style='width: 60px'>Ações</th>
         </tr>
     </ng-template>
@@ -30,6 +31,7 @@
         <tr>
           <td>{{categoria.id}}</td>
           <td>{{categoria.nome}}</td>
+          <td>{{categoria.situacao}}</td>
           <td style='text-align: center;'>
             <a routerLink='/categoria/{{ categoria.id }}'>
               <span class='pi pi-pencil' style='font-size: x-large'></span>

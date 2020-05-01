@@ -21,8 +21,11 @@
 <p-table [value]="produtos" autoLayout="true" [paginator]="true" [rows]="50" [loading]='pesquisando'>
     <ng-template pTemplate="header">
         <tr>
-            <th>Código</th>
+            <th style='width: 60px'>Código</th>
             <th>Nome</th>
+            <th>Categoria</th>
+            <th>Un. de Medida</th>
+            <th style="width: 60px">Estoque Mínimo</th>
             <th style='width: 60px'>Ações</th>
         </tr>
     </ng-template>
@@ -30,6 +33,9 @@
         <tr>
           <td>{{produto.id}}</td>
           <td>{{produto.nome}}</td>
+          <td>{{produto.categoria.nome}}</td>
+          <td>{{produto.unidademedida.nome}}</td>
+          <td>{{produto.estoque_minimo}}</td>
           <td style='text-align: center;'>
             <a routerLink='/produto/{{ produto.id }}'>
               <span class='pi pi-pencil' style='font-size: x-large'></span>
