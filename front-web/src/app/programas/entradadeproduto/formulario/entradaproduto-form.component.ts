@@ -87,6 +87,7 @@ export class EntradaProdutoFormComponent implements OnInit {
     this.entradaprodutoCrudService.carregar(id).subscribe(
       entradaproduto => {
         this.formEntradaProduto.patchValue(entradaproduto);
+        this.listaItens = entradaproduto.itensdaentrada;
         this.editando = true;
       }
     );
@@ -94,6 +95,7 @@ export class EntradaProdutoFormComponent implements OnInit {
 
   getEntradaProdutoDoForm(): EntradaProduto {
     const entradaproduto = this.formEntradaProduto.getRawValue();
+    entradaproduto.itensdaentrada = this.listaItens;
     return entradaproduto;
   }
 
@@ -132,7 +134,7 @@ export class EntradaProdutoFormComponent implements OnInit {
         this.messageService.add({
           severity: 'success',
           summary: 'Sucesso!',
-          detail: 'Entrada ' + entradaproduto.id + ' incluído com sucesso!'
+          detail: 'Entrada incluída com sucesso!'
         });
       },
       error => {

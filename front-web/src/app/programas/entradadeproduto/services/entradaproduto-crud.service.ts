@@ -15,6 +15,10 @@ export class EntradaProdutoCrudService {
     return this.http.get<EntradaProduto>(url).pipe(
       tap(
         entradaproduto => {
+          if (entradaproduto.dataentrada) {
+            entradaproduto.dataentrada = new Date(entradaproduto.dataentrada);
+            entradaproduto.dataentrada.setDate(entradaproduto.dataentrada.getDate() + 1);
+          }
           return of(entradaproduto);
         }
       )

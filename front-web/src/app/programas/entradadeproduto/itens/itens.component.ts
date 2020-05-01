@@ -16,7 +16,7 @@ import { ProdutoPesquisaService } from '../../produto/services/produto-pesquisa.
 })
 export class ItensComponent implements OnInit {
 
-  @Input() itens = [];
+  @Input() itensdaentrada = [];
 
   formItens: FormGroup;
 
@@ -58,7 +58,7 @@ export class ItensComponent implements OnInit {
   adicionarItem() {
     if (this.formItens.valid) {
       const novoItem = this.formItens.getRawValue();
-      const itemExistente = this.itens.find(t => novoItem.produto.id === t.produto.id);
+      const itemExistente = this.itensdaentrada.find(t => novoItem.produto.id === t.produto.id);
       if (itemExistente) {
         alert('Item já cadastrado!');
         this.messageService.add({
@@ -67,14 +67,14 @@ export class ItensComponent implements OnInit {
           detail: 'Número ' + novoItem.id + ' já cadastrado.'
         });
       } else {
-        this.itens.push(novoItem);
+        this.itensdaentrada.push(novoItem);
         this.novo();
       }
     }
   }
 
   removerItem(indiceItem) {
-    this.itens.splice(indiceItem, 1);
+    this.itensdaentrada.splice(indiceItem, 1);
   }
 
 }

@@ -31,12 +31,13 @@
 </p-panel>
 <br>
 <p-panel header="Itens da entrada">
-    <app-itens [itens]='listaItens'></app-itens>
+    <app-itens [itensdaentrada]='listaItens'></app-itens>
 </p-panel>
 <br>
 
-<pre>{{ fornecedores | json }}</pre>
+<!--<pre>{{ fornecedores | json }}</pre>
 <pre>{{ listaItens | json }}</pre>
+-->
 <div class='controles'>
     <button pButton type="button" label="Salvar" (click)="salvar()" class="ui-button-success"></button>
     <button pButton type="button" label="Cancelar" (click)="cancelar()" class="ui-button-secondary"></button>

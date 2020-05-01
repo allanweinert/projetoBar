@@ -3,7 +3,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { EntradaProduto } from '../modelos/entrada-produto';
 
 @Injectable()
 export class EntradaProdutoPesquisaService {

@@ -1,8 +1,8 @@
-<h3>Fornecedor / Pesquisa</h3>
+<h3>Entrada de Produto / Pesquisa</h3>
 <div>
     <div class="p-grid">
         <div class="p-col-fixed" style='width: 160px'>
-            <button pButton type="button" label="Incluir" routerLink='/fornecedor/novo' class="ui-button-success"></button>
+            <button pButton type="button" label="Incluir" routerLink='/entradaproduto/novo' class="ui-button-success"></button>
         </div>
         <div class="p-col ui-fluid">
             <form [formGroup]="formPesquisa">
@@ -22,14 +22,18 @@
     <ng-template pTemplate="header">
         <tr>
             <th>Código</th>
+            <th>Nome Fantasia</th>
+            <th>Data de Entrada</th>
             <th style='width: 60px'>Ações</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-entradaproduto>
+    <ng-template pTemplate="body" let-entrada>
         <tr>
-            <td>{{entradaproduto.id}}</td>
+            <td>{{entrada.id}}</td>
+            <td>{{entrada.fornecedor.nomeFantasia}}</td>
+            <td>{{entrada.dataentrada | date:'dd/MM/yyyy' }}</td>
             <td style='text-align: center;'>
-                <a routerLink='/entradaproduto/{{ entradaproduto.id }}'>
+                <a routerLink='/entradaproduto/{{ entrada.id }}'>
                     <span class='pi pi-pencil' style='font-size: x-large'></span>
                 </a>
             </td>

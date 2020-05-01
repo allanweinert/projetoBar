@@ -70,7 +70,7 @@ public class EntradaDeProdutoService {
 						Long pesquisaId = Long.valueOf(valor);
 						w.field(EntradaDeProduto_.id).eq(pesquisaId);
 					} catch (Exception e) {}
-					w.field(EntradaDeProduto_.dataentrada).ilike("%"+valor+"%");
+					//w.field(EntradaDeProduto_.dataentrada).ilike("%"+valor+"%");
 				}
 			})
 			.pagination()

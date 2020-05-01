@@ -14,9 +14,6 @@ import javax.validation.Validator;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.QueryBuilder;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-import br.inf.ids.treina1.api.categoria.Categoria;
-import br.inf.ids.treina1.api.categoria.Categoria_;
-
 @RequestScoped
 public class CategoriaService {
 	

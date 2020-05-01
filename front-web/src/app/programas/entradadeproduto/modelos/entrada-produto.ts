@@ -4,7 +4,7 @@ import { ItensEntrada } from './itens-entrada';
 
 export interface EntradaProduto {
     id?: number;
+    dataentrada?: Date;
     fornecedor?: Fornecedor;
-    data?: Date;
-    itens?: ItensEntrada[];
+    itensdaentrada?: ItensEntrada[];
 }

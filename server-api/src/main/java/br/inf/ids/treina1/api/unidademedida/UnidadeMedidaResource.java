@@ -19,8 +19,6 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-import br.inf.ids.treina1.api.unidademedida.UnidadeMedida;
-import br.inf.ids.treina1.api.unidademedida.UnidadeMedidaService;
 
 @Tag(name = "UnidadeMedida", description = "Unidade de medida do produto")
 @Path("/unidademedida")

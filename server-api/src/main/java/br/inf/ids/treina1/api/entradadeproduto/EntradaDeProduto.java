@@ -17,15 +17,13 @@ import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import br.inf.ids.treina1.api.entradadeproduto.itens.ItensDaEntrada;
 import br.inf.ids.treina1.api.fornecedor.Fornecedor;
 
 @Entity
 @SequenceGenerator(name = "SEQ_ENTRADAPRODUTO", sequenceName = "SEQ_ENTRADAPRODUTO", allocationSize = 1)
-@Getter @Setter
 @Table(name = "entradaproduto")
 public class EntradaDeProduto {
 	
@@ -34,6 +32,7 @@ public class EntradaDeProduto {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ENTRADAPRODUTO")
 	private Long id;
 	
+	@JsonIgnoreProperties({"telefones"})
 	@ManyToOne
 	@JoinColumn(name = "FORNECEDORID")
 	private Fornecedor fornecedor;
@@ -41,9 +40,50 @@ public class EntradaDeProduto {
 	@NotNull
 	private LocalDate dataentrada;
 
-	
 	@Valid
 	@OneToMany(mappedBy = "entrada", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItensDaEntrada> itensdaentrada;
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public Fornecedor getFornecedor() {
+		return fornecedor;
+	}
+
+
+	public void setFornecedor(Fornecedor fornecedor) {
+		this.fornecedor = fornecedor;
+	}
+
+
+	public LocalDate getDataentrada() {
+		return dataentrada;
+	}
+
+
+	public void setDataentrada(LocalDate dataentrada) {
+		this.dataentrada = dataentrada;
+	}
+
+
+	public List<ItensDaEntrada> getItensdaentrada() {
+		return itensdaentrada;
+	}
+
+
+	public void setItensdaentrada(List<ItensDaEntrada> itensdaentrada) {
+		this.itensdaentrada = itensdaentrada;
+	}
+
+	
 
 }

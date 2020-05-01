@@ -46,3 +46,1922 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-04-30 14:42:36.780 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data D:\Projetos\projetoBar -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-04-30 14:43:02.758
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-04-30 14:43:02.759
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3aa8c337,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@78e7b83,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2020-04-30 14:43:12.285
+!MESSAGE Unable to create part
+!STACK 1
+org.eclipse.ui.PartInitException: Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/fornecedor/Fornecedor.java'.
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3210)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3221)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:331)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1297)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1086)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/fornecedor/Fornecedor.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1022)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1288)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4212)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:260)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1477)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2575)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2548)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1423)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3179)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2320)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3196)
+	... 124 more
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2020-04-30 14:43:12.304
+!MESSAGE Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/fornecedor/Fornecedor.java'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/fornecedor/Fornecedor.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1022)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1288)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4212)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:260)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1477)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2575)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2548)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1423)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3179)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2320)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3196)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3221)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:331)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1297)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:547)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:531)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:105)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:680)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:148)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:676)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1086)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+!SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2020-04-30 14:43:12.306
+!MESSAGE Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/fornecedor/Fornecedor.java'.
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-04-30 14:43:15.420
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2020-04-30 14:43:30.747
+!MESSAGE Unable to create part
+!STACK 1
+org.eclipse.ui.PartInitException: Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada.java'.
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3210)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3221)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:331)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1386)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1336)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1270)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$0(StackRenderer.java:1256)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1128)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1955)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:335)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3922)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3524)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1022)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1288)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4212)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:260)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1477)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2575)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2548)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1423)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3179)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:436)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:2375)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2373)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3196)
+	... 78 more
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2020-04-30 14:43:30.750
+!MESSAGE Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada.java'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1022)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1288)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4212)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:260)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1477)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2575)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2548)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1423)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3179)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:436)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:2375)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2373)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3196)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3221)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:340)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1002)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:967)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:139)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:408)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:331)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:1002)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:768)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:739)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:717)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:107)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1386)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1336)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1270)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$0(StackRenderer.java:1256)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1128)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1955)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:335)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3922)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3524)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+!SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2020-04-30 14:43:30.751
+!MESSAGE Cannot determine URI for '/server-api/src/main/java/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada.java'.
+
+!ENTRY org.eclipse.jface 2 0 2020-04-30 14:45:15.981
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1976)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1609)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-04-30 14:45:37.082
+!MESSAGE Could not download sources for io.quarkus:quarkus-jackson:0.21.2
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.quarkus:quarkus-jackson:jar:sources:0.21.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.quarkus:quarkus-jackson:jar:sources:0.21.2
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-04-30 14:45:37.082
+!MESSAGE Could not resolve artifact io.quarkus:quarkus-jackson:jar:sources:0.21.2
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-04-30 14:45:37.082
+!MESSAGE Missing io.quarkus:quarkus-jackson:jar:sources:0.21.2
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-04-30 14:48:04.337
+!MESSAGE Could not download sources for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-04-30 14:48:04.337
+!MESSAGE Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-04-30 14:48:04.337
+!MESSAGE Missing antlr:antlr:jar:sources:2.7.7
+
+!ENTRY org.eclipse.ui 4 0 2020-04-30 14:49:00.982
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: i/o error (java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado))
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setVisible(UIElementImpl.java:361)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributionRecord.updateVisibility(ContributionRecord.java:113)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:194)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:258)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:115)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:95)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:463)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5115)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4747)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:335)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2100)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4749)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3518)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.swt.SWTException: i/o error (java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado))
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:184)
+	at org.eclipse.tm.terminal.view.ui.local.showin.ExternalExecutablesManager.loadImage(ExternalExecutablesManager.java:282)
+	at org.eclipse.tm.terminal.view.ui.local.showin.DynamicContributionItems.getContributionItems(DynamicContributionItems.java:74)
+	at org.eclipse.ui.actions.CompoundContributionItem.getContributionItemsToFill(CompoundContributionItem.java:83)
+	at org.eclipse.ui.actions.CompoundContributionItem.fill(CompoundContributionItem.java:57)
+	at org.eclipse.ui.internal.menus.DynamicMenuContributionItem.fill(DynamicMenuContributionItem.java:146)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:729)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:806)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.scheduleManagerUpdate(MenuManagerRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.subscribeUIElementTopicVisible(MenuManagerRenderer.java:212)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 63 more
+Caused by: java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:181)
+	... 77 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-04-30 14:49:43.663
+!MESSAGE Could not download sources for com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.guava:listenablefuture:jar:sources:9999.0-empty-to-avoid-conflict-with-guava
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing com.google.guava:listenablefuture:jar:sources:9999.0-empty-to-avoid-conflict-with-guava
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-04-30 14:49:43.663
+!MESSAGE Could not resolve artifact com.google.guava:listenablefuture:jar:sources:9999.0-empty-to-avoid-conflict-with-guava
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-04-30 14:49:43.663
+!MESSAGE Missing com.google.guava:listenablefuture:jar:sources:9999.0-empty-to-avoid-conflict-with-guava
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-04-30 14:50:52.939
+!MESSAGE Could not download sources for io.quarkus:quarkus-jsonp:0.21.2
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.quarkus:quarkus-jsonp:jar:sources:0.21.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:304)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.quarkus:quarkus-jsonp:jar:sources:0.21.2
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-04-30 14:50:52.939
+!MESSAGE Could not resolve artifact io.quarkus:quarkus-jsonp:jar:sources:0.21.2
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-04-30 14:50:52.939
+!MESSAGE Missing io.quarkus:quarkus-jsonp:jar:sources:0.21.2
+
+!ENTRY org.eclipse.ui 4 0 2020-04-30 14:51:56.371
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: i/o error (java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado))
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setVisible(UIElementImpl.java:361)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributionRecord.updateVisibility(ContributionRecord.java:113)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:194)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:258)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:115)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:95)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:463)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5115)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4747)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:335)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2100)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4749)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3518)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.swt.SWTException: i/o error (java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado))
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:184)
+	at org.eclipse.tm.terminal.view.ui.local.showin.ExternalExecutablesManager.loadImage(ExternalExecutablesManager.java:282)
+	at org.eclipse.tm.terminal.view.ui.local.showin.DynamicContributionItems.getContributionItems(DynamicContributionItems.java:74)
+	at org.eclipse.ui.actions.CompoundContributionItem.getContributionItemsToFill(CompoundContributionItem.java:83)
+	at org.eclipse.ui.actions.CompoundContributionItem.fill(CompoundContributionItem.java:57)
+	at org.eclipse.ui.internal.menus.DynamicMenuContributionItem.fill(DynamicMenuContributionItem.java:146)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:729)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:806)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.scheduleManagerUpdate(MenuManagerRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.subscribeUIElementTopicVisible(MenuManagerRenderer.java:212)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 63 more
+Caused by: java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:181)
+	... 77 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-04-30 14:52:07.322
+!MESSAGE Could not download javadoc for io.quarkus:quarkus-jackson:0.21.2
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.quarkus:quarkus-jackson:jar:javadoc:0.21.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.quarkus:quarkus-jackson:jar:javadoc:0.21.2
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-04-30 14:52:07.322
+!MESSAGE Could not resolve artifact io.quarkus:quarkus-jackson:jar:javadoc:0.21.2
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-04-30 14:52:07.322
+!MESSAGE Missing io.quarkus:quarkus-jackson:jar:javadoc:0.21.2
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-04-30 14:52:10.986
+!MESSAGE Could not download javadoc for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing antlr:antlr:jar:javadoc:2.7.7
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-04-30 14:52:10.987
+!MESSAGE Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-04-30 14:52:10.987
+!MESSAGE Missing antlr:antlr:jar:javadoc:2.7.7
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-04-30 14:52:12.363
+!MESSAGE Could not download javadoc for com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.guava:listenablefuture:jar:javadoc:9999.0-empty-to-avoid-conflict-with-guava
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing com.google.guava:listenablefuture:jar:javadoc:9999.0-empty-to-avoid-conflict-with-guava
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-04-30 14:52:12.363
+!MESSAGE Could not resolve artifact com.google.guava:listenablefuture:jar:javadoc:9999.0-empty-to-avoid-conflict-with-guava
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-04-30 14:52:12.363
+!MESSAGE Missing com.google.guava:listenablefuture:jar:javadoc:9999.0-empty-to-avoid-conflict-with-guava
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2020-04-30 14:52:13.725
+!MESSAGE Could not download javadoc for io.quarkus:quarkus-jsonp:0.21.2
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact io.quarkus:quarkus-jsonp:jar:javadoc:0.21.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$4(MavenImpl.java:803)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:114)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:771)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:748)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:330)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:316)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:269)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:233)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:161)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1373)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:161)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing io.quarkus:quarkus-jsonp:jar:javadoc:0.21.2
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2020-04-30 14:52:13.725
+!MESSAGE Could not resolve artifact io.quarkus:quarkus-jsonp:jar:javadoc:0.21.2
+!SUBENTRY 2 org.eclipse.m2e.core 4 -1 2020-04-30 14:52:13.726
+!MESSAGE Missing io.quarkus:quarkus-jsonp:jar:javadoc:0.21.2
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:28.701
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.491
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.547
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.564
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/materia/Materia_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.580
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/municipio/Municipio_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.594
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/unidademedida/UnidadeMedida_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.609
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/itens/telefone/Telefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.648
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/categoria/Categoria_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.664
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/Fornecedor_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.677
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/Pessoa_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.693
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/itens/conteudo/Conteudo_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.706
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/config/Config_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.719
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/produto/Produto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.731
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/itens/telefone/FornecedorTelefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.744
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:31.758
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/Curso_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:35.913
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.321
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.406
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.486
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/materia/Materia_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.528
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/municipio/Municipio_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.542
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/unidademedida/UnidadeMedida_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.572
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/itens/telefone/Telefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.587
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/categoria/Categoria_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.605
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/Fornecedor_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.641
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/Pessoa_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.803
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/itens/conteudo/Conteudo_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.829
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/config/Config_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.865
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/produto/Produto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.883
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/itens/telefone/FornecedorTelefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.918
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 14:56:36.939
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/Curso_.java
+
+!ENTRY org.eclipse.ui 4 0 2020-04-30 15:01:28.251
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: i/o error (java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado))
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setVisible(UIElementImpl.java:361)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributionRecord.updateVisibility(ContributionRecord.java:113)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:194)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:258)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:115)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:95)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:463)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5115)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4747)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:335)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2100)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4749)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3518)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.swt.SWTException: i/o error (java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado))
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:184)
+	at org.eclipse.tm.terminal.view.ui.local.showin.ExternalExecutablesManager.loadImage(ExternalExecutablesManager.java:282)
+	at org.eclipse.tm.terminal.view.ui.local.showin.DynamicContributionItems.getContributionItems(DynamicContributionItems.java:74)
+	at org.eclipse.ui.actions.CompoundContributionItem.getContributionItemsToFill(CompoundContributionItem.java:83)
+	at org.eclipse.ui.actions.CompoundContributionItem.fill(CompoundContributionItem.java:57)
+	at org.eclipse.ui.internal.menus.DynamicMenuContributionItem.fill(DynamicMenuContributionItem.java:146)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:729)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:806)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.scheduleManagerUpdate(MenuManagerRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.subscribeUIElementTopicVisible(MenuManagerRenderer.java:212)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 63 more
+Caused by: java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:181)
+	... 77 more
+!SESSION 2020-04-30 15:01:53.616 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-04-30 15:02:09.883
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-04-30 15:02:09.883
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@53b7f08,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24536f07,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-04-30 15:02:20.359
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2020-04-30 15:03:13.847
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.e4.core.di.InjectionException: org.eclipse.swt.SWTException: i/o error (java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado))
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:68)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4561)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:64)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setVisible(UIElementImpl.java:361)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributionRecord.updateVisibility(ContributionRecord.java:113)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:194)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:258)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:115)
+	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:95)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:463)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:259)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4105)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5115)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4747)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:335)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2100)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4749)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:237)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3963)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3518)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+Caused by: org.eclipse.swt.SWTException: i/o error (java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado))
+	at org.eclipse.swt.SWT.error(SWT.java:4723)
+	at org.eclipse.swt.SWT.error(SWT.java:4638)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:184)
+	at org.eclipse.tm.terminal.view.ui.local.showin.ExternalExecutablesManager.loadImage(ExternalExecutablesManager.java:282)
+	at org.eclipse.tm.terminal.view.ui.local.showin.DynamicContributionItems.getContributionItems(DynamicContributionItems.java:74)
+	at org.eclipse.ui.actions.CompoundContributionItem.getContributionItemsToFill(CompoundContributionItem.java:83)
+	at org.eclipse.ui.actions.CompoundContributionItem.fill(CompoundContributionItem.java:57)
+	at org.eclipse.ui.internal.menus.DynamicMenuContributionItem.fill(DynamicMenuContributionItem.java:146)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:729)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:806)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.scheduleManagerUpdate(MenuManagerRenderer.java:1221)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.subscribeUIElementTopicVisible(MenuManagerRenderer.java:212)
+	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	... 63 more
+Caused by: java.io.FileNotFoundException: C:\Program Files\Git\mingw64\share\git\git-for-windows.ico (O sistema não pode encontrar o caminho especificado)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.eclipse.swt.graphics.ImageLoader.load(ImageLoader.java:181)
+	... 77 more
+!SESSION 2020-04-30 15:08:20.864 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-04-30 15:09:24.087
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-04-30 15:09:24.087
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@58be583e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1a34772e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-04-30 15:09:35.982
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-04-30 15:12:24.314 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-04-30 15:13:18.734
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-04-30 15:13:18.734
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@401002ce,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6870a76f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-04-30 15:13:31.490
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:11.728
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.353
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.410
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.433
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/materia/Materia_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.449
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/municipio/Municipio_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.461
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/unidademedida/UnidadeMedida_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.473
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/itens/telefone/Telefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.483
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/categoria/Categoria_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.498
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/Fornecedor_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.510
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/Pessoa_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.523
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/itens/conteudo/Conteudo_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.534
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/config/Config_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.547
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/produto/Produto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.559
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/itens/telefone/FornecedorTelefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.572
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:14.582
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/Curso_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:38.992
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jface 2 0 2020-04-30 15:16:39.182
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1976)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:670)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1609)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1596)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.570
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.648
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.678
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/materia/Materia_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.701
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/municipio/Municipio_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.728
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/unidademedida/UnidadeMedida_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.777
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/itens/telefone/Telefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.797
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/categoria/Categoria_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.819
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/Fornecedor_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.841
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/Pessoa_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.866
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/itens/conteudo/Conteudo_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:40.943
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/config/Config_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:41.043
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/produto/Produto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:41.060
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/itens/telefone/FornecedorTelefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:41.073
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:16:41.087
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/Curso_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:17:53.702
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:17:53.739
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:18:08.254
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:18:08.350
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:18:36.024
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:18:36.039
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:19:39.334
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:19:39.378
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:19:48.379
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:19:48.407
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:19:58.111
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 15:19:58.128
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:12:49.034
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:12:49.097
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:12:49.116
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:12:49.434
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:16:53.888
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:16:53.915
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:16:53.942
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:16:54.083
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:18:39.423
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:18:39.450
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:18:39.470
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:18:39.569
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:23:47.368
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:23:47.386
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:23:47.401
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:23:47.505
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:24:30.803
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:24:30.820
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:24:30.838
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:24:30.934
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:25:08.034
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:25:08.064
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:25:08.102
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:25:08.217
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:30:16.303
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:30:16.320
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:30:16.343
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:30:16.446
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:05.579
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:05.633
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:05.654
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:05.766
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:33.402
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:33.420
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:33.435
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:33.543
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:51.904
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:51.927
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:51.949
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:31:52.088
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:34:12.224
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:34:12.302
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:34:12.323
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:34:12.445
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:34:34.199
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:34:34.217
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:34:34.232
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:34:34.404
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:35:58.051
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:35:58.070
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:35:58.087
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:35:58.203
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:36:44.964
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:36:44.985
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:36:45.002
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:36:45.112
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:11.251
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:11.277
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:11.295
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:11.380
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:25.527
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:25.546
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:25.563
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:25.646
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:30.734
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:30.777
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:42:30.796
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:45:16.929
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:45:16.989
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:45:17.002
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:45:17.135
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:47:10.213
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:47:10.232
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:47:10.251
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:47:10.395
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:48:35.592
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:48:35.608
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:48:35.622
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:48:35.803
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:52:48.266
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:52:48.284
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:52:48.300
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:52:48.415
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:52:57.455
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:52:57.484
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:52:57.505
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:52:57.602
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:53:02.041
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:53:02.058
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:53:02.073
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 16:53:02.177
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:01:35.038
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:01:35.230
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:01:35.244
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:01:35.391
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:04:00.421
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:04:00.439
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:04:00.453
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:04:00.546
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:05:33.618
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:05:33.640
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:05:33.656
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:05:33.778
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:06:51.924
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:06:51.969
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:06:51.986
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:06:52.086
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:09:43.789
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:09:43.807
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:09:43.822
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 17:09:43.944
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 18:06:36.230
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 18:06:36.356
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 18:06:36.370
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 18:06:36.524
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 18:33:45.889
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 18:33:45.940
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 18:33:45.968
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 18:33:46.213
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 19:31:35.176
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 19:31:35.306
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 19:31:35.328
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 19:31:35.561
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 19:37:43.994
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 19:37:44.021
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 19:42:35.687
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 19:42:35.701
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:39:27.011
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:39:27.190
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:39:27.202
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:39:27.280
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:41:52.724
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:41:52.739
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:44:02.198
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:44:02.211
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:47:00.679
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:47:00.694
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:47:00.711
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:47:00.803
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java

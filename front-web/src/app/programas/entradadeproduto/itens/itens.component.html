@@ -34,7 +34,7 @@
 <br>
 Lista de Itens:
 <br>
-<p-table autoLayout="true" [value]="itens">
+<p-table autoLayout="true" [value]="itensdaentrada">
   <ng-template pTemplate="header">
       <tr>
           <th>Nome</th>
@@ -55,7 +55,7 @@ Lista de Itens:
   </ng-template>
   <ng-template pTemplate="emptymessage">
     <tr>
-      <div *ngIf='itens.length === 0' style='padding: 16px'>
+      <div *ngIf='itensdaentrada.length === 0' style='padding: 16px'>
         Nenhum item adicionado
     </div>
     </tr>
