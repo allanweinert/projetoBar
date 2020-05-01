@@ -13,10 +13,14 @@
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.categoria.Categoria"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.unidademedida.UnidadeMedida"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.fornecedor.Fornecedor"/>
-<fullyQualifiedTypeName name="br.inf.ids.treina1.api.produto.Produto"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.entradadeproduto.EntradaDeProduto"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.entradadeproduto.itens.ItensDaEntrada"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.entradadeproduto.EntradaDeProduto_"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
 <fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonPropertyOrder"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.produto.Produto"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreProperties"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 </qualifiedTypeNameHistroy>

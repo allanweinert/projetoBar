@@ -1965,3 +1965,134 @@ java.lang.RuntimeException
 
 !ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-04-30 20:47:00.803
 !MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+!SESSION 2020-05-01 12:44:27.080 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-05-01 12:45:05.880
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-05-01 12:45:05.880
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@123e9094,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f6ba47b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-05-01 12:45:47.439
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:10:48.695
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:10:51.203
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:10:51.226
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:10:51.973
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:17:22.642
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:17:22.832
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:17:22.859
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:17:23.094
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:19:59.246
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:19:59.297
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:19:59.319
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:19:59.504
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:56:37.165
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:56:37.507
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:56:37.575
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:56:37.796
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:57:46.181
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:57:46.247
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:57:46.264
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 15:57:46.397
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:18:48.647
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:18:48.673
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:18:48.696
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:18:48.834
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:19:56.754
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:19:56.772
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:19:56.789
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:19:56.903
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:20:12.675
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:20:12.701
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:20:12.724
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/itens/ItensDaEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-05-01 16:20:12.838
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/entradadeproduto/EntradaDeProduto_.java
