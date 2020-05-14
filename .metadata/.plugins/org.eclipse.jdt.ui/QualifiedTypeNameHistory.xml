@@ -23,4 +23,7 @@
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.produto.Produto"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreProperties"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
+<fullyQualifiedTypeName name="javax.persistence.EnumType"/>
 </qualifiedTypeNameHistroy>

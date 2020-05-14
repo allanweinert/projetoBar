@@ -7,4 +7,5 @@ export interface EntradaProduto {
     dataentrada?: Date;
     fornecedor?: Fornecedor;
     itensdaentrada?: ItensEntrada[];
+    tipoentrada?: string;
 }

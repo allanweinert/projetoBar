@@ -6,6 +6,8 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,6 +21,7 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import br.inf.ids.treina1.api.entradadeproduto.enums.TipoDeEntrada;
 import br.inf.ids.treina1.api.entradadeproduto.itens.ItensDaEntrada;
 import br.inf.ids.treina1.api.fornecedor.Fornecedor;
 
@@ -31,6 +34,9 @@ public class EntradaDeProduto {
 	@Column(name = "ENTRADAPRODUTOID")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ENTRADAPRODUTO")
 	private Long id;
+	
+	@Enumerated(EnumType.STRING)
+	private TipoDeEntrada tipoentrada;
 	
 	@JsonIgnoreProperties({"telefones"})
 	@ManyToOne
