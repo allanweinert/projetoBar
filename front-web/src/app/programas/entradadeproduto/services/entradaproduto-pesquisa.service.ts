@@ -9,6 +9,15 @@ export class EntradaProdutoPesquisaService {
 
   constructor(private http: HttpClient) { }
 
+  
+  listarEntradas(): {label: string, value: string}[] {
+    return [
+      { label: 'Não informado', value: 'NAO_INFORMADO' },
+      { label: 'Externa', value: 'ENTRADA_EXTERNA' },
+      { label: 'Interna', value: 'ENTRADA_INTERNA' }
+    ];
+  }
+
   pesquisar(valor: any, pagina = 1): Observable<any> {
     const url = `${environment.apiURL}/entradaproduto/pesquisa`;
     const options = {

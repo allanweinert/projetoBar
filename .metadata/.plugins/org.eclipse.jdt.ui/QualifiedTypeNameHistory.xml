@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.unidadedemedida.UnidadeMedida"/>
-<fullyQualifiedTypeName name="lombok.Getter"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.unidademedida.enums.Situacao"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.categoria.Categoria"/>
@@ -23,4 +22,17 @@
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.produto.Produto"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreProperties"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
+<fullyQualifiedTypeName name="javax.persistence.EnumType"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.Max"/>
+<fullyQualifiedTypeName name="org.checkerframework.checker.units.qual.min"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
+<fullyQualifiedTypeName name="javax.enterprise.context.RequestScoped"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.movimentacao.MovimentacaoEstoque"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.movimentacao.enums.MovimentacaoEstoqueTipo"/>
+<fullyQualifiedTypeName name="lombok.Getter"/>
+<fullyQualifiedTypeName name="lombok.Setter"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
 </qualifiedTypeNameHistroy>

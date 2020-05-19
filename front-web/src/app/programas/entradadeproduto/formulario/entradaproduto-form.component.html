@@ -7,24 +7,29 @@
         *ngIf='editando'></button>
 </div>
 <p-panel header="Identificação">
-<form [formGroup]="formEntradaProduto">
+    <form [formGroup]="formEntradaProduto">
         <div class="ui-fluid" >
             <div class="p-grid">
-              <div class="p-col-6">
-                Fornecedor
-                <p-autoComplete formControlName="fornecedor"
-                                forceSelection="true"
-                                field="razaoSocial"
-                                dropdown="true"
-                                dataKey="id"
-                                [suggestions]="fornecedores"
-                                (completeMethod)="pesquisarFornecedores($event)">
-                </p-autoComplete>
-              </div>
-              <div class="p-col-2">
-                Data de Entrada
-                <p-calendar formControlName="dataentrada" dateFormat="dd/mm/yy" [locale]="ptBR" [showIcon]="true"></p-calendar>
-            </div>
+                <div class="p-col-2">
+                    Tipo da entrada
+                    <p-dropdown [options]="tipoEntradas" formControlName="tipoentrada"></p-dropdown>
+                </div>
+
+                <div class="p-col-6">
+                    Fornecedor
+                    <p-autoComplete formControlName="fornecedor"
+                                    forceSelection="true"
+                                    field="razaoSocial"
+                                    dropdown="true"
+                                    dataKey="id"
+                                    [suggestions]="fornecedores"
+                                    (completeMethod)="pesquisarFornecedores($event)">
+                    </p-autoComplete>
+                </div>
+                <div class="p-col-2">
+                    Data de Entrada
+                    <p-calendar formControlName="dataentrada" dateFormat="dd/mm/yy" [locale]="ptBR" [showIcon]="true"></p-calendar>
+                </div>
             </div>
         </div>
     </form>

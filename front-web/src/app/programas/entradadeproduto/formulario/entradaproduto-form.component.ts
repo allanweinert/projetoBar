@@ -25,6 +25,7 @@ export class EntradaProdutoFormComponent implements OnInit {
 
   fornecedores = [];
   listaItens = [];
+  tipoEntradas = [];
   formEntradaProduto: FormGroup;
   editando = false;
 
@@ -33,12 +34,14 @@ export class EntradaProdutoFormComponent implements OnInit {
               private route: ActivatedRoute,
               private messageService: MessageService,
               private entradaprodutoCrudService: EntradaProdutoCrudService,
+              private entradaprodutoPesquisaService: EntradaProdutoPesquisaService,
               private fornecedorPesquisaService: FornecedorPesquisaService) {
     this.configurarFormulario();
     this.configurarCalendar();
   }
 
   ngOnInit() {
+    this.tipoEntradas = this.entradaprodutoPesquisaService.listarEntradas();
     this.verificarParametroRota();
   }
 
@@ -46,7 +49,8 @@ export class EntradaProdutoFormComponent implements OnInit {
     this.formEntradaProduto = this.formBuilder.group({
       id: '',
       fornecedor: '',
-      dataentrada:'',
+      dataentrada: '',
+      tipoentrada: ''
     });
     this.formEntradaProduto.get('id').disable();
   }

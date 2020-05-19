@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="fornecedor"/>
+		<item key="selection" value="movimentacaoEstoque"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="entradaProduto"/>
+			<item value="EntradaDeProduto"/>
+			<item value="lomb"/>
 			<item value="fornecedor"/>
 			<item value="FORNECEDOR"/>
 			<item value="categoria"/>
@@ -21,6 +24,8 @@
 			<item value="EntradaProdutoService"/>
 		</list>
 		<list key="replacehistory">
+			<item value="movimentacaoEstoque"/>
+			<item value="MovimentacaoEstoque"/>
 			<item value="entradaProduto"/>
 			<item value="entrada"/>
 			<item value="ENTRADAPRODUTO"/>
