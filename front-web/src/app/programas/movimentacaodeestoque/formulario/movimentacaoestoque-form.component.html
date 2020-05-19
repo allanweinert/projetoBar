@@ -1,0 +1,28 @@
+<h3>Movimentacão de Estoque / Cadastro</h3>
+<div class='controles'>
+    <button pButton type="button" label="Pesquisar" routerLink='/movimentacaoestoque/pesquisa'
+        class="ui-button-secondary"></button>
+    <button pButton type="button" label="Novo" (click)="novo()" class="ui-button-secondary"></button>
+    <button pButton type="button" label="Excluir" (click)="excluir()" class="ui-button-danger"
+        *ngIf='editando'></button>
+</div>
+<p-panel header="Tipo de Movimentação">
+    <form [formGroup]="formMovimentacaoEstoque">
+        <div class="ui-fluid" >
+            <div class="p-grid">
+                <div class="p-col-2">
+                    <p-dropdown [options]="tipoMovimentacoes" formControlName="tipomovimentacao"></p-dropdown>
+                </div>
+            </div>
+        </div>
+        <div class="ui-fluid" >
+            
+        </div>
+    </form>
+</p-panel>
+<br>
+
+<div class='controles'>
+    <button pButton type="button" label="Salvar" (click)="salvar()" class="ui-button-success"></button>
+    <button pButton type="button" label="Cancelar" (click)="cancelar()" class="ui-button-secondary"></button>
+</div>

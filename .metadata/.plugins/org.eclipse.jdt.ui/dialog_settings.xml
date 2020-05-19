@@ -16,7 +16,7 @@
 	</section>
 	<section name="RefactoringWizard.preview">
 		<item key="width" value="1340"/>
-		<item key="height" value="588"/>
+		<item key="height" value="578"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item key="renameSubpackages" value="false"/>
