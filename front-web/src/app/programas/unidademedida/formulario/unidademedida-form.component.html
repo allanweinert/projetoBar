@@ -1,13 +1,13 @@
-<h3>Categoria / Cadastro</h3>
+<h3>Unidade de Medida / Cadastro</h3>
 <div class='controles'>
-    <button pButton type="button" label="Pesquisar" routerLink='/categoria/pesquisa'
+    <button pButton type="button" label="Pesquisar" routerLink='/unidademedida/pesquisa'
         class="ui-button-secondary"></button>
     <button pButton type="button" label="Novo" (click)="novo()" class="ui-button-secondary"></button>
     <button pButton type="button" label="Excluir" (click)="excluir()" class="ui-button-danger"
         *ngIf='editando'></button>
 </div>
 <p-panel header="Identificação">
-  <form [formGroup]="formCategoria">
+  <form [formGroup]="formUnidadeMedida">
     <div class="ui-fluid">
       <div class="p-grid">
         <div class="p-col-10">

@@ -1,5 +1,5 @@
 import { Categoria } from '../../categoria/modelos/categoria';
-import { UnidadeMedida } from '../../unidadedemedida/modelos/unidademedida';
+import { UnidadeMedida } from '../../unidademedida/modelos/unidademedida';
 
 export interface Produto {
     id?: number;

@@ -4,11 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'movimentacaoestoque',
-    loadChildren: () => import('./programas/movimentacaodeestoque/movimentacaoestoque.module').then(mod => mod.MovimentacaoEstoqueModule),
-  },
-  {
-    path: 'entradaproduto',
-    loadChildren: () => import('./programas/entradadeproduto/entradaproduto.module').then(mod => mod.EntradaProdutoModule),
+    loadChildren: () => import('./programas/movimentacaoestoque/movimentacaoestoque.module').then(mod => mod.MovimentacaoEstoqueModule),
   },
   {
     path: 'fornecedor',
@@ -16,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'unidademedida',
-    loadChildren: () => import('./programas/unidadedemedida/unidademedida.module').then(mod => mod.UnidadeMedidaModule),
+    loadChildren: () => import('./programas/unidademedida/unidademedida.module').then(mod => mod.UnidadeMedidaModule),
   },
   {
     path: 'categoria',

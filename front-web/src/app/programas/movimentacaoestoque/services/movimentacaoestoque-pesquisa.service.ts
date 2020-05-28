@@ -5,12 +5,21 @@ import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
-export class FornecedorPesquisaService {
+export class MovimentacaoEstoquePesquisaService {
 
   constructor(private http: HttpClient) { }
 
+  
+  listarMovimentacoes(): {label: string, value: string}[] {
+    return [
+      { label: 'Selecione', value: 'SELECIONE' },
+      { label: 'Entrada', value: 'ENTRADA' },
+      { label: 'Saída', value: 'SAIDA' }
+    ];
+  }
+
   pesquisar(valor: any, pagina = 1): Observable<any> {
-    const url = `${environment.apiURL}/fornecedor/pesquisa`;
+    const url = `${environment.apiURL}/movimentaestoque/pesquisa`;
     const options = {
       params: new HttpParams().set('valor', valor).set('pagina', String(pagina))
     };

@@ -6,7 +6,7 @@ import { ProdutoCrudService } from '../services/produto-crud.service';
 import { Produto } from '../modelos/produto';
 import { ProdutoPesquisaService } from '../services/produto-pesquisa.service';
 import { CategoriaPesquisaService } from '../../categoria/services/categoria-pesquisa.service';
-import { UnidadeMedidaPesquisaService } from '../../unidadedemedida/services/unidademedida-pesquisa.service';
+import { UnidadeMedidaPesquisaService } from '../../unidademedida/services/unidademedida-pesquisa.service';
 
 @Component({
   selector: 'app-produto-form',
@@ -134,6 +134,7 @@ export class ProdutoFormComponent implements OnInit {
           summary: 'Sucesso!',
           detail: 'Produto ' + produto.nome + ' incluído com sucesso!'
         });
+        this.novo();
       },
       error => {
         this.messageService.add({
@@ -151,22 +152,22 @@ export class ProdutoFormComponent implements OnInit {
     return this.formProduto.valid;
   }
 
- /* excluir() {
+  excluir() {
     const id = this.formProduto.get('id').value;
-    const confirmacao = confirm('Deseja excluir o Município ' + id + '?');
+    const confirmacao = confirm('Deseja excluir este produto ?');
     if (confirmacao) {
       this.produtoCrudService.deletar(id).subscribe(
         resultado => {
           this.messageService.add({
             severity: 'success',
             summary: 'Sucesso!',
-            detail: 'Município ' + id + ' excluído com sucesso!'
+            detail: 'Produto excluído com sucesso!'
           });
           this.novo();
         }
       );
     }
-  }*/
+  }
 
   novo() {
     this.editando = false;

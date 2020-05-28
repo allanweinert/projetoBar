@@ -136,6 +136,23 @@ export class CategoriaFormComponent implements OnInit {
     this.router.navigate(['/categoria/novo']);
   }
 
+  excluir() {
+    const id = this.formCategoria.get('id').value;
+    const confirmacao = confirm('Deseja excluir esta categoria ?');
+    if (confirmacao) {
+      this.categoriaCrudService.deletar(id).subscribe(
+        resultado => {
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Sucesso!',
+            detail: 'Categoria excluída com sucesso!'
+          });
+          this.novo();
+        }
+      );
+    }
+  }
+
   cancelar() {
     const id = this.formCategoria.get('id').value;
     if (id) {

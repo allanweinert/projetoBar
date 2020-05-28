@@ -11,23 +11,18 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import br.inf.ids.treina1.api.fornecedor.Fornecedor;
 import br.inf.ids.treina1.api.movimentacao.enums.MovimentacaoEstoqueTipo;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemSaida;
-import lombok.Getter;
-import lombok.Setter;
+
 
 @Entity
-@Getter @Setter
+
 @SequenceGenerator(name = "seq_movimentacao", sequenceName = "seq_movimentacao", allocationSize = 1)
 @Table(name = "movimentacaoestoque")
 public class MovimentacaoEstoque {
@@ -42,17 +37,55 @@ public class MovimentacaoEstoque {
 	
 	@NotNull
 	private LocalDate data;
-
-	@ManyToOne
-	@JoinColumn(name = "fornecedorid")
-	private Fornecedor fornecedor;
 	
-	@Valid
+	//@Valid
 	@OneToMany(mappedBy = "movimentacaoEstoque", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItemEntrada> itensEntrada;
 
-	@Valid
+	//@Valid
 	@OneToMany(mappedBy = "movimentacaoEstoque", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItemSaida> itensSaida;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public MovimentacaoEstoqueTipo getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(MovimentacaoEstoqueTipo tipo) {
+		this.tipo = tipo;
+	}
+
+	public LocalDate getData() {
+		return data;
+	}
+
+	public void setData(LocalDate data) {
+		this.data = data;
+	}
+
+	public List<ItemEntrada> getItensEntrada() {
+		return itensEntrada;
+	}
+
+	public void setItensEntrada(List<ItemEntrada> itensEntrada) {
+		this.itensEntrada = itensEntrada;
+	}
+
+	public List<ItemSaida> getItensSaida() {
+		return itensSaida;
+	}
+
+	public void setItensSaida(List<ItemSaida> itensSaida) {
+		this.itensSaida = itensSaida;
+	}
+	
+	
 
 }

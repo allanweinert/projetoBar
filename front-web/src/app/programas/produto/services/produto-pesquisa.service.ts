@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Categoria } from '../../categoria/modelos/categoria';
-import { UnidadeMedida } from '../../unidadedemedida/modelos/unidademedida';
+import { UnidadeMedida } from '../../unidademedida/modelos/unidademedida';
 
 @Injectable()
 export class ProdutoPesquisaService {

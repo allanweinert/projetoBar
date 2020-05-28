@@ -3,8 +3,8 @@
     <button pButton type="button" label="Pesquisar" routerLink='/produto/pesquisa'
         class="ui-button-secondary"></button>
     <button pButton type="button" label="Novo" (click)="novo()" class="ui-button-secondary"></button>
-    <button pButton type="button" label="Excluir"  class="ui-button-danger"
-        *ngIf='editando'></button><!--(click)="excluir()"-->
+    <button pButton type="button" label="Excluir" (click)="excluir()" class="ui-button-danger"
+        *ngIf='editando'></button>
 </div>
 <p-panel header="Identificação">
   <form [formGroup]="formProduto">

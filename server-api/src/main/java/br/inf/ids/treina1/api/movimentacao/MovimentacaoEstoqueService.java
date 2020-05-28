@@ -76,7 +76,7 @@ public class MovimentacaoEstoqueService {
 						Long pesquisaId = Long.valueOf(valor);
 						w.field(MovimentacaoEstoque_.id).eq(pesquisaId);
 					} catch (Exception e) {}
-					//w.field(MovimentacaoEstoque_.dataentrada).ilike("%"+valor+"%");
+					//w.field(MovimentacaoEstoque_.tipo).ilike("%"+valor+"%");
 				}
 			})
 			.pagination()
