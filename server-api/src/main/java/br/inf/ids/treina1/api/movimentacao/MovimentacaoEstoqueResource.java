@@ -19,8 +19,8 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
-@Tag(name = "Entrada De Produto", description = "Entrada do produto")
-@Path("/entradaproduto")
+@Tag(name = "Movimentação de Estoque", description = "Movimentações do estoque")
+@Path("/movimentaestoque")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class MovimentacaoEstoqueResource {

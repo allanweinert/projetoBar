@@ -4,8 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 
 import { FornecedorCrudService } from '../services/fornecedor-crud.service';
-import { Fornecedor } from '../modelos/fornecedor';
 import { FornecedorPesquisaService } from '../services/fornecedor-pesquisa.service';
+
+import { Fornecedor } from '../modelos/fornecedor';
 
 @Component({
   selector: 'app-fornecedor-form',
@@ -40,7 +41,7 @@ export class FornecedorFormComponent implements OnInit {
     this.formFornecedor = this.formBuilder.group({
       id: '',
       razaoSocial: ['', Validators.required],
-      nomeFantasia: [''],
+      nomeFantasia: ['', Validators.required],
       cpf: '',
       cnpj: '',
     });
@@ -97,7 +98,7 @@ export class FornecedorFormComponent implements OnInit {
         this.messageService.add({
           severity: 'success',
           summary: 'Sucesso!',
-          detail: 'Fornecedor ' + fornecedor.nome + ' alterado com sucesso!'
+          detail: 'Fornecedor ' + fornecedor.razaoSocial + ' alterado com sucesso!'
         });
       }
     );
@@ -109,8 +110,9 @@ export class FornecedorFormComponent implements OnInit {
         this.messageService.add({
           severity: 'success',
           summary: 'Sucesso!',
-          detail: 'Fornecedor ' + fornecedor.nome + ' incluído com sucesso!'
+          detail: 'Fornecedor ' + fornecedor.razaoSocial + ' incluído com sucesso!'
         });
+        this.novo();
       },
       error => {
         this.messageService.add({
@@ -130,6 +132,19 @@ export class FornecedorFormComponent implements OnInit {
 
   excluir() {
     const id = this.formFornecedor.get('id').value;
+    const confirmacao = confirm('Deseja excluir este fornecedor ?');
+    if (confirmacao) {
+      this.fornecedorCrudService.deletar(id).subscribe(
+        resultado => {
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Sucesso!',
+            detail: 'Fornecedor excluído com sucesso!'
+          });
+          this.novo();
+        }
+      );
+    }
   }
 
   novo() {
