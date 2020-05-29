@@ -2,19 +2,32 @@
 <div>
     <div class="p-grid">
         <div class="p-col-fixed" style='width: 160px'>
-            <button pButton type="button" label="Incluir" routerLink='/movimentacaoestoque/novo' class="ui-button-success"></button>
+            <button pButton 
+                    type="button" 
+                    label="Incluir" 
+                    routerLink='/movimentacaoestoque/novo' 
+                    class="ui-button-success">
+            </button>
         </div>
         <div class="p-col ui-fluid">
             <form [formGroup]="formPesquisa">
                 <div class="ui-inputgroup">
-                    <input type="text" pInputText formControlName="valorPesquisa" placeholder="pesquisar...">
+                    <input type="text" 
+                            pInputText 
+                            formControlName="valorPesquisa" 
+                            placeholder="pesquisar..."
+                    >
                     <button pButton type="button" icon='pi pi-search' (click)='pesquisar()'></button>
                 </div>
             </form>
         </div>
         <div class="p-col-fixed" style='width: 140px; text-align: right'>
-            <button pButton type="button" label="Limpar filtro" (click)='limparPesquisa()'
-                class="ui-button-secondary"></button>
+            <button pButton 
+                    type="button" 
+                    label="Limpar filtro" 
+                    (click)='limparPesquisa()' 
+                    class="ui-button-secondary">
+            </button>
         </div>
     </div>
 </div>
@@ -33,7 +46,7 @@
             <td>{{movimentaestoque.id}}</td>
             <td>{{movimentaestoque.data | date:'dd/MM/yyyy' }}</td>
             <td>{{getDescricaoTipo(movimentaestoque.tipo)}}</td>
-            <td></td>
+            <td>{{movimentaestoque.fornecedor.razaoSocial}}</td>
             
             
             <td style='text-align: center;'>
