@@ -18,7 +18,6 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import br.inf.ids.treina1.api.fornecedor.Fornecedor;
 import br.inf.ids.treina1.api.movimentacao.MovimentacaoEstoque;
 import br.inf.ids.treina1.api.produto.Produto;
 
@@ -39,13 +38,8 @@ public class ItemEntrada {
 	private MovimentacaoEstoque movimentacaoEstoque;
 	
 	@ManyToOne
-	@JoinColumn(name = "fornecedorid")
-	//@JsonIgnoreProperties({"cnpj","cpf","telefones"})
-	private Fornecedor fornecedor;
-	
-	@ManyToOne
 	@JoinColumn(name = "produtoid")
-	//@JsonIgnoreProperties({"categoria", "estoque_minimo", "unidademedida", "situacao"})
+	@JsonIgnoreProperties({"categoria", "estoque_minimo", "unidademedida", "situacao"})
 	private Produto produto;
 	
 	@NotNull
@@ -75,14 +69,6 @@ public class ItemEntrada {
 
 	public void setMovimentacaoEstoque(MovimentacaoEstoque movimentacaoEstoque) {
 		this.movimentacaoEstoque = movimentacaoEstoque;
-	}
-
-	public Fornecedor getFornecedor() {
-		return fornecedor;
-	}
-
-	public void setFornecedor(Fornecedor fornecedor) {
-		this.fornecedor = fornecedor;
 	}
 
 	public Produto getProduto() {

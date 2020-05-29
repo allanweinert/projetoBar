@@ -21,6 +21,17 @@
                                 [(ngModel)]="dataAtual">
                     </p-calendar>
                 </div>
+                <div class="p-col-12" *ngIf="formMovimentacaoEstoque.get('tipo').value == 'ENTRADA'">
+                    Fornecedor
+                    <p-autoComplete formControlName="fornecedor"
+                                    forceSelection="true"
+                                    field="razaoSocial"
+                                    dropdown="true"
+                                    dataKey="id"
+                                    [suggestions]="fornecedores"
+                                    (completeMethod)="pesquisarFornecedores($event)">
+                    </p-autoComplete>
+                  </div>
             </div>
         </div>
     </form>

@@ -33,7 +33,7 @@ public class MovimentacaoEstoqueService {
 		if (!validate.isEmpty()) {
 			throw new ConstraintViolationException(validate);
 		}
-		movimentacaoEstoqueValidaItemComTipo.validar(movimentacaoEstoque);
+		//movimentacaoEstoqueValidaItemComTipo.validar(movimentacaoEstoque);
 	}
 
 	

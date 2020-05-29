@@ -21,6 +21,17 @@ export class FornecedorCrudService {
     );
   }
 
+  pesquisaFornecedor(cnpj: string) {
+    const url = `http://www.receitaws.com.br/v1/cnpj/${cnpj}`;
+    return this.http.get<Fornecedor>(url).pipe(
+      tap(
+        fornecedorws => {
+          return of(fornecedorws)
+        }
+      )
+    )
+  }
+
   incluir(fornecedor: Fornecedor) {
     const url = `${environment.apiURL}/fornecedor`;
     return this.http.post<Fornecedor>(url, fornecedor).pipe(
@@ -53,5 +64,6 @@ export class FornecedorCrudService {
       )
     );
   }
+  
 
 }

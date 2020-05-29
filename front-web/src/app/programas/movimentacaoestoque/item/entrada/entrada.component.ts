@@ -5,7 +5,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 
 import { ProdutoPesquisaService } from '../../../produto/services/produto-pesquisa.service';
-import { FornecedorPesquisaService } from '../../../fornecedor/services/fornecedor-pesquisa.service';
 
 import { ItemEntrada } from '../../modelos/item-entrada';
 
@@ -15,8 +14,7 @@ import { ItemEntrada } from '../../modelos/item-entrada';
   styleUrls: ['./entrada.component.css'],
   providers: [
     MessageService,
-    ProdutoPesquisaService,
-    FornecedorPesquisaService
+    ProdutoPesquisaService
   ]
 })
 export class EntradaComponent implements OnInit {
@@ -25,13 +23,11 @@ export class EntradaComponent implements OnInit {
 
   formEntrada: FormGroup;
   
-  fornecedores = [];
   produtos = [];
 
   constructor(private formBuilder: FormBuilder,
               private messageService: MessageService,
-              private produtoPesquisaService: ProdutoPesquisaService,
-              private fornecedorPesquisaService: FornecedorPesquisaService) {
+              private produtoPesquisaService: ProdutoPesquisaService) {
     this.configurarFormEntrada();
   }
 
@@ -42,7 +38,6 @@ export class EntradaComponent implements OnInit {
   configurarFormEntrada() {
     this.formEntrada = this.formBuilder.group({
       id: '',
-      fornecedor: ['',[Validators.required]],
       produto: ['',[Validators.required]],
       quantidade: ['',[Validators.required]],
       valorCusto: ['',[Validators.required]],
@@ -54,14 +49,6 @@ export class EntradaComponent implements OnInit {
     this.produtoPesquisaService.pesquisar(pesquisa.query).subscribe(
       resultadop => {
         this.produtos = resultadop.data;
-      }
-    );
-  }
-
-  pesquisarFornecedores(pesquisa) {
-    this.fornecedorPesquisaService.pesquisar(pesquisa.query).subscribe(
-      resultadof => {
-        this.fornecedores = resultadof.data;
       }
     );
   }

@@ -11,11 +11,17 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import br.inf.ids.treina1.api.fornecedor.Fornecedor;
 import br.inf.ids.treina1.api.movimentacao.enums.MovimentacaoEstoqueTipo;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemSaida;
@@ -38,11 +44,16 @@ public class MovimentacaoEstoque {
 	@NotNull
 	private LocalDate data;
 	
-	//@Valid
+	@ManyToOne
+	@JoinColumn(name = "fornecedorid")
+	@JsonIgnoreProperties({"cnpj","cpf","telefones"})
+	private Fornecedor fornecedor;
+	
+	@Valid
 	@OneToMany(mappedBy = "movimentacaoEstoque", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItemEntrada> itensEntrada;
 
-	//@Valid
+	@Valid
 	@OneToMany(mappedBy = "movimentacaoEstoque", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItemSaida> itensSaida;
 
@@ -68,6 +79,14 @@ public class MovimentacaoEstoque {
 
 	public void setData(LocalDate data) {
 		this.data = data;
+	}
+
+	public Fornecedor getFornecedor() {
+		return fornecedor;
+	}
+
+	public void setFornecedor(Fornecedor fornecedor) {
+		this.fornecedor = fornecedor;
 	}
 
 	public List<ItemEntrada> getItensEntrada() {
