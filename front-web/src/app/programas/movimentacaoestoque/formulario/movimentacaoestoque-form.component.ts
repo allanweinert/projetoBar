@@ -6,10 +6,12 @@ import { MessageService } from 'primeng/api';
 
 import { MovimentacaoEstoqueCrudService } from '../services/movimentacaoestoque-crud.service';
 import { MovimentacaoEstoquePesquisaService } from '../services/movimentacaoestoque-pesquisa.service';
+import { FornecedorPesquisaService } from '../../fornecedor/services/fornecedor-pesquisa.service';
 
 import { MovimentacaoEstoque } from '../modelos/movimentacaoestoque';
 import { ItemEntrada } from '../modelos/item-entrada';
 import { ItemSaida } from '../modelos/item-saida';
+
 
 @Component({
   selector: 'app-movimentacaoestoque-form',
@@ -18,16 +20,20 @@ import { ItemSaida } from '../modelos/item-saida';
   providers: [
     MovimentacaoEstoqueCrudService,
     MovimentacaoEstoquePesquisaService,
+    FornecedorPesquisaService
   ]
 })
 export class MovimentacaoEstoqueFormComponent implements OnInit {
 
   ptBR;
 
+  formMovimentacaoEstoque: FormGroup;
+
   tipoMovimentacoes = [];
+  fornecedores = [];
   listaEntrada: ItemEntrada[];
   listaSaida: ItemSaida[];
-  formMovimentacaoEstoque: FormGroup;
+  
   dataAtual: Date;
   editando = false;
 
@@ -36,7 +42,8 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
               private route: ActivatedRoute,
               private messageService: MessageService,
               private movimentacaoestoqueCrudService: MovimentacaoEstoqueCrudService,
-              private movimentacaoestoquePesquisaService: MovimentacaoEstoquePesquisaService) {
+              private movimentacaoestoquePesquisaService: MovimentacaoEstoquePesquisaService,
+              private fornecedorPesquisaService: FornecedorPesquisaService) {
     this.configurarFormulario();
     this.configurarCalendar();
   }
@@ -51,7 +58,8 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     this.formMovimentacaoEstoque = this.formBuilder.group({
       id: '',
       tipo: ['',[Validators.required]],
-      data: ['',[Validators.required]]
+      data: ['',[Validators.required]],
+      fornecedor: ''
     });
     this.formMovimentacaoEstoque.get('id').disable();
   }
@@ -157,6 +165,17 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     return this.formMovimentacaoEstoque.valid;
   }
 
+  //Início Pesquisas
+
+  pesquisarFornecedores(pesquisa) {
+    this.fornecedorPesquisaService.pesquisar(pesquisa.query).subscribe(
+      resultadof => {
+        this.fornecedores = resultadof.data;
+      }
+    );
+  }
+
+  //Inicio Ações
   excluir() {
     const id = this.formMovimentacaoEstoque.get('id').value;
   }

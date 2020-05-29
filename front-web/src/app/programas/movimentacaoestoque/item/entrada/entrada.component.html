@@ -1,17 +1,6 @@
 <form [formGroup]="formEntrada">
     <div class="ui-fluid">
         <div class="p-grid">
-          <div class="p-col-12">
-            Fornecedor
-            <p-autoComplete formControlName="fornecedor"
-                            forceSelection="true"
-                            field="razaoSocial"
-                            dropdown="true"
-                            dataKey="id"
-                            [suggestions]="fornecedores"
-                            (completeMethod)="pesquisarFornecedores($event)">
-            </p-autoComplete>
-          </div>
           <div class="p-col-6">
             Produto
             <p-autoComplete formControlName="produto"
@@ -28,6 +17,7 @@
             <input type="number" 
                     pInputText 
                     pKeyFilter="pint" 
+                    min="1"
                     maxlength="3" 
                     formControlName="quantidade">
           </div>
@@ -79,8 +69,8 @@ Lista de Itens:
       <tr>
         <td>{{item.produto.nome}}</td>
         <td>{{item.quantidade}}</td>
-        <td>{{item.valorCusto}}</td>
-        <td>{{item.valorVenda}}</td>
+        <td>{{item.valorCusto | currency:'BRL':true}}</td>
+        <td>{{item.valorVenda | currency:'BRL':true}}</td>
         <td><button pButton type="button" icon="pi pi-trash" (click)="removerItem(item)" class="ui-button-secondary"></button></td>
       </tr>
   </ng-template>
