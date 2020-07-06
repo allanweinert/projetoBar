@@ -24,10 +24,11 @@
 			<item value="org.eclipse.ui.commands"/>
 		</list>
 		<list key="textEntries">
-			<item value="1"/>
+			<item value="2"/>
 		</list>
 		<list key="textArray">
 			<item value="ggas"/>
+			<item value="gg"/>
 		</list>
 	</section>
 	<section name="NewWizardAction">

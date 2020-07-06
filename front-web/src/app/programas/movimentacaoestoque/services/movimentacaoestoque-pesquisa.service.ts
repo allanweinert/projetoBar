@@ -9,7 +9,6 @@ export class MovimentacaoEstoquePesquisaService {
 
   constructor(private http: HttpClient) { }
 
-  
   listarMovimentacoes(): {label: string, value: string}[] {
     return [
       { label: 'Selecione', value: 'SELECIONE' },

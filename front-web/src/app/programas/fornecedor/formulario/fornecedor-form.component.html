@@ -1,41 +1,69 @@
-<h3>Fornecedor / Cadastro</h3>
-<div class='controles'>
-    <button pButton type="button" label="Pesquisar" routerLink='/fornecedor/pesquisa'
-        class="ui-button-secondary"></button>
-    <button pButton type="button" label="Novo" (click)="novo()" class="ui-button-secondary"></button>
-    <button pButton type="button" label="Excluir" (click)="excluir()" class="ui-button-danger"
-        *ngIf='editando'></button>
-</div>
-<p-panel header="Identificação">
-    <form [formGroup]="formFornecedor">
-        <div class="ui-fluid">
-            <div class="p-grid">
-                <div class="p-col-10">
-                  Razão Social
-                  <input type="text" pInputText formControlName="razaoSocial">
-                </div>
-                <div class="p-col-10">
-                  Nome Fantasia
-                  <input type="text" pInputText formControlName="nomeFantasia">
-                </div>
-                <div class="p-col-3">
-                  CPF
-                  <p-inputMask formControlName="cpf" mask="999.999.999-99" unmask='true'></p-inputMask>
-                </div>
-                <div class="p-col-3">
-                  CNPJ
-                  <p-inputMask formControlName="cnpj" mask="99.999.999/9999-99" unmask="true"></p-inputMask>
-                </div>
-            </div>
+<p-card header="Fornecedor" subheader="Cadastro">
+  <br />
+  <p-header class="controles">
+    <button
+      pButton
+      type="button"
+      icon="pi pi-search"
+      routerLink="/fornecedor/pesquisa"
+    ></button>
+
+    <button
+      pButton
+      type="button"
+      (click)="excluir()"
+      icon="pi pi-trash"
+      *ngIf="editando"
+    ></button>
+  </p-header>
+
+  <form [formGroup]="formFornecedor">
+    <div class="ui-fluid">
+      <div class="p-grid">
+        <div class="p-col-4 ui-inputgroup">
+          <p-inputMask
+            formControlName="cnpj"
+            mask="99.999.999/9999-99"
+            unmask="true"
+            placeholder="Pequise pelo cnpj"
+          ></p-inputMask>
+          <button
+            pButton
+            type="button"
+            icon='pi pi-search'
+            (click)='pesquisaCnpjReceita()'>
+          </button>
+          </div>
+        <div class="p-col-10">
+          Razão Social
+          <input type="text" pInputText formControlName="razaoSocial" />
         </div>
-    </form>
-</p-panel>
-<br>
-<p-panel header="Contato">
-    <app-telefone [telefones]='listaTelefones'></app-telefone>
-</p-panel>
-<br>
-<div class='controles'>
-    <button pButton type="button" label="Salvar" (click)="salvar()" class="ui-button-success"></button>
-    <button pButton type="button" label="Cancelar" (click)="cancelar()" class="ui-button-secondary"></button>
+        <div class="p-col-10">
+          Nome Fantasia
+          <input type="text" pInputText formControlName="nomeFantasia" />
+        </div>
+      </div>
+    </div>
+  </form>
+</p-card>
+<br />
+<p-card header="Contato">
+  <app-telefone [telefones]="listaTelefones"></app-telefone>
+</p-card>
+<br />
+<div class="controles">
+  <button
+    pButton
+    type="button"
+    label="Salvar"
+    (click)="salvar()"
+    class="ui-button-success"
+  ></button>
+  <button
+    pButton
+    type="button"
+    label="Cancelar"
+    (click)="cancelar()"
+    class="ui-button-secondary"
+  ></button>
 </div>

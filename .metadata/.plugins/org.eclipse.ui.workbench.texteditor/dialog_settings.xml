@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="movimentacaoEstoque"/>
+		<item key="selection" value="SaldoEstoque"/>
 		<item key="wrap" value="true"/>
-		<item key="casesensitive" value="true"/>
+		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="MovimentacaoEstoque"/>
+			<item value="ITEMENTRADA"/>
+			<item value="itementrada"/>
+			<item value="nome"/>
 			<item value="entradaProduto"/>
 			<item value="EntradaDeProduto"/>
 			<item value="lomb"/>
@@ -15,15 +19,15 @@
 			<item value="FORNECEDOR"/>
 			<item value="categoria"/>
 			<item value="unidadedemedida"/>
-			<item value="Categoria"/>
+			<item value="Localarmazenamento"/>
 			<item value="curso"/>
 			<item value="Curso"/>
 			<item value="cursoService"/>
-			<item value="Entrada"/>
-			<item value="ProdutoService"/>
-			<item value="EntradaProdutoService"/>
 		</list>
 		<list key="replacehistory">
+			<item value="SaldoEstoque"/>
+			<item value="SALDOESTOQUE"/>
+			<item value="saldoestoque"/>
 			<item value="movimentacaoEstoque"/>
 			<item value="MovimentacaoEstoque"/>
 			<item value="entradaProduto"/>
@@ -31,7 +35,7 @@
 			<item value="ENTRADAPRODUTO"/>
 			<item value="UnidadeMedida"/>
 			<item value="unidademedida"/>
-			<item value="Categoria"/>
+			<item value="Localarmazenamento"/>
 			<item value="categoria"/>
 			<item value="categoriaService"/>
 			<item value="EntradaProduto"/>
@@ -39,8 +43,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="938"/>
-		<item key="DIALOG_Y_ORIGIN" value="178"/>
+		<item key="DIALOG_X_ORIGIN" value="1008"/>
+		<item key="DIALOG_Y_ORIGIN" value="95"/>
 		<item key="DIALOG_WIDTH" value="284"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

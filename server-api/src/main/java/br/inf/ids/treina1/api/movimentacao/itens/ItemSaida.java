@@ -38,7 +38,7 @@ public class ItemSaida {
 	
 	@ManyToOne
 	@JoinColumn(name = "produtoId")
-	@JsonIgnoreProperties({"categoria", "estoque_minimo", "unidademedida", "situacao"})
+	@JsonIgnoreProperties({"categoria", "estoque_minimo", "situacao"})
 	private Produto produto;
 	
 	@NotNull
@@ -48,7 +48,11 @@ public class ItemSaida {
 	
 	@NotNull
 	@Column(precision = 5, scale = 2)
-	private BigDecimal valorVenda;
+	private BigDecimal valorUnitario;
+	
+	@NotNull
+	@Column(precision = 5, scale = 2)
+	private BigDecimal total;
 
 	public Long getId() {
 		return id;
@@ -82,13 +86,23 @@ public class ItemSaida {
 		this.quantidade = quantidade;
 	}
 
-	public BigDecimal getValorVenda() {
-		return valorVenda;
+	public BigDecimal getValorUnitario() {
+		return valorUnitario;
 	}
 
-	public void setValorVenda(BigDecimal valorVenda) {
-		this.valorVenda = valorVenda;
+	public void setValorVenda(BigDecimal valorUnitario) {
+		this.valorUnitario = valorUnitario;
 	}
+	
+	public BigDecimal getTotal() {
+		return total;
+	}
+
+	public void setTotal(BigDecimal total) {
+		this.total = total;
+	}
+	
+	
 	
 	
 	

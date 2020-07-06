@@ -12,18 +12,21 @@ import { ToastModule } from 'primeng/toast';
 import { CalendarModule } from 'primeng/calendar';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { InputMaskModule } from 'primeng/inputmask';
+import { CardModule } from 'primeng/card';
 
-import { UnidadeMedidaPesquisaComponent } from './pesquisa/unidademedida-pesquisa.component';
-import { UnidadeMedidaFormComponent } from './formulario/unidademedida-form.component';
+
+import { LocalArmazenamentoFormComponent } from './formulario/localarmazenamento-form.component';
+import { LocalArmazenamentoPesquisaComponent } from './pesquisa/localarmazenamento-pesquisa.component';
+
 
 const routes: Routes = [
-  { path: 'pesquisa',  component: UnidadeMedidaPesquisaComponent },
-  { path: 'novo',  component: UnidadeMedidaFormComponent },
-  { path: ':id',  component: UnidadeMedidaFormComponent }
+  { path: 'pesquisa',  component: LocalArmazenamentoPesquisaComponent },
+  { path: 'novo',  component: LocalArmazenamentoFormComponent },
+  { path: ':id',  component: LocalArmazenamentoFormComponent }
 ];
 
 @NgModule({
-  declarations: [UnidadeMedidaPesquisaComponent, UnidadeMedidaFormComponent],
+  declarations: [LocalArmazenamentoPesquisaComponent, LocalArmazenamentoFormComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -36,7 +39,9 @@ const routes: Routes = [
     ToastModule,
     CalendarModule,
     AutoCompleteModule,
-    InputMaskModule
+    InputMaskModule,
+    CardModule,
+
   ]
 })
-export class UnidadeMedidaModule { }
+export class LocalArmazenamentoModule { }

@@ -12,6 +12,7 @@ import { ToastModule } from 'primeng/toast';
 import { CalendarModule } from 'primeng/calendar';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { InputMaskModule } from 'primeng/inputmask';
+import { CardModule } from 'primeng/card';
 
 import { MovimentacaoEstoqueFormComponent } from './formulario/movimentacaoestoque-form.component';
 import { MovimentacaoEstoquePesquisaComponent } from './pesquisa/movimentacaoestoque-pesquisa.component';
@@ -44,6 +45,7 @@ const routes: Routes = [
     InputMaskModule,
     EntradaModule,
     SaidaModule,
+    CardModule
   ]
 })
 export class MovimentacaoEstoqueModule { }

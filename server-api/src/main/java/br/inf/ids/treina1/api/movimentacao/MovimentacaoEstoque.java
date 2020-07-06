@@ -22,6 +22,7 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import br.inf.ids.treina1.api.fornecedor.Fornecedor;
+import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento;
 import br.inf.ids.treina1.api.movimentacao.enums.MovimentacaoEstoqueTipo;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemSaida;
@@ -48,6 +49,15 @@ public class MovimentacaoEstoque {
 	@JoinColumn(name = "fornecedorid")
 	@JsonIgnoreProperties({"cnpj","cpf","telefones"})
 	private Fornecedor fornecedor;
+	
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "localarmazenamentoid")
+	private LocalArmazenamento localArmazenamento;
+	
+	@ManyToOne
+	@JoinColumn(name = "localarmazenamentodestinoid")
+	private LocalArmazenamento localArmazenamentoDestino;
 	
 	@Valid
 	@OneToMany(mappedBy = "movimentacaoEstoque", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -104,7 +114,21 @@ public class MovimentacaoEstoque {
 	public void setItensSaida(List<ItemSaida> itensSaida) {
 		this.itensSaida = itensSaida;
 	}
-	
-	
+
+	public LocalArmazenamento getLocalArmazenamento() {
+		return localArmazenamento;
+	}
+
+	public void setLocalArmazenamento(LocalArmazenamento localArmazenamento) {
+		this.localArmazenamento = localArmazenamento;
+	}
+
+	public LocalArmazenamento getLocalArmazenamentoDestino() {
+		return localArmazenamentoDestino;
+	}
+
+	public void setLocalArmazenamentoDestino(LocalArmazenamento localArmazenamentoDestino) {
+		this.localArmazenamentoDestino = localArmazenamentoDestino;
+	}
 
 }

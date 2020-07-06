@@ -4,7 +4,6 @@ import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Categoria } from '../../categoria/modelos/categoria';
-import { UnidadeMedida } from '../../unidademedida/modelos/unidademedida';
 
 @Injectable()
 export class ProdutoPesquisaService {
@@ -16,17 +15,6 @@ export class ProdutoPesquisaService {
       { label: 'Ativo', value: 'ATIVO' },
       { label: 'Inativo', value: 'INATIVO' }
     ];
-  }
-
-  listarUnidadeMedida(): Observable<UnidadeMedida[]> {
-    const url = `${environment.apiURL}/unidademedida/tudo`;
-    return this.http.get<UnidadeMedida[]>(url).pipe(
-      tap(
-        unm => {
-          return of(unm);
-        }
-      )
-    );
   }
 
   listarCategoria(): Observable<Categoria[]> {
@@ -42,6 +30,20 @@ export class ProdutoPesquisaService {
 
   pesquisar(valor: any, pagina = 1): Observable<any> {
     const url = `${environment.apiURL}/produto/pesquisa`;
+    const options = {
+      params: new HttpParams().set('valor', valor).set('pagina', String(pagina))
+    };
+    return this.http.get<any>(url, options).pipe(
+      tap(
+        resultado => {
+          return of(resultado);
+        }
+      )
+    );
+  }
+
+  pesquisacomsaldo(valor: any, pagina = 1): Observable<any> {
+    const url = `${environment.apiURL}/produto/pesquisacomsaldo`;
     const options = {
       params: new HttpParams().set('valor', valor).set('pagina', String(pagina))
     };

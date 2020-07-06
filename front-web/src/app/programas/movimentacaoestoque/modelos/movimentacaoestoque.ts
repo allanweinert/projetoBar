@@ -5,6 +5,9 @@ export interface MovimentacaoEstoque {
     id?: number;
     tipo?: string;
     data?: Date;
+    fornecedor?: string;
+    localArmazenamento?: any;
+    localArmazenamentoDestino?: string;
     itensEntrada?: ItemEntrada[];
     itensSaida?: ItemSaida[];
 }

@@ -33,13 +33,9 @@ public class Fornecedor {
 	@NotNull
 	@Size(max = 300)
 	private String razaoSocial;
-	
-	@NotNull
+
 	@Size(max = 300)
 	private String nomeFantasia;
-	
-	@CPF
-	private String cpf;
 	
 	@CNPJ
 	private String cnpj;

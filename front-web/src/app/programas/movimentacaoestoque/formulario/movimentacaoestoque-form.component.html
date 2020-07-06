@@ -1,54 +1,114 @@
-<h3>Movimentacão de Estoque / Cadastro</h3>
-<div class='controles'>
-    <button pButton type="button" label="Pesquisar" routerLink='/movimentacaoestoque/pesquisa'
-        class="ui-button-secondary"></button>
-    <button pButton type="button" label="Novo" (click)="novo()" class="ui-button-secondary"></button>
-    <button pButton type="button" label="Excluir" (click)="excluir()" class="ui-button-danger"
-        *ngIf='editando'></button>
-</div>
-<p-panel header="Tipo de Movimentação">
-    <form [formGroup]="formMovimentacaoEstoque">
-        <div class="ui-fluid" >
-            <div class="p-grid">
-                <div class="p-col-2">
-                    <p-dropdown [options]="tipoMovimentacoes" formControlName="tipo"></p-dropdown>
-                </div>
-                <div class="p-col-2">
-                    <p-calendar formControlName="data" 
-                                dateFormat="dd/mm/yy" 
-                                [locale]="ptBR" 
-                                [showIcon]="true"
-                                [(ngModel)]="dataAtual">
-                    </p-calendar>
-                </div>
-                <div class="p-col-12" *ngIf="formMovimentacaoEstoque.get('tipo').value == 'ENTRADA'">
-                    Fornecedor
-                    <p-autoComplete formControlName="fornecedor"
-                                    forceSelection="true"
-                                    field="razaoSocial"
-                                    dropdown="true"
-                                    dataKey="id"
-                                    [suggestions]="fornecedores"
-                                    (completeMethod)="pesquisarFornecedores($event)">
-                    </p-autoComplete>
-                  </div>
-            </div>
-        </div>
-    </form>
-</p-panel>
-<br>
-<p-panel *ngIf="formMovimentacaoEstoque.get('tipo').value == 'ENTRADA'" header="Itens da entrada">
-    <app-entrada [itensEntrada]='listaEntrada'></app-entrada>
-</p-panel>
-<br> 
-<br>
-<p-panel *ngIf="formMovimentacaoEstoque.get('tipo').value == 'SAIDA'" header="Itens da saída">
-    <app-saida [itensSaida]='listaSaida'></app-saida>
-</p-panel>
-<br>
+<p-card header="Movimentação de Estoque" subheader="Cadastro">
+  <br />
+  <p-header class="controles">
+    <button
+      pButton
+      type="button"
+      icon="pi pi-search"
+      routerLink="/movimentacaoestoque/pesquisa"
+    ></button>
 
-<div *ngIf="formMovimentacaoEstoque.get('tipo').value == 'ENTRADA' || formMovimentacaoEstoque.get('tipo').value == 'SAIDA'" class='controles'>
-    <button pButton type="button" label="Salvar" (click)="salvar()" class="ui-button-success"></button>
-    <button pButton type="button" label="Cancelar" (click)="cancelar()" class="ui-button-secondary"></button>
-</div>
+    <button
+      pButton
+      type="button"
+      (click)="excluir()"
+      icon="pi pi-trash"
+      *ngIf="editando"
+    ></button>
+  </p-header>
+
+  <form [formGroup]="formMovimentacaoEstoque">
+    <div class="ui-fluid">
+      <div class="p-grid">
+        <div class="p-col-2">
+          <p-dropdown
+            [options]="tipoMovimentacoes"
+            formControlName="tipo"
+          ></p-dropdown>
+        </div>
+        <div class="p-col-2">
+          <p-calendar
+            formControlName="data"
+            dateFormat="dd/mm/yy"
+            [locale]="ptBR"
+            [showIcon]="true"
+            [(ngModel)]="dataAtual"
+          >
+          </p-calendar>
+        </div>
+        <div
+          class="p-col-12"
+          *ngIf="formMovimentacaoEstoque.get('tipo').value == 'ENTRADA'"
+        >
+          Fornecedor
+          <p-autoComplete
+            formControlName="fornecedor"
+            forceSelection="true"
+            field="razaoSocial"
+            dropdown="true"
+            dataKey="id"
+            [suggestions]="fornecedores"
+            (completeMethod)="pesquisarFornecedores($event)"
+          >
+          </p-autoComplete>
+        </div>
+        <div
+          class="p-col-12"
+          *ngIf="formMovimentacaoEstoque.get('tipo').value == 'SAIDA'"
+        >
+          Local de Armazenamento
+          <p-autoComplete
+            formControlName="localArmazenamentoDestino"
+            forceSelection="true"
+            field="nome"
+            dropdown="true"
+            dataKey="id"
+            [suggestions]="armazenamentos"
+            (completeMethod)="pesquisarLocalArmazenamento($event)"
+          >
+          </p-autoComplete>
+        </div>
+      </div>
+    </div>
+  </form>
+</p-card>
+<br />
+<p-card
+  *ngIf="formMovimentacaoEstoque.get('tipo').value == 'ENTRADA'"
+  header="Itens da entrada"
+>
+  <app-entrada [itensEntrada]="listaEntrada"></app-entrada>
+</p-card>
+
+<p-card
+  *ngIf="formMovimentacaoEstoque.get('tipo').value == 'SAIDA'"
+  header="Itens da saída"
+>
+  <app-saida [itensSaida]="listaSaida"></app-saida>
+</p-card>
+<br />
+    <div
+      *ngIf="
+        formMovimentacaoEstoque.get('tipo').value == 'ENTRADA' ||
+        formMovimentacaoEstoque.get('tipo').value == 'SAIDA'
+      "
+      class="controles"
+    >
+      <div class="controles">
+        <button
+          pButton
+          type="button"
+          label="Salvar"
+          (click)="salvar()"
+          class="ui-button-success"
+        ></button>
+        <button
+          pButton
+          type="button"
+          label="Cancelar"
+          (click)="cancelar()"
+          class="ui-button-secondary"
+        ></button>
+      </div>
+    </div>
 

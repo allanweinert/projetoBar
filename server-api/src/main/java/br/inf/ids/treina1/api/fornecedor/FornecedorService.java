@@ -26,14 +26,14 @@ public class FornecedorService {
 	Validator validator;
 	
 	@Inject
-	FornecedorValidaDocumentoDuplicado cpf;
+	FornecedorValidaDocumentoDuplicado cnpjDuplicado;
 	
 	private void validar(Fornecedor fornecedor) {
 		Set<ConstraintViolation<Object>> validate = validator.validate(fornecedor);
 		if (!validate.isEmpty()) {
 			throw new ConstraintViolationException(validate);
 		}
-		cpf.executa(fornecedor);
+		cnpjDuplicado.executa(fornecedor);
 	}
 	
 	public List<Fornecedor> todas() {
@@ -76,7 +76,6 @@ public class FornecedorService {
 						w.field(Fornecedor_.id).eq(pesquisaId);
 					} catch (Exception e) {}
 					w.field(Fornecedor_.razaoSocial).ilike("%"+valor+"%");
-					w.field(Fornecedor_.cpf).ilike("%"+valor+"%");
 					w.field(Fornecedor_.cnpj).ilike("%"+valor+"%");
 				}
 			})

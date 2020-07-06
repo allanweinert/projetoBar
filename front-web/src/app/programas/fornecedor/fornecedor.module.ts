@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FornecedorPesquisaComponent } from './pesquisa/fornecedor-pesquisa.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FornecedorFormComponent } from './formulario/fornecedor-form.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
@@ -13,7 +14,10 @@ import { ToastModule } from 'primeng/toast';
 import { CalendarModule } from 'primeng/calendar';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { InputMaskModule } from 'primeng/inputmask';
+import { CardModule } from 'primeng/card';
+
 import { TelefoneModule } from 'src/app/shared/telefone/telefone.module';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 const routes: Routes = [
   { path: 'pesquisa',  component: FornecedorPesquisaComponent },
@@ -36,7 +40,9 @@ const routes: Routes = [
     CalendarModule,
     AutoCompleteModule,
     InputMaskModule,
-    TelefoneModule
+    TelefoneModule,
+    CardModule,
+    ProgressSpinnerModule
   ]
 })
 export class FornecedorModule { }

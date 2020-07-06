@@ -1,84 +1,103 @@
 <form [formGroup]="formEntrada">
-    <div class="ui-fluid">
-        <div class="p-grid">
-          <div class="p-col-6">
-            Produto
-            <p-autoComplete formControlName="produto"
-                            forceSelection="true"
-                            field="nome"
-                            dropdown="true"
-                            dataKey="id"
-                            [suggestions]="produtos"
-                            (completeMethod)="pesquisarProdutos($event)">
-            </p-autoComplete>
-          </div>
-          <div class="p-col-2">
-            Quantidade
-            <input type="number" 
-                    pInputText 
-                    pKeyFilter="pint" 
-                    min="1"
-                    maxlength="3" 
-                    formControlName="quantidade">
-          </div>
-          <div class="p-col-2">
-            Valor de custo
-            <input currencyMask 
-                    maxlength="9" 
-                    pInputText 
-                    [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" 
-                    formControlName="valorCusto"
-            >
-          </div>
-          <div class="p-col-2">
-            Valor de venda
-            <input currencyMask 
-                    maxlength="9" 
-                    type="text" 
-                    pInputText 
-                    [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"  
-                    formControlName="valorVenda"
-            >
-          </div>
-          <div class="p-col-fixed" style='width: 100px'>
-            <br>
-            <button pButton 
-                    type="button" 
-                    label="Adicionar" 
-                    (click)="adicionarItem()" 
-                    class="ui-button-success">
-            </button>
-          </div>
-        </div>
+  <div class="ui-fluid">
+    <div class="p-grid">
+      <div class="p-col-4">
+        Produto
+        <p-autoComplete
+          formControlName="produto"
+          forceSelection="true"
+          field="nome"
+          dropdown="true"
+          dataKey="id"
+          [suggestions]="produtos"
+          (completeMethod)="pesquisarProdutos($event)"
+        >
+        </p-autoComplete>
+      </div>
+
+      <div class="p-col-2">
+        Quantidade
+        <input
+          type="number"
+          pInputText
+          pKeyFilter="pint"
+          min="1"
+          maxlength="3"
+          formControlName="quantidade"
+          (focusout)="totalItem()"
+        />
+      </div>
+      <div class="p-col-2">
+        Valor Unitário
+        <input
+          currencyMask
+          maxlength="9"
+          pInputText
+          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+          formControlName="valorUnitario"
+          (focusout)="totalItem()"
+        />
+      </div>
+      <div class="p-col-2">
+        Total do item
+        <input
+          currencyMask
+          maxlength="9"
+          type="text"
+          pInputText
+          disabled
+          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+          formControlName="total"
+        />
+      </div>
+      <div class="p-col-fixed" style="width: 100px;">
+        <br />
+        <button
+          pButton
+          type="button"
+          label="Adicionar"
+          (click)="adicionarItem()"
+          class="ui-button-success"
+        ></button>
+      </div>
     </div>
+  </div>
 </form>
-<br>
+<br />
 Lista de Itens:
-<br>
+<br />
 <p-table autoLayout="true" [value]="itensEntrada">
   <ng-template pTemplate="header">
-      <tr>
-          <th>Nome</th>
-          <th>Quantidade</th>
-          <th>Valor de Custo</th>
-          <th>Valor de Venda</th>
-          <th style='width: 60px'>Ações</th>
-      </tr>
+    <tr>
+      <th>Nome</th>
+      <th style="width: 125px;">Quantidade</th>
+      <th style="width: 125px;">Valor Unitário</th>
+      <th style="width: 125px;">Valor Total</th>
+      <th style="width: 60px;">Ações</th>
+    </tr>
   </ng-template>
   <ng-template pTemplate="body" let-item>
-      <tr>
-        <td>{{item.produto.nome}}</td>
-        <td>{{item.quantidade}}</td>
-        <td>{{item.valorCusto | currency:'BRL':true}}</td>
-        <td>{{item.valorVenda | currency:'BRL':true}}</td>
-        <td><button pButton type="button" icon="pi pi-trash" (click)="removerItem(item)" class="ui-button-secondary"></button></td>
-      </tr>
+    <tr>
+      <td>{{ item.produto.nome }}</td>
+      <td>{{ item.quantidade }}</td>
+      <td>{{ item.valorUnitario | currency: "BRL":true }}</td>
+      <td>{{ item.total | currency: "BRL":true }}</td>
+      <td>
+        <button
+          pButton
+          type="button"
+          icon="pi pi-trash"
+          (click)="removerItem(item)"
+          class="ui-button-secondary"
+        ></button>
+      </td>
+    </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">
     <tr>
-      <div *ngIf='itensEntrada.length === 0' style='padding: 16px'>
+      <div *ngIf="itensEntrada.length === 0" style="padding: 16px;">
         Nenhum item adicionado
-    </div>
+      </div>
     </tr>
   </ng-template>
 </p-table>
