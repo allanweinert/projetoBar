@@ -1,33 +1,30 @@
-import { Fornecedor } from './../../../fornecedor/modelos/fornecedor';
-import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, Input } from "@angular/core";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
-import { MessageService } from 'primeng/api';
+import { MessageService } from "primeng/api";
 
-import { ProdutoPesquisaService } from '../../../produto/services/produto-pesquisa.service';
+import { ProdutoPesquisaService } from "../../../produto/services/produto-pesquisa.service";
 
-import { ItemEntrada } from '../../modelos/item-entrada';
+import { ItemEntrada } from "../../modelos/item-entrada";
 
 @Component({
-  selector: 'app-entrada',
-  templateUrl: './entrada.component.html',
-  styleUrls: ['./entrada.component.css'],
-  providers: [
-    MessageService,
-    ProdutoPesquisaService
-  ]
+  selector: "app-entrada",
+  templateUrl: "./entrada.component.html",
+  styleUrls: ["./entrada.component.css"],
+  providers: [MessageService, ProdutoPesquisaService],
 })
 export class EntradaComponent implements OnInit {
-
-  @Input() itensEntrada:ItemEntrada[] = [];
+  @Input() itensEntrada: ItemEntrada[] = [];
 
   formEntrada: FormGroup;
-  
+
   produtos = [];
 
-  constructor(private formBuilder: FormBuilder,
-              private messageService: MessageService,
-              private produtoPesquisaService: ProdutoPesquisaService) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private messageService: MessageService,
+    private produtoPesquisaService: ProdutoPesquisaService
+  ) {
     this.configurarFormEntrada();
   }
 
@@ -37,36 +34,48 @@ export class EntradaComponent implements OnInit {
 
   configurarFormEntrada() {
     this.formEntrada = this.formBuilder.group({
-      id: '',
-      produto: ['',[Validators.required]],
-      quantidade: ['',[Validators.required]],
-      valorCusto: ['',[Validators.required]],
-      valorVenda: ['',[Validators.required]]
+      id: "",
+      produto: ["", [Validators.required]],
+      quantidade: ["", [Validators.required]],
+      valorUnitario: ["", [Validators.required]],
+      total: ["", [Validators.required]],
     });
   }
 
   pesquisarProdutos(pesquisa) {
-    this.produtoPesquisaService.pesquisar(pesquisa.query).subscribe(
-      resultadop => {
+    this.produtoPesquisaService
+      .pesquisar(pesquisa.query)
+      .subscribe((resultadop) => {
         this.produtos = resultadop.data;
-      }
-    );
+      });
   }
 
   novo() {
     this.formEntrada.reset();
   }
 
+  //Multiplicação do item
+  totalItem() {
+    this.formEntrada
+      .get("total")
+      .setValue(
+        this.formEntrada.get("quantidade").value *
+          this.formEntrada.get("valorUnitario").value
+      );
+  }
+
   adicionarItem() {
     const novoItem = this.formEntrada.getRawValue();
-    const itemExistente = this.itensEntrada.find(t => novoItem.produto.id === t.produto.id);
+    const itemExistente = this.itensEntrada.find(
+      (t) => novoItem.produto.id === t.produto.id
+    );
     if (this.formEntrada.valid) {
       if (itemExistente) {
-        alert('Item já cadastrado!');
+        alert("Item já cadastrado!");
         this.messageService.add({
-          severity: 'warn',
-          summary: 'Não é possível adicionar esse item!',
-          detail: 'Número ' + novoItem.nome + ' já cadastrado.'
+          severity: "warn",
+          summary: "Não é possível adicionar esse item!",
+          detail: "Número " + novoItem.nome + " já cadastrado.",
         });
       } else {
         this.itensEntrada.push(novoItem);
@@ -78,5 +87,4 @@ export class EntradaComponent implements OnInit {
   removerItem(indiceItem) {
     this.itensEntrada.splice(indiceItem, 1);
   }
-
 }

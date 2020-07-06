@@ -3,16 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'localarmazenamento',
+    loadChildren: () => import('./programas/localarmazenamento/localarmazenamento.module').then(mod => mod.LocalArmazenamentoModule),
+  },
+  {
     path: 'movimentacaoestoque',
     loadChildren: () => import('./programas/movimentacaoestoque/movimentacaoestoque.module').then(mod => mod.MovimentacaoEstoqueModule),
   },
   {
     path: 'fornecedor',
     loadChildren: () => import('./programas/fornecedor/fornecedor.module').then(mod => mod.FornecedorModule),
-  },
-  {
-    path: 'unidademedida',
-    loadChildren: () => import('./programas/unidademedida/unidademedida.module').then(mod => mod.UnidadeMedidaModule),
   },
   {
     path: 'categoria',

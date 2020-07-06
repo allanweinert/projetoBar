@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopMenuModule } from './top-menu/top-menu.module';
 import { SideMenuModule } from './side-menu/side-menu.module';
-import { CurrencyMaskModule } from "ng2-currency-mask";
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 @NgModule({
   declarations: [

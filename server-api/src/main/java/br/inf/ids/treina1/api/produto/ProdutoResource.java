@@ -64,4 +64,12 @@ public class ProdutoResource {
 		return produtoService.pesquisa(pagina, valor);
 	}
 	
+	@GET
+	@Path("/pesquisacomsaldo")
+	public PaginationResult<Produto> pesquisaComSaldo(
+			@QueryParam("pagina") Integer pagina,
+			@Parameter(required = false, name = "valor") @QueryParam("valor") String valor) {
+		return produtoService.comSaldo(pagina, valor);
+	}
+	
 }

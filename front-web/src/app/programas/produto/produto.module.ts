@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProdutoPesquisaComponent } from './pesquisa/produto-pesquisa.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProdutoFormComponent } from './formulario/produto-form.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
@@ -13,6 +14,7 @@ import { ToastModule } from 'primeng/toast';
 import { CalendarModule } from 'primeng/calendar';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { InputMaskModule } from 'primeng/inputmask';
+import { CardModule } from 'primeng/card';
 
 const routes: Routes = [
   { path: 'pesquisa',  component: ProdutoPesquisaComponent },
@@ -34,7 +36,8 @@ const routes: Routes = [
     ToastModule,
     CalendarModule,
     AutoCompleteModule,
-    InputMaskModule
+    InputMaskModule,
+    CardModule
   ]
 })
 export class ProdutoModule { }

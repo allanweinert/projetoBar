@@ -4,19 +4,20 @@
     top: 60px;
     left: 0;
     height: 100%;
-    width: 200px;
-    padding: 16px;
+    width: 240px;
+    padding: 15px;
     overflow-x: hidden;
-    background-color: #145da7;
+    background-color: #2f373e;
     color: white;
 }
 
 .sidebar a {
     padding: 6px 8px 6px 16px;
+    font-size: 14px;
     text-decoration: none;
     display: block;
     color: white;
-    padding: 16px;
+    padding: 12px;
 }
 
 .sidebar a:hover {

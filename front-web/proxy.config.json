@@ -1,0 +1,10 @@
+{
+  "/receita-aws/*": {
+    "target": "https://www.receitaws.com.br/v1",
+    "secure": true,
+    "pathRewrite": {
+      "^/receita-aws": ""
+    },
+    "changeOrigin": true
+  }
+}

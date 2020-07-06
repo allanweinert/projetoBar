@@ -4,6 +4,6 @@ export interface ItemEntrada {
     id?: number;
     produto?: Produto;
     quantidade?: number;
-    valorCusto?: number;
-    valorVenda?: number;
+    valorUnitario?: number;
+    total?: number;
 }

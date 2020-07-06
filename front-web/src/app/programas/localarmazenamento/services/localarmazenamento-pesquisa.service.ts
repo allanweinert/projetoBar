@@ -6,7 +6,7 @@ import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
-export class UnidadeMedidaPesquisaService {
+export class LocalArmazenamentoPesquisaService {
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class UnidadeMedidaPesquisaService {
   }
 
   pesquisar(valor: any, pagina = 1): Observable<any> {
-    const url = `${environment.apiURL}/unidademedida/pesquisa`;
+    const url = `${environment.apiURL}/localarmazenamento/pesquisa`;
     const options = {
       params: new HttpParams().set('valor', valor).set('pagina', String(pagina))
     };

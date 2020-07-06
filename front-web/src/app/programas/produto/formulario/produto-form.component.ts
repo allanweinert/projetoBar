@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MessageService } from 'primeng/api';
-import { ProdutoCrudService } from '../services/produto-crud.service';
-import { Produto } from '../modelos/produto';
-import { ProdutoPesquisaService } from '../services/produto-pesquisa.service';
-import { CategoriaPesquisaService } from '../../categoria/services/categoria-pesquisa.service';
-import { UnidadeMedidaPesquisaService } from '../../unidademedida/services/unidademedida-pesquisa.service';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {MessageService} from 'primeng/api';
+import {ProdutoCrudService} from '../services/produto-crud.service';
+import {Produto} from '../modelos/produto';
+import {ProdutoPesquisaService} from '../services/produto-pesquisa.service';
+import {CategoriaPesquisaService} from '../../categoria/services/categoria-pesquisa.service';
 
 @Component({
   selector: 'app-produto-form',
@@ -15,8 +14,7 @@ import { UnidadeMedidaPesquisaService } from '../../unidademedida/services/unida
   providers: [
     ProdutoCrudService,
     ProdutoPesquisaService,
-    CategoriaPesquisaService,
-    UnidadeMedidaPesquisaService
+    CategoriaPesquisaService
   ]
 })
 export class ProdutoFormComponent implements OnInit {
@@ -24,7 +22,6 @@ export class ProdutoFormComponent implements OnInit {
   ptBR;
 
   situacao = [];
-  unidademedidas = [];
   categorias = [];
   formProduto: FormGroup;
   editando = false;
@@ -35,9 +32,8 @@ export class ProdutoFormComponent implements OnInit {
               private messageService: MessageService,
               private produtoPesquisaService: ProdutoPesquisaService,
               private produtoCrudService: ProdutoCrudService,
-              public categoriaPesquisaService: CategoriaPesquisaService,
-              public unidadeMedidaPesquisaService: UnidadeMedidaPesquisaService
-              ) {
+              public categoriaPesquisaService: CategoriaPesquisaService
+  ) {
     this.configurarFormulario();
   }
 
@@ -51,19 +47,10 @@ export class ProdutoFormComponent implements OnInit {
       id: '',
       nome: ['', Validators.required],
       categoria: '',
-      unidademedida: ['', Validators.required],
       estoque_minimo: '',
       situacao: ''
     });
     this.formProduto.get('id').disable();
-  }
-
-  pesquisarUnidadeMedida(pesquisa) {
-    this.unidadeMedidaPesquisaService.pesquisar(pesquisa.query).subscribe(
-      unm => {
-        this.unidademedidas = unm.data;
-      }
-    );
   }
 
   pesquisarCategorias(pesquisa) {

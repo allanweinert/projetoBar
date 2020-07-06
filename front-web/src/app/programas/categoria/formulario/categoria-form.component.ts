@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { MessageService } from 'primeng/api';
 
+
 import { CategoriaCrudService } from '../services/categoria-crud.service';
 import { Categoria } from '../modelos/categoria';
 import { CategoriaPesquisaService } from '../services/categoria-pesquisa.service';
@@ -17,6 +18,7 @@ import { CategoriaPesquisaService } from '../services/categoria-pesquisa.service
     CategoriaPesquisaService
   ]
 })
+
 export class CategoriaFormComponent implements OnInit {
 
   ptBR;
@@ -96,7 +98,7 @@ export class CategoriaFormComponent implements OnInit {
         this.messageService.add({
           severity: 'success',
           summary: 'Sucesso!',
-          detail: 'Categoria ' + categoria.nome + ' alterada com sucesso!'
+          detail: 'Localarmazenamento ' + categoria.nome + ' alterada com sucesso!'
         });
       }
     );
@@ -108,14 +110,14 @@ export class CategoriaFormComponent implements OnInit {
         this.messageService.add({
           severity: 'success',
           summary: 'Sucesso!',
-          detail: 'Categoria ' + categoria.nome + ' incluída com sucesso!'
+          detail: 'Localarmazenamento ' + categoria.nome + ' incluída com sucesso!'
         });
         this.novo();
       },
       error => {
         this.messageService.add({
           severity: 'warn',
-          summary: 'Não foi possível salvar a Categoria!',
+          summary: 'Não foi possível salvar a Localarmazenamento!',
           detail: JSON.stringify(error)
         });
       }
@@ -145,7 +147,7 @@ export class CategoriaFormComponent implements OnInit {
           this.messageService.add({
             severity: 'success',
             summary: 'Sucesso!',
-            detail: 'Categoria excluída com sucesso!'
+            detail: 'Localarmazenamento excluída com sucesso!'
           });
           this.novo();
         }

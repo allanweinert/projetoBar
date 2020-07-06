@@ -2413,3 +2413,42 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact io.quarkus:qu
 2020-05-28 21:46:34,620 [Worker-46: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 17 resources
 2020-05-28 21:46:35,759 [Worker-46: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-05-28 21:46:35,760 [Worker-46: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projetos\projetoBar\server-api\src\test\resources
+2020-05-31 12:59:11,666 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-05-31 17:16:00,733 [Worker-65: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-31 17:16:00,754 [Worker-65: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 17 resources
+2020-05-31 17:16:00,771 [Worker-65: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-31 17:16:00,772 [Worker-65: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projetos\projetoBar\server-api\src\test\resources
+2020-05-31 17:21:45,736 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-05-31 17:22:21,559 [Worker-0: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-31 17:22:21,580 [Worker-0: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 17 resources
+2020-05-31 17:22:21,598 [Worker-0: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-31 17:22:21,599 [Worker-0: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projetos\projetoBar\server-api\src\test\resources
+2020-05-31 17:23:15,198 [Worker-1: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-31 17:23:15,200 [Worker-1: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 17 resources
+2020-05-31 17:23:15,385 [Worker-1: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-31 17:23:15,385 [Worker-1: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projetos\projetoBar\server-api\src\test\resources
+2020-05-31 17:24:45,061 [Worker-0: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-31 17:24:45,090 [Worker-0: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 17 resources
+2020-05-31 17:24:45,098 [Worker-0: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-31 17:24:45,098 [Worker-0: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projetos\projetoBar\server-api\src\test\resources
+2020-06-11 21:52:45,571 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-06-11 22:45:45,562 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-06-16 20:27:06,561 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-06-18 20:11:22,973 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-06-21 16:09:40,510 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-06-21 16:21:47,623 [Worker-15: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-21 16:21:47,639 [Worker-15: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 17 resources
+2020-06-21 16:21:47,758 [Worker-15: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-21 16:21:47,759 [Worker-15: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projetos\projetoBar\server-api\src\test\resources
+2020-06-21 16:23:17,255 [Worker-15: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-21 16:23:17,264 [Worker-15: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 17 resources
+2020-06-21 16:23:17,365 [Worker-15: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-06-21 16:23:17,366 [Worker-15: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projetos\projetoBar\server-api\src\test\resources
+2020-06-28 18:07:09,210 [Worker-15: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-06-30 19:04:38,971 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-07-01 17:55:47,175 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-07-01 19:02:42,481 [Worker-34: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-01 19:02:42,498 [Worker-34: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2020-07-01 19:02:42,586 [Worker-34: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-07-01 19:02:42,587 [Worker-34: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Projetos\projetoBar\server-api\src\test\resources
+2020-07-05 13:58:42,550 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

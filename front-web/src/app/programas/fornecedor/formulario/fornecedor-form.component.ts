@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { MessageService } from 'primeng/api';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
+import {MessageService} from 'primeng/api';
 
-import { FornecedorCrudService } from '../services/fornecedor-crud.service';
-import { FornecedorPesquisaService } from '../services/fornecedor-pesquisa.service';
+import {FornecedorCrudService} from '../services/fornecedor-crud.service';
+import {FornecedorPesquisaService} from '../services/fornecedor-pesquisa.service';
 
-import { Fornecedor } from '../modelos/fornecedor';
+import {Fornecedor} from '../modelos/fornecedor';
+import {FornecedorTelefone} from '../modelos/fornecedor-telefone';
 
 @Component({
   selector: 'app-fornecedor-form',
@@ -19,17 +20,17 @@ import { Fornecedor } from '../modelos/fornecedor';
 })
 export class FornecedorFormComponent implements OnInit {
 
-  ptBR;
-
   listaTelefones = [];
   formFornecedor: FormGroup;
   editando = false;
+  pesquisando = false;
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
               private route: ActivatedRoute,
               private messageService: MessageService,
-              private fornecedorCrudService: FornecedorCrudService) {
+              private fornecedorCrudService: FornecedorCrudService,
+              private fornecedorPesquisaComponent: FornecedorPesquisaService) {
     this.configurarFormulario();
   }
 
@@ -41,8 +42,7 @@ export class FornecedorFormComponent implements OnInit {
     this.formFornecedor = this.formBuilder.group({
       id: '',
       razaoSocial: ['', Validators.required],
-      nomeFantasia: ['', Validators.required],
-      cpf: '',
+      nomeFantasia: '',
       cnpj: '',
     });
     this.formFornecedor.get('id').disable();
@@ -70,7 +70,6 @@ export class FornecedorFormComponent implements OnInit {
   getFornecedorDoForm(): Fornecedor {
     const fornecedor = this.formFornecedor.getRawValue();
     fornecedor.telefones = this.listaTelefones;
-    fornecedor.cpf = fornecedor.cpf !== '' ? fornecedor.cpf : null;
     fornecedor.cnpj = fornecedor.cnpj !== '' ? fornecedor.cnpj : null;
     return fornecedor;
   }
@@ -118,7 +117,7 @@ export class FornecedorFormComponent implements OnInit {
         this.messageService.add({
           severity: 'warn',
           summary: 'Não foi possível salvar o Fornecedor!',
-          detail: JSON.stringify(error)
+          detail: error.error.mensagens[0]
         });
       }
     );
@@ -163,4 +162,58 @@ export class FornecedorFormComponent implements OnInit {
     }
   }
 
+  // Início da integração com a receita federal
+  pesquisaCnpjReceita() {
+    this.fornecedorPesquisaComponent.pesquisaFornecedorReceita(this.formFornecedor.get('cnpj').value).subscribe(
+      resultado => {
+        this.formFornecedor.get('razaoSocial').setValue(resultado.nome);
+        this.formFornecedor.get('nomeFantasia').setValue(resultado.fantasia);
+        this.TelefoneSanitizer(resultado.telefone);
+      },
+      error => {
+        this.messageService.add({
+          severity: 'warn',
+          summary: 'Não foi possível encontrar o Fornecedor, verifique o Cnpj e tente novamente!',
+          detail: error.error.mensagens
+        });
+      }
+    );
+  }
+
+  // Tratamento dos telefones recebidos pela receita federal
+
+  private TelefoneSanitizer(telefone: string) {
+    const telefones: FornecedorTelefone[] = [];
+    const telefonesString = telefone
+      .split(' ').join('')
+      .split('-').join('')
+      .split(')').join('')
+      .split('(').join('')
+      .split('/');
+
+    telefonesString.forEach(t => {
+      const telefoneFornecedor = {} as FornecedorTelefone;
+      telefoneFornecedor.numero = t;
+      telefoneFornecedor.tipo = 'TRABALHO';
+      telefones.push(telefoneFornecedor);
+    });
+
+    this.alimentaTelefones(telefones);
+  }
+
+  private alimentaTelefones(telefones: FornecedorTelefone[]) {
+
+    telefones.forEach(t1 => {
+      let jaExiste = false;
+      this.listaTelefones.forEach(t2 => {
+        if (t1.numero === t2.numero) {
+          jaExiste = true;
+        }
+      });
+
+      if (!jaExiste) {
+        this.listaTelefones.push(t1);
+      }
+    });
+  }
 }

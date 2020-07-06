@@ -67,8 +67,8 @@ public class CategoriaService {
 				
 				if (valor!=null && !valor.isEmpty()) {
 					try {
-						Long produtoId = Long.valueOf(valor);
-						w.field(Categoria_.id).eq(produtoId);
+						Long categoriaId = Long.valueOf(valor);
+						w.field(Categoria_.id).eq(categoriaId);
 					} catch (Exception e) {}
 					w.field(Categoria_.nome).ilike("%"+valor+"%");
 				}
