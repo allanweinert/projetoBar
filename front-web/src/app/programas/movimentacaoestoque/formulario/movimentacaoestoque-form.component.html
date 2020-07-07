@@ -27,14 +27,11 @@
           ></p-dropdown>
         </div>
         <div class="p-col-2">
-          <p-calendar
-            formControlName="data"
-            dateFormat="dd/mm/yy"
-            [locale]="ptBR"
-            [showIcon]="true"
-            [(ngModel)]="dataAtual"
+          <app-calendario
+          [form] = "formMovimentacaoEstoque"
+          param = 'data'
           >
-          </p-calendar>
+          </app-calendario>
         </div>
         <div
           class="p-col-12"

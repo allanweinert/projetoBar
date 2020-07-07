@@ -1,3 +1,4 @@
+import { CalendarioModule } from './../../shared/calendario/calendario.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
@@ -45,7 +46,8 @@ const routes: Routes = [
     InputMaskModule,
     EntradaModule,
     SaidaModule,
-    CardModule
+    CardModule,
+    CalendarioModule
   ]
 })
 export class MovimentacaoEstoqueModule { }

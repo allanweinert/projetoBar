@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 
@@ -12,6 +12,7 @@ import { LocalArmazenamentoPesquisaService } from '../../localarmazenamento/serv
 import { MovimentacaoEstoque } from "../modelos/movimentacaoestoque";
 import { ItemEntrada } from "../modelos/item-entrada";
 import { ItemSaida } from "../modelos/item-saida";
+import { CalendarioComponent } from 'src/app/shared/calendario/calendario.component';
 
 
 @Component({
@@ -26,7 +27,6 @@ import { ItemSaida } from "../modelos/item-saida";
   ],
 })
 export class MovimentacaoEstoqueFormComponent implements OnInit {
-  ptBR;
 
   formMovimentacaoEstoque: FormGroup;
 
@@ -36,7 +36,6 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   listaEntrada: ItemEntrada[];
   listaSaida: ItemSaida[];
 
-  dataAtual: Date;
   editando = false;
 
   constructor(
@@ -50,13 +49,11 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     private localarmazenamentoPesquisaService: LocalArmazenamentoPesquisaService
   ) {
     this.configurarFormulario();
-    this.configurarCalendar();
   }
 
   ngOnInit() {
     this.tipoMovimentacoes = this.movimentacaoestoquePesquisaService.listarMovimentacoes();
     this.verificarParametroRota();
-    this.dataAtual = new Date();
   }
 
   configurarFormulario() {
@@ -80,53 +77,6 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     }
   }
 
-  configurarCalendar() {
-    this.ptBR = {
-      firstDayOfWeek: 0, // iniciar semana no domingo
-      dayNames: [
-        "Domingo",
-        "Segunda",
-        "Terça",
-        "Quarta",
-        "Quinta",
-        "Sexta",
-        "Sábado",
-      ],
-      dayNamesShort: ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"],
-      dayNamesMin: ["D", "S", "T", "Q", "Q", "S", "S"],
-      monthNames: [
-        "Janeiro",
-        "Fevereiro",
-        "Março",
-        "Abril",
-        "Maio",
-        "Junho",
-        "Julho",
-        "Agosto",
-        "Setembro",
-        "Outubro",
-        "Novembro",
-        "Dezembro",
-      ],
-      monthNamesShort: [
-        "jan",
-        "fev",
-        "mar",
-        "abr",
-        "mai",
-        "jun",
-        "jul",
-        "ago",
-        "set",
-        "out",
-        "nov",
-        "dez",
-      ],
-      today: "Hoje",
-      clear: "Limpar",
-    };
-  }
-
   carregarMovimentacaoEstoque(id: number) {
     this.movimentacaoestoqueCrudService
       .carregar(id)
@@ -140,7 +90,6 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
 
   getMovimentacaoEstoqueDoForm(): MovimentacaoEstoque {
     const movimentacaoestoque = this.formMovimentacaoEstoque.getRawValue();
-    movimentacaoestoque.data = new Date();
 
     if (this.listaEntrada && this.listaEntrada.length > 0) {
       movimentacaoestoque.itensEntrada = this.listaEntrada;
@@ -235,6 +184,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     this.listaEntrada = [];
     this.listaSaida = [];
     this.formMovimentacaoEstoque.reset();
+    this.formMovimentacaoEstoque.controls.data.setValue(new Date());
     this.router.navigate(["/movimentacaoestoque/novo"]);
   }
 
