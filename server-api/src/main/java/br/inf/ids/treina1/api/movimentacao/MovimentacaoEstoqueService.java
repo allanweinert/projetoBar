@@ -13,7 +13,11 @@ import javax.validation.Validator;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.QueryBuilder;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
+import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.ref.Ref;
 
+import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento;
+import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento_;
+import br.inf.ids.treina1.api.movimentacao.dto.SaldoEstoqueDTO;
 import br.inf.ids.treina1.api.movimentacao.enums.MovimentacaoEstoqueTipo;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada_;
@@ -22,37 +26,36 @@ import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque;
 import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoqueService;
 import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque_;
 import br.inf.ids.treina1.api.movimentacao.validacao.MovimentacaoEstoqueValidaItemComTipo;
+import br.inf.ids.treina1.api.produto.Produto;
+import br.inf.ids.treina1.api.produto.Produto_;
 
 @RequestScoped
 public class MovimentacaoEstoqueService {
-	
+
 	@Inject
 	EntityManager em;
-	
+
 	@Inject
 	Validator validator;
-	
+
 	@Inject
 	MovimentacaoEstoqueValidaItemComTipo movimentacaoEstoqueValidaItemComTipo;
-	
+
 	@Inject
 	SaldoEstoqueService saldoEstoqueService;
-	
+
 	private void validar(MovimentacaoEstoque movimentacaoEstoque) {
 		Set<ConstraintViolation<Object>> validate = validator.validate(movimentacaoEstoque);
 		if (!validate.isEmpty()) {
 			throw new ConstraintViolationException(validate);
 		}
-		//movimentacaoEstoqueValidaItemComTipo.validar(movimentacaoEstoque);
+		// movimentacaoEstoqueValidaItemComTipo.validar(movimentacaoEstoque);
 	}
 
-	
 	public List<MovimentacaoEstoque> todas() {
-		return new QueryBuilder(em)
-			.select(MovimentacaoEstoque.class)
-			.getResultList();
+		return new QueryBuilder(em).select(MovimentacaoEstoque.class).getResultList();
 	}
-	
+
 	@Transactional
 	public Long gravar(MovimentacaoEstoque movimentacaoEstoque) {
 		this.validar(movimentacaoEstoque);
@@ -67,23 +70,22 @@ public class MovimentacaoEstoqueService {
 			}
 		} else if (MovimentacaoEstoqueTipo.SAIDA.equals(movimentacaoEstoque.getTipo())) {
 			for (ItemSaida itemSaida : movimentacaoEstoque.getItensSaida()) {
-				
-				SaldoEstoque saldo = 
-						new QueryBuilder(em)
-							.select(SaldoEstoque.class)
-								.innerJoin(SaldoEstoque_.itemEntrada).on()
-									.field(ItemEntrada_.produto).eq(itemSaida.getProduto())
-									.field(ItemEntrada_.valorUnitario).eq(itemSaida.getValorUnitario())
-								.end()
+
+				SaldoEstoque saldo = new QueryBuilder(em).select(SaldoEstoque.class)
+						.innerJoin(SaldoEstoque_.itemEntrada)
+							.on()
+								.field(ItemEntrada_.produto).eq(itemSaida.getProduto())
+								.field(ItemEntrada_.valorUnitario).eq(itemSaida.getValorUnitario())
+						.end()
 						.where()
-							.field(SaldoEstoque_.localArmazenamento).eq(movimentacaoEstoque.getLocalArmazenamento())
-						.getSingleResult();
-				
-				saldo.setRestante(saldo.getRestante()-itemSaida.getQuantidade());
-			
-				saldoEstoqueService.atualizar(saldo);		
-				
-			}	
+							.field(SaldoEstoque_.localArmazenamento)
+								.eq(movimentacaoEstoque.getLocalArmazenamento()).getSingleResult();
+
+				saldo.setRestante(saldo.getRestante() - itemSaida.getQuantidade());
+
+				saldoEstoqueService.atualizar(saldo);
+
+			}
 		}
 		return movimentacaoEstoque.getId();
 	}
@@ -97,31 +99,45 @@ public class MovimentacaoEstoqueService {
 		this.validar(movimentacaoEstoque);
 		em.merge(movimentacaoEstoque);
 	}
-	
+
 	@Transactional
 	public void remover(Long id) {
 		em.remove(busca(id));
 	}
 
 	public PaginationResult<MovimentacaoEstoque> pesquisa(Integer pagina, String valor) {
-		
-		return new QueryBuilder(em)
-			.select(MovimentacaoEstoque.class)
-			.where().orGroup(w -> {
-				
-				if (valor!=null) {
-					try {
-						Long pesquisaId = Long.valueOf(valor);
-						w.field(MovimentacaoEstoque_.id).eq(pesquisaId);
-					} catch (Exception e) {}
-					
+
+		return new QueryBuilder(em).select(MovimentacaoEstoque.class).where().orGroup(w -> {
+
+			if (valor != null) {
+				try {
+					Long pesquisaId = Long.valueOf(valor);
+					w.field(MovimentacaoEstoque_.id).eq(pesquisaId);
+				} catch (Exception e) {
 				}
-			})
-			.pagination()
-				.numRows(10)
-				.page(pagina)
-			.getResultList();
-		
+
+			}
+		}).pagination().numRows(10).page(pagina).getResultList();
+
 	}
-	
+
+	public List<SaldoEstoqueDTO> saldo() {
+		Ref<LocalArmazenamento> joinLocalArmazenamento = new Ref<>();		
+		Ref<Produto> joinProduto = new Ref<>();		
+
+		return new QueryBuilder(em)
+				.select(SaldoEstoque.class)
+				.innerJoin(SaldoEstoque_.itemEntrada)
+					.innerJoin(ItemEntrada_.produto).ref(joinProduto)
+					.end()
+				.end()	
+				.innerJoin(SaldoEstoque_.localArmazenamento).ref(joinLocalArmazenamento)
+				.fields()
+					.field(joinLocalArmazenamento.field(LocalArmazenamento_.nome)).alias("localArmazenamento")
+					.field(joinProduto.field(Produto_.nome)).alias("produto")
+					.field(SaldoEstoque_.restante).alias("restante")
+				.where()
+					.field(SaldoEstoque_.restante).gt(0)
+				.getResultListByConstructor(SaldoEstoqueDTO.class);
+			}
 }
