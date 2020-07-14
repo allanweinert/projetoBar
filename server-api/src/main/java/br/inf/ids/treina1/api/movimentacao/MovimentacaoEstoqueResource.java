@@ -19,6 +19,8 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
+import br.inf.ids.treina1.api.movimentacao.dto.SaldoEstoqueDTO;
+
 @Tag(name = "Movimentação de Estoque", description = "Movimentações do estoque")
 @Path("/movimentaestoque")
 @Produces(MediaType.APPLICATION_JSON)
@@ -64,4 +66,9 @@ public class MovimentacaoEstoqueResource {
 		return movimentacaoEstoqueService.pesquisa(pagina, valor);
 	}
 	
+	@GET
+	@Path("/dashboard")
+	public List<SaldoEstoqueDTO> getDashboard() {
+		return movimentacaoEstoqueService.saldo();
+	}
 }
