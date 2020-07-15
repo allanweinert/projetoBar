@@ -10,6 +10,10 @@ import { AppComponent } from './app.component';
 import { TopMenuModule } from './top-menu/top-menu.module';
 import { SideMenuModule } from './side-menu/side-menu.module';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { HighchartsChartModule } from 'highcharts-angular';
+import * as Highcharts from 'highcharts';
+import StockModule from 'highcharts/modules/stock';
+StockModule(Highcharts);
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
     TopMenuModule,
     SideMenuModule,
     ToastModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    HighchartsChartModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
