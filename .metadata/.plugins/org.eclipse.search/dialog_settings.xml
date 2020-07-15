@@ -8,7 +8,7 @@
 		<item key="org.eclipse.jdt.search.resultpage.limit_enabled" value="TRUE"/>
 	</section>
 	<section name="SearchDialog">
-		<item key="PREVIOUS_PAGE" value="org.eclipse.jdt.ui.JavaSearchPage"/>
+		<item key="PREVIOUS_PAGE" value="org.eclipse.rse.internal.files.ui.search.searchPage"/>
 	</section>
 	<section name="Search">
 		<list key="Search.processedPageIds">

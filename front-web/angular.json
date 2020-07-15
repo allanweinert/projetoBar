@@ -71,7 +71,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "treina1-web:build:production"
+              "browserTarget": "treina1-web:build:production",
+              "proxyConfig": "proxy.conf.json"
             }
           }
         },

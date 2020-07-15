@@ -139,5 +139,5 @@ public class MovimentacaoEstoqueService {
 				.where()
 					.field(SaldoEstoque_.restante).gt(0)
 				.getResultListByConstructor(SaldoEstoqueDTO.class);
-			}
+	}
 }
