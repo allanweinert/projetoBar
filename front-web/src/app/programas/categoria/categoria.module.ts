@@ -13,15 +13,10 @@ import { CalendarModule } from 'primeng/calendar';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CardModule } from 'primeng/card';
-import {MatIconModule} from '@angular/material/icon';
-
-import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule} from '@angular/material';
-
 
 import { CategoriaFormComponent } from './formulario/categoria-form.component';
 import { CategoriaPesquisaComponent } from './pesquisa/categoria-pesquisa.component';
-import {MatSortModule} from '@angular/material/sort';
-import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { BarraFerramentaModule } from 'src/app/shared/barraferramenta/barraferramenta.module';
 
 const routes: Routes = [
   { path: 'pesquisa',  component: CategoriaPesquisaComponent },
@@ -45,13 +40,7 @@ const routes: Routes = [
     AutoCompleteModule,
     InputMaskModule,
     CardModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatIconModule,
-    MatProgressSpinnerModule
+    BarraFerramentaModule,
   ]
 })
 export class CategoriaModule { }

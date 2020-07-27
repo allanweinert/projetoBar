@@ -1,0 +1,11 @@
+button {
+    margin-right: .25em;
+}
+
+.ui-splitbutton {
+    margin-left: .25em;
+}
+
+.ui-splitbutton button {
+    margin-right: 0;
+}
