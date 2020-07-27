@@ -13,6 +13,9 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { HighchartsChartModule } from 'highcharts-angular';
 import * as Highcharts from 'highcharts';
 import StockModule from 'highcharts/modules/stock';
+import { BarraFerramentaModule } from './shared/barraferramenta/barraferramenta.module';
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
 StockModule(Highcharts);
 
 @NgModule({
@@ -28,7 +31,10 @@ StockModule(Highcharts);
     SideMenuModule,
     ToastModule,
     CurrencyMaskModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    BarraFerramentaModule,
+    ToolbarModule,
+    ButtonModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
