@@ -15,6 +15,7 @@ import { ItemEntrada } from "../../modelos/item-entrada";
 })
 export class EntradaComponent implements OnInit {
   @Input() itensEntrada: ItemEntrada[] = [];
+  @Input() show: boolean;
 
   formEntrada: FormGroup;
 

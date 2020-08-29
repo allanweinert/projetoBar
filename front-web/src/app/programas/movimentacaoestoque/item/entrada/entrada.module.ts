@@ -11,6 +11,7 @@ import { TableModule } from 'primeng/table';
 import {KeyFilterModule} from 'primeng/keyfilter';
 
 import { EntradaComponent } from './entrada.component';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [EntradaComponent],
@@ -25,6 +26,7 @@ import { EntradaComponent } from './entrada.component';
     TableModule,
     KeyFilterModule,
     CurrencyMaskModule,
+    CardModule
   ]
 })
 export class EntradaModule { }

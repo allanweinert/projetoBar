@@ -5,6 +5,7 @@ import { MessageService } from "primeng/api";
 
 import { ProdutoPesquisaService } from "../../../produto/services/produto-pesquisa.service";
 import { ItemSaida } from "../../modelos/item-saida";
+import { LocalArmazenamento } from 'src/app/programas/localarmazenamento/modelos/localarmazenamento';
 
 @Component({
   selector: "app-saida",
@@ -14,6 +15,8 @@ import { ItemSaida } from "../../modelos/item-saida";
 })
 export class SaidaComponent implements OnInit {
   @Input() itensSaida: ItemSaida[] = [];
+  @Input() localArmazenamento: LocalArmazenamento;
+  @Input() show: boolean;
 
   formSaida: FormGroup;
 
@@ -41,11 +44,11 @@ export class SaidaComponent implements OnInit {
     });
   }
 
-  pesquisarProdutos(pesquisa) {
+  pesquisarProdutos(pesquisa?: any) {
     this.produtoPesquisaService
-      .pesquisacomsaldo(pesquisa.query)
-      .subscribe((resultadop) => {
-        this.produtos = resultadop.data;
+      .pesquisaProdutoComSaldoPorLocalArmazenamento(this.localArmazenamento.id)
+      .subscribe((resultado) => {
+        this.produtos = resultado.data;
       });
   }
 

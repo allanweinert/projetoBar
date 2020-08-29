@@ -11,6 +11,7 @@ import { TableModule } from 'primeng/table';
 
 import { SaidaComponent } from './saida.component';
 import {CurrencyMaskModule} from "ng2-currency-mask";
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [SaidaComponent],
@@ -23,7 +24,8 @@ import {CurrencyMaskModule} from "ng2-currency-mask";
         ButtonModule,
         AutoCompleteModule,
         TableModule,
-        CurrencyMaskModule
+        CurrencyMaskModule,
+        CardModule
     ]
 })
 export class SaidaModule { }

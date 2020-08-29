@@ -48,10 +48,10 @@
 <fullyQualifiedTypeName name="javax.print.DocFlavor.STRING"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento_"/>
 <fullyQualifiedTypeName name="com.ordnaelmedeiros.jpafluidselect.querybuilder.select.ref.Ref"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.produto.Produto"/>
 <fullyQualifiedTypeName name="br.inf.ids.treina1.api.movimentacao.dto.SaldoEstoqueDTO"/>
 <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
 <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+<fullyQualifiedTypeName name="br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento_"/>
 </qualifiedTypeNameHistroy>

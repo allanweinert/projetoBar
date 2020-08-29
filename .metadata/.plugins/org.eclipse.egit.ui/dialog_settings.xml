@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="CommitDialog.authorValues">
+		<item value="allan &lt;allan@TheWeinert&gt;"/>
 		<item value="allan &lt;allan@DESKTOP-ACIKARS&gt;"/>
 		<item value="allanweinert &lt;allan_weinert@hotmail.com&gt;"/>
 		<item value="Allan Weinert &lt;allan_weinert@hotmail.com&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
+		<item value="allan &lt;allan@TheWeinert&gt;"/>
 		<item value="allan &lt;allan@DESKTOP-ACIKARS&gt;"/>
 		<item value="allanweinert &lt;allan_weinert@hotmail.com&gt;"/>
 		<item value="Allan Weinert &lt;allan_weinert@hotmail.com&gt;"/>
@@ -15,7 +17,7 @@
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
-		<item key="STAGING_SASH_FORM_WEIGHT" value="503,484"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="509,490"/>
 		<item key="sortItemState" value="false"/>
 	</section>
 	<section name="GitCommitMessageComponent">

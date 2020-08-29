@@ -7,13 +7,16 @@ import { MessageService } from "primeng/api";
 import { MovimentacaoEstoqueCrudService } from "../services/movimentacaoestoque-crud.service";
 import { MovimentacaoEstoquePesquisaService } from "../services/movimentacaoestoque-pesquisa.service";
 import { FornecedorPesquisaService } from "../../fornecedor/services/fornecedor-pesquisa.service";
-import { LocalArmazenamentoPesquisaService } from '../../localarmazenamento/services/localarmazenamento-pesquisa.service';
+import { LocalArmazenamentoPesquisaService } from "../../localarmazenamento/services/localarmazenamento-pesquisa.service";
 
 import { MovimentacaoEstoque } from "../modelos/movimentacaoestoque";
 import { ItemEntrada } from "../modelos/item-entrada";
 import { ItemSaida } from "../modelos/item-saida";
-import { CalendarioComponent } from 'src/app/shared/calendario/calendario.component';
-
+import { CalendarioComponent } from "src/app/shared/calendario/calendario.component";
+import { TipoMovimentacao } from "../modelos/tipo-movimentacao.enum";
+import { SaidaComponent } from "../item/saida/saida.component";
+import { LocalArmazenamento } from "../../localarmazenamento/modelos/localarmazenamento";
+import { Fornecedor } from "../../fornecedor/modelos/fornecedor";
 
 @Component({
   selector: "app-movimentacaoestoque-form",
@@ -23,11 +26,10 @@ import { CalendarioComponent } from 'src/app/shared/calendario/calendario.compon
     MovimentacaoEstoqueCrudService,
     MovimentacaoEstoquePesquisaService,
     FornecedorPesquisaService,
-    LocalArmazenamentoPesquisaService
+    LocalArmazenamentoPesquisaService,
   ],
 })
 export class MovimentacaoEstoqueFormComponent implements OnInit {
-
   formMovimentacaoEstoque: FormGroup;
 
   tipoMovimentacoes = [];
@@ -36,7 +38,17 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   listaEntrada: ItemEntrada[];
   listaSaida: ItemSaida[];
 
+  TipoMovimentacao: typeof TipoMovimentacao = TipoMovimentacao;
+
+  tipo: TipoMovimentacao;
+  localArmazenamento: LocalArmazenamento;
+  fornecedor: Fornecedor;
+  showEntrada = false;
+  showSaida = false;
+
   editando = false;
+
+  @ViewChild(SaidaComponent) saidaComponent: SaidaComponent;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -54,6 +66,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   ngOnInit() {
     this.tipoMovimentacoes = this.movimentacaoestoquePesquisaService.listarMovimentacoes();
     this.verificarParametroRota();
+    this.onChanges();
   }
 
   configurarFormulario() {
@@ -63,7 +76,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
       data: ["", [Validators.required]],
       fornecedor: "",
       localArmazenamento: "",
-      localArmazenamentoDestino: ""
+      localArmazenamentoDestino: "",
     });
     this.formMovimentacaoEstoque.get("id").disable();
   }
@@ -118,7 +131,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   }
 
   atualizarMovimentacaoEstoque(movimentacaoestoque: MovimentacaoEstoque) {
-    movimentacaoestoque.localArmazenamento = {'id' : 1};
+    movimentacaoestoque.localArmazenamento = { id: 1 };
     this.movimentacaoestoqueCrudService
       .atualizar(movimentacaoestoque)
       .subscribe((entradaprodutoId) => {
@@ -132,7 +145,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   }
 
   incluirMovimentacaoEstoque(movimentacaoestoque: MovimentacaoEstoque) {
-    movimentacaoestoque.localArmazenamento = {"id" : 1};
+    movimentacaoestoque.localArmazenamento = { id: 1 };
     this.movimentacaoestoqueCrudService.incluir(movimentacaoestoque).subscribe(
       (movimentacaoestoqueId) => {
         this.messageService.add({
@@ -157,7 +170,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     return this.formMovimentacaoEstoque.valid;
   }
 
-//Início Pesquisas
+  //Início pesquisas
   pesquisarFornecedores(pesquisa) {
     this.fornecedorPesquisaService
       .pesquisar(pesquisa.query)
@@ -173,8 +186,8 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
         this.armazenamentos = resultadol.data;
       });
   }
+  //Fim de pesquisas
 
-//Inicio Ações
   excluir() {
     const id = this.formMovimentacaoEstoque.get("id").value;
   }
@@ -194,6 +207,47 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
       this.carregarMovimentacaoEstoque(id);
     } else {
       this.novo();
+    }
+  }
+
+  onChangeTipo(): void {
+    this.tipo = this.formMovimentacaoEstoque.get("tipo").value;
+    this.showMovimentacao();
+  }
+
+  onChanges(): void {
+    this.formMovimentacaoEstoque.valueChanges.subscribe((val) => {
+      this.tipo = val["tipo"];
+      this.fornecedor = val["fornecedor"];
+      this.localArmazenamento = val["localArmazenamento"];
+    });
+  }
+
+  showMovimentacao(): void {
+    console.log(this.tipo)
+    if (this.tipo === TipoMovimentacao.ENTRADA) {
+      this.showSaida = false;
+      this.formMovimentacaoEstoque.get("localArmazenamento").setValue(null)
+
+      if (this.fornecedor) {
+        this.showEntrada = true;
+
+      }else this.showEntrada = false;
+            
+    } else if (this.tipo === TipoMovimentacao.SAIDA) {
+      this.showEntrada = false;
+      this.formMovimentacaoEstoque.get("fornecedor").setValue(null)
+
+
+      if (this.localArmazenamento) {
+        this.showSaida = true;
+        this.saidaComponent.pesquisarProdutos();
+      } else this.showSaida = false;
+    } else {
+      this.formMovimentacaoEstoque.get("localArmazenamento").setValue(null)
+      this.formMovimentacaoEstoque.get("fornecedor").setValue(null)
+      this.showEntrada = false;
+      this.showSaida = false;
     }
   }
 }

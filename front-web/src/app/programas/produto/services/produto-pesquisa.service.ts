@@ -42,10 +42,10 @@ export class ProdutoPesquisaService {
     );
   }
 
-  pesquisacomsaldo(valor: any, pagina = 1): Observable<any> {
-    const url = `${environment.apiURL}/produto/pesquisacomsaldo`;
+  pesquisaProdutoComSaldoPorLocalArmazenamento(localArmazenamentoId: number, pagina = 1): Observable<any> {
+    const url = `${environment.apiURL}/produto/pesquisaprodutocomsaldoporlocalarmazenamento`;
     const options = {
-      params: new HttpParams().set('valor', valor).set('pagina', String(pagina))
+      params: new HttpParams().set('localArmazenamentoId', localArmazenamentoId.toString()).set('pagina', String(pagina))
     };
     return this.http.get<any>(url, options).pipe(
       tap(

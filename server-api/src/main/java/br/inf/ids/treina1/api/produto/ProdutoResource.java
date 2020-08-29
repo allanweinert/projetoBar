@@ -72,4 +72,12 @@ public class ProdutoResource {
 		return produtoService.comSaldo(pagina, valor);
 	}
 	
+	@GET
+	@Path("/pesquisaprodutocomsaldoporlocalarmazenamento")
+	public PaginationResult<Produto> produtoComSaldoPorLocalArmazenamento(
+			@QueryParam("pagina") Integer pagina,
+			@Parameter(required = true, name = "localArmazenamentoId") @QueryParam("localArmazenamentoId") Long localArmazenamentoId) {
+		return produtoService.produtoComSaldoPorLocalArmazenamento(pagina, localArmazenamentoId);
+	}
+	
 }
