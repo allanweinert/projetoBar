@@ -16,6 +16,7 @@ import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.Paginat
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.ref.Ref;
 
 import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento;
+import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento_;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada_;
 import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque;
@@ -85,6 +86,27 @@ public class ProdutoService {
 				.page(pagina)
 			.getResultList();
 			
+		}
+	
+		public PaginationResult<Produto> produtoComSaldoPorLocalArmazenamento(Integer pagina, Long localArmazenamentoId) {
+			Ref<ItemEntrada> joinItem = new Ref<>();
+			return new QueryBuilder(em)
+					.select(SaldoEstoque.class)
+						.innerJoin(SaldoEstoque_.itemEntrada)
+							.ref(joinItem)
+						.end()
+						.innerJoin(SaldoEstoque_.localArmazenamento)
+							.on()
+								.field(LocalArmazenamento_.id).eq(localArmazenamentoId)
+					.fields()
+						.add(joinItem.field(ItemEntrada_.produto))
+					.where()
+						.field(SaldoEstoque_.restante).gt(0)
+					.pagination()
+						.numRows(10)
+						.page(pagina)
+					.getResultList(Produto.class);
+	
 		}
 
 

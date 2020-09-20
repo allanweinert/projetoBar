@@ -24,22 +24,20 @@
           <p-dropdown
             [options]="tipoMovimentacoes"
             formControlName="tipo"
+            (onChange)="onChangeTipo()"
           ></p-dropdown>
         </div>
         <div class="p-col-2">
-          <app-calendario
-          [form] = "formMovimentacaoEstoque"
-          param = 'data'
-          >
+          <app-calendario 
+            [form]="formMovimentacaoEstoque" 
+            param="data">
           </app-calendario>
         </div>
-        <div
-          class="p-col-12"
-          *ngIf="formMovimentacaoEstoque.get('tipo').value == 'ENTRADA'"
-        >
+        <div class="p-col-12" *ngIf="tipo == TipoMovimentacao.ENTRADA">
           Fornecedor
           <p-autoComplete
             formControlName="fornecedor"
+            (onSelect)="onChangeFornecedor()"
             forceSelection="true"
             field="razaoSocial"
             dropdown="true"
@@ -49,13 +47,11 @@
           >
           </p-autoComplete>
         </div>
-        <div
-          class="p-col-12"
-          *ngIf="formMovimentacaoEstoque.get('tipo').value == 'SAIDA'"
-        >
+        <div class="p-col-12" *ngIf="tipo == TipoMovimentacao.SAIDA">
           Local de Armazenamento
           <p-autoComplete
-            formControlName="localArmazenamentoDestino"
+            formControlName="localArmazenamento"
+            (onSelect)="onChangeLocalArmazenamento()"
             forceSelection="true"
             field="nome"
             dropdown="true"
@@ -70,42 +66,39 @@
   </form>
 </p-card>
 <br />
-<p-card
-  *ngIf="formMovimentacaoEstoque.get('tipo').value == 'ENTRADA'"
-  header="Itens da entrada"
->
-  <app-entrada [itensEntrada]="listaEntrada"></app-entrada>
-</p-card>
 
-<p-card
-  *ngIf="formMovimentacaoEstoque.get('tipo').value == 'SAIDA'"
-  header="Itens da saída"
+<app-entrada 
+  [show]="showEntrada" 
+  [itensEntrada]="listaEntrada"
+> 
+</app-entrada>
+
+<app-saida
+  [show]="showSaida"
+  [itensSaida]="listaSaida"
+  [localArmazenamento]="localArmazenamento"
 >
-  <app-saida [itensSaida]="listaSaida"></app-saida>
-</p-card>
+</app-saida>
+
 <br />
-    <div
-      *ngIf="
-        formMovimentacaoEstoque.get('tipo').value == 'ENTRADA' ||
-        formMovimentacaoEstoque.get('tipo').value == 'SAIDA'
-      "
-      class="controles"
-    >
-      <div class="controles">
-        <button
-          pButton
-          type="button"
-          label="Salvar"
-          (click)="salvar()"
-          class="ui-button-success"
-        ></button>
-        <button
-          pButton
-          type="button"
-          label="Cancelar"
-          (click)="cancelar()"
-          class="ui-button-secondary"
-        ></button>
-      </div>
-    </div>
-
+<div
+  *ngIf="showEntrada || showSaida"
+  class="controles"
+>
+  <div class="controles">
+    <button
+      pButton
+      type="button"
+      label="Salvar"
+      (click)="salvar()"
+      class="ui-button-success"
+    ></button>
+    <button
+      pButton
+      type="button"
+      label="Cancelar"
+      (click)="cancelar()"
+      class="ui-button-secondary"
+    ></button>
+  </div>
+</div>

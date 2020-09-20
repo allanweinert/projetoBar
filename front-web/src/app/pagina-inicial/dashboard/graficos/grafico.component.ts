@@ -11,8 +11,6 @@ import { DashboardPesquisaService } from '../services/dashboard-pesquisa.service
 })
 export class GraficoComponent implements OnInit {
 
-  title: string = "Bem - Vindo!";
-
   users: any = [];
   saldos: any = [];
 

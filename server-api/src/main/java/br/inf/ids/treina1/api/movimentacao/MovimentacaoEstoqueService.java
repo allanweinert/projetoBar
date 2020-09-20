@@ -138,6 +138,11 @@ public class MovimentacaoEstoqueService {
 					.field(SaldoEstoque_.restante).alias("restante")
 				.where()
 					.field(SaldoEstoque_.restante).gt(0)
+				.group()
+					/*.add(joinProduto.field(Produto_.nome))
+				.order()
+					.asc(joinProduto.field(Produto_.nome))
+				.print()*/
 				.getResultListByConstructor(SaldoEstoqueDTO.class);
 	}
 }
