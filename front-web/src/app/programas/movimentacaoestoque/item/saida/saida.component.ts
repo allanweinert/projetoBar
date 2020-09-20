@@ -56,15 +56,15 @@ export class SaidaComponent implements OnInit {
     this.formSaida.reset();
   }
 
-    //Multiplicação do item
-    totalItem() {
-      this.formSaida
-        .get("total")
-        .setValue(
-          this.formSaida.get("quantidade").value *
-            this.formSaida.get("valorUnitario").value
-        );
-    }
+  //Multiplicação do item
+  totalItem() {
+    this.formSaida
+      .get("total")
+      .setValue(
+        this.formSaida.get("quantidade").value *
+          this.formSaida.get("valorUnitario").value
+      );
+  }
 
   adicionarItem() {
     const novoItem = this.formSaida.getRawValue();

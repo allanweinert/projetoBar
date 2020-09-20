@@ -90,6 +90,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     }
   }
 
+  //Carrega o registro para edição.
   carregarMovimentacaoEstoque(id: number) {
     this.movimentacaoestoqueCrudService
       .carregar(id)
@@ -98,9 +99,15 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
         this.listaEntrada = movimentacaoestoque.itensEntrada;
         this.listaSaida = movimentacaoestoque.itensSaida;
         this.editando = true;
+
+        if (this.listaEntrada && this.listaEntrada.length > 0) {
+          this.showEntrada = true;
+        } else this.showSaida = true
+
       });
   }
 
+  //Valida se a lista possui itens antes de salvar.
   getMovimentacaoEstoqueDoForm(): MovimentacaoEstoque {
     const movimentacaoestoque = this.formMovimentacaoEstoque.getRawValue();
 
@@ -215,6 +222,16 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     this.showMovimentacao();
   }
 
+  onChangeLocalArmazenamento(): void {
+    this.localArmazenamento = this.formMovimentacaoEstoque.get("localArmazenamento").value;
+    this.showMovimentacao();
+  }
+
+  onChangeFornecedor(): void {
+    this.fornecedor = this.formMovimentacaoEstoque.get("fornecedor").value;
+    this.showMovimentacao();
+  }
+
   onChanges(): void {
     this.formMovimentacaoEstoque.valueChanges.subscribe((val) => {
       this.tipo = val["tipo"];
@@ -224,25 +241,28 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   }
 
   showMovimentacao(): void {
-    console.log(this.tipo)
+    //Se o tipo for entrada, saída é falso e determina local de armazenamento como nulo.
     if (this.tipo === TipoMovimentacao.ENTRADA) {
       this.showSaida = false;
       this.formMovimentacaoEstoque.get("localArmazenamento").setValue(null)
-
-      if (this.fornecedor) {
+      
+      //Se fornecedor não for nulo exibe itens da entrada.
+      if (this.fornecedor){
         this.showEntrada = true;
-
-      }else this.showEntrada = false;
+      }
             
-    } else if (this.tipo === TipoMovimentacao.SAIDA) {
+    } 
+    //Se o tipo for saída, entrada é falso e determina fornecedor como nulo.
+    else if (this.tipo === TipoMovimentacao.SAIDA) {
       this.showEntrada = false;
-      this.formMovimentacaoEstoque.get("fornecedor").setValue(null)
-
-
-      if (this.localArmazenamento) {
+      this.formMovimentacaoEstoque.get("fornecedor").setValue(null)   
+      
+      //Se local de armazenamento não for nulo exibe itens da saída.
+      if (this.localArmazenamento){
         this.showSaida = true;
         this.saidaComponent.pesquisarProdutos();
-      } else this.showSaida = false;
+      }
+      
     } else {
       this.formMovimentacaoEstoque.get("localArmazenamento").setValue(null)
       this.formMovimentacaoEstoque.get("fornecedor").setValue(null)

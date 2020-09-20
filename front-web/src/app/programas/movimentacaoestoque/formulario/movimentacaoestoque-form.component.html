@@ -28,13 +28,16 @@
           ></p-dropdown>
         </div>
         <div class="p-col-2">
-          <app-calendario [form]="formMovimentacaoEstoque" param="data">
+          <app-calendario 
+            [form]="formMovimentacaoEstoque" 
+            param="data">
           </app-calendario>
         </div>
         <div class="p-col-12" *ngIf="tipo == TipoMovimentacao.ENTRADA">
           Fornecedor
           <p-autoComplete
             formControlName="fornecedor"
+            (onSelect)="onChangeFornecedor()"
             forceSelection="true"
             field="razaoSocial"
             dropdown="true"
@@ -48,6 +51,7 @@
           Local de Armazenamento
           <p-autoComplete
             formControlName="localArmazenamento"
+            (onSelect)="onChangeLocalArmazenamento()"
             forceSelection="true"
             field="nome"
             dropdown="true"
@@ -63,7 +67,12 @@
 </p-card>
 <br />
 
-<app-entrada [show]="showEntrada" [itensEntrada]="listaEntrada"> </app-entrada>
+<app-entrada 
+  [show]="showEntrada" 
+  [itensEntrada]="listaEntrada"
+> 
+</app-entrada>
+
 <app-saida
   [show]="showSaida"
   [itensSaida]="listaSaida"
