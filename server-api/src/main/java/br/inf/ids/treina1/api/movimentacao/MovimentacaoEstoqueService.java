@@ -135,14 +135,10 @@ public class MovimentacaoEstoqueService {
 				.fields()
 					.field(joinLocalArmazenamento.field(LocalArmazenamento_.nome)).alias("localArmazenamento")
 					.field(joinProduto.field(Produto_.nome)).alias("produto")
-					.field(SaldoEstoque_.restante).alias("restante")
 				.where()
 					.field(SaldoEstoque_.restante).gt(0)
 				.group()
-					/*.add(joinProduto.field(Produto_.nome))
-				.order()
-					.asc(joinProduto.field(Produto_.nome))
-				.print()*/
+					.add(joinProduto.field(Produto_.id))	
 				.getResultListByConstructor(SaldoEstoqueDTO.class);
 	}
 }

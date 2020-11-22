@@ -1,13 +1,17 @@
 package br.inf.ids.treina1.api.produto;
 
 import br.inf.ids.treina1.api.categoria.Categoria;
+import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.produto.enums.Situacao;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
 
 @Entity
 @SequenceGenerator(name = "SEQ_PRODUTO", sequenceName = "SEQ_PRODUTO", allocationSize = 1)
@@ -34,5 +38,8 @@ public class Produto {
 
     @Enumerated(EnumType.STRING)
     private Situacao situacao;
+    
+    @OneToMany(mappedBy = "produto", fetch = FetchType.LAZY)
+    private List<ItemEntrada> entradas;
 
 }
