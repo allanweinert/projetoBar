@@ -9318,3 +9318,515 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-09-19 17:38:01.643 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-09-19 17:38:27.331
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-19 17:38:27.331
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e826fd4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f14590c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-09-19 17:39:00.974
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-09-19 22:35:16.833 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-09-19 22:35:42.526
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-19 22:35:42.526
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1c25deb0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1be12e05,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-09-19 22:36:09.805
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-09-27 10:42:00.078 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-09-27 10:43:10.593
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-09-27 10:43:10.593
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@270be080,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@752ffce3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-09-27 10:44:05.684
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-10-15 21:36:23.780 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-10-15 21:36:48.447
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-10-15 21:36:48.447
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@16c1d11,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@123d0816,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-10-15 21:37:17.475
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-11-03 19:56:17.341 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-11-03 20:01:39.474
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-11-03 20:01:39.474
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@16732340,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@38e052b2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-11-03 20:02:18.707
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:25:56.468
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:25:59.872
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:25:59.974
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/materia/Materia_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:25:59.993
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/municipio/Municipio_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.011
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/itens/ItemSaida_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.029
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/MovimentacaoEstoque_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.049
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/itens/telefone/Telefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.069
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/categoria/Categoria_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.090
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/Fornecedor_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.109
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/saldoestoque/SaldoEstoque_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.127
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/Pessoa_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.145
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/itens/ItemEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.163
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/localarmazenamento/LocalArmazenamento_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.181
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/itens/conteudo/Conteudo_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.199
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/config/Config_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.217
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/produto/Produto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.234
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/itens/telefone/FornecedorTelefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-03 21:26:00.254
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/Curso_.java
+!SESSION 2020-11-04 18:00:27.933 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-11-04 18:33:51.983
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-11-04 18:33:51.984
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61d24347,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@347f8029,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-11-04 18:34:34.147
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 20:25:36.834
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 20:25:40.571
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 20:25:40.608
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/itens/ItemEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 20:25:42.188
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/saldoestoque/SaldoEstoque_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 20:25:42.218
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/produto/Produto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 20:25:42.250
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/MovimentacaoEstoque_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:06:41.912
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:06:41.941
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:12:07.421
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:12:07.449
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:17:45.591
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:17:45.621
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:39:45.362
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:39:45.393
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:44:18.168
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:44:18.204
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:48:08.172
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:48:08.192
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:49:33.189
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:49:33.207
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:50:30.670
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:50:30.684
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:51:30.220
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:51:30.234
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:51:40.037
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 21:51:40.052
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:01:41.911
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:01:41.937
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:03:32.222
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:03:32.242
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:11:05.464
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:11:05.481
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:12:36.886
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:12:36.909
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:19:11.469
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:19:11.496
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:22:30.532
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:22:30.565
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:26:37.342
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:26:37.358
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:33:29.348
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:33:29.371
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:34:10.254
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:34:10.279
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:35:21.777
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:35:21.798
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:36:31.260
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:36:31.290
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:38:00.055
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:38:00.074
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:40:09.540
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-04 22:40:09.560
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+!SESSION 2020-11-07 10:35:15.808 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_252
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-11-07 10:35:49.398
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2020-11-07 10:36:10.316
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-11-07 10:36:10.317
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3d213a2b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27691ee8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-11-07 10:37:04.266
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\allan'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:31.141
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:35.740
+!MESSAGE Hibernate JPA 2 Static-Metamodel Generator 5.4.4.Final
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:35.825
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/materia/Materia_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:35.874
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/municipio/Municipio_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:35.892
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/itens/ItemSaida_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:35.912
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/MovimentacaoEstoque_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:35.936
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/itens/telefone/Telefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:35.977
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/categoria/Categoria_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:35.995
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/Fornecedor_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.024
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/saldoestoque/SaldoEstoque_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.045
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/pessoa/Pessoa_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.065
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/movimentacao/itens/ItemEntrada_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.085
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/localarmazenamento/LocalArmazenamento_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.105
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/itens/conteudo/Conteudo_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.127
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/config/Config_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.145
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/produto/Produto_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.169
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/fornecedor/itens/telefone/FornecedorTelefone_.java
+
+!ENTRY org.eclipse.jdt.apt.pluggable.core 1 1 2020-11-07 10:37:36.188
+!MESSAGE Problem with Filer: Source file already created: /server-api/.apt_generated/br/inf/ids/treina1/api/curso/Curso_.java

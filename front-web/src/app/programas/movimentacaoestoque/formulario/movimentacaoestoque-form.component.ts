@@ -12,7 +12,6 @@ import { LocalArmazenamentoPesquisaService } from "../../localarmazenamento/serv
 import { MovimentacaoEstoque } from "../modelos/movimentacaoestoque";
 import { ItemEntrada } from "../modelos/item-entrada";
 import { ItemSaida } from "../modelos/item-saida";
-import { CalendarioComponent } from "src/app/shared/calendario/calendario.component";
 import { TipoMovimentacao } from "../modelos/tipo-movimentacao.enum";
 import { SaidaComponent } from "../item/saida/saida.component";
 import { LocalArmazenamento } from "../../localarmazenamento/modelos/localarmazenamento";
@@ -165,7 +164,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
         this.messageService.add({
           severity: "warn",
           summary: "Não foi possível salvar a entrada!",
-          detail: JSON.stringify(error),
+          detail: error.error.mensagens,
         });
       }
     );

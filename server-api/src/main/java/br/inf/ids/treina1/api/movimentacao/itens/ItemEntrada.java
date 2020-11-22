@@ -18,7 +18,9 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import br.inf.ids.treina1.api.categoria.Categoria;
 import br.inf.ids.treina1.api.movimentacao.MovimentacaoEstoque;
+import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque;
 import br.inf.ids.treina1.api.produto.Produto;
 
 @Entity
@@ -54,6 +56,10 @@ public class ItemEntrada {
 	@NotNull
 	@Column(precision = 5, scale = 2)
 	private BigDecimal total;
+	
+	@ManyToOne
+    @JoinColumn(name = "ITEMENTRADAID")
+    private SaldoEstoque saldo;
 	
 
 	public Long getId() {

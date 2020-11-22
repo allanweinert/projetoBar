@@ -95,7 +95,6 @@ INDEX VERSION 1.131+C:\Projetos\projetoBar\.metadata\.plugins\org.eclipse.jdt.co
 1121400400.index
 3812366192.index
 2781145946.index
-2824023099.index
 4177057387.index
 535526041.index
 1605021837.index
