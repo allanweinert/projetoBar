@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-<entry loc="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.222-2" stamp="1570238685347"/>
-<entry loc="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.252-2" stamp="1594479319806"/>
+    <entry loc="C:\Users\allan\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932" stamp="1606059141706"/>
+    <entry loc="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.222-2" stamp="1570238685347"/>
+    <entry loc="C:\Program Files\ojdkbuild\java-1.8.0-openjdk-1.8.0.252-2" stamp="1594479319806"/>
+    <entry loc="C:\Users\allan\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_14.0.2.v20200815-0932\jre" stamp="1606059141690"/>
 </dirs>
