@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
+  /**
+   * Path: Define o caminho da URL para a rota.
+   * Component: Define o componente que o Angular deve usar para o caminho correspondente.
+   */
   {
     path: 'localarmazenamento',
     loadChildren: () => import('./programas/localarmazenamento/localarmazenamento.module').then(mod => mod.LocalArmazenamentoModule),
@@ -34,8 +38,16 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./pagina-inicial/pagina-inicial.module').then(mod => mod.PaginaInicialModule),
   },
-  { path: '',   redirectTo: '/inicio', pathMatch: 'full' },
+  /**
+   * Rota Padrão
+   * pathMatch: full = Informa ao roteador como combinar a URL com o caminho de um rota.
+   */
   {
+     path: '',   redirectTo: '/inicio', pathMatch: 'full' },
+  {
+    /**
+     * Rota Curinga: Quando a solicitação não bater com nenhuma rota acima, esta rota é selecionada.
+     */
     path: '**',
     redirectTo: 'inicio'
   }

@@ -194,7 +194,7 @@ export class FornecedorFormComponent implements OnInit {
     telefonesString.forEach(t => {
       const telefoneFornecedor = {} as FornecedorTelefone;
       telefoneFornecedor.numero = t;
-      telefoneFornecedor.tipo = 'TRABALHO';
+      telefoneFornecedor.tipo = 'TRABALHO'; //Remover tipo
       telefones.push(telefoneFornecedor);
     });
 

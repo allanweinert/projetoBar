@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="pesquisaprodutocomsaldoporlocalarmazenamento"/>
 			<item value="MovimentacaoEstoque"/>
 			<item value="ITEMENTRADA"/>
 			<item value="itementrada"/>
@@ -22,7 +23,6 @@
 			<item value="Localarmazenamento"/>
 			<item value="curso"/>
 			<item value="Curso"/>
-			<item value="cursoService"/>
 		</list>
 		<list key="replacehistory">
 			<item value="SaldoEstoque"/>

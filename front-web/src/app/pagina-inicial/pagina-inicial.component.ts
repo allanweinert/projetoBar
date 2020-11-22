@@ -15,14 +15,12 @@ export class PaginaInicialComponent implements OnInit {
 
   constructor(private dashboardPesquisaService: DashboardPesquisaService) {}
 
-  ngOnInit() {
-    this.carregarSaldo();
-  }
+  ngOnInit() {}
 
-  carregarSaldo() {
+  /*carregarSaldo() {
     this.dashboardPesquisaService.saldoEstoque().subscribe((saldos: any) =>{
       this.saldos = saldos;
     });
-  }
+  }*/
 
 }
