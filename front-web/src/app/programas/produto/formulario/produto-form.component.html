@@ -1,21 +1,11 @@
+<app-barraferramenta
+  (onClickPesquisar)="pesquisar()"
+  (onClickSalvar)="salvar()"
+  (onClickCancelar)="cancelar()"
+  (onClickExcluir)="excluir()"
+></app-barraferramenta>
 <p-card header="Produto" subheader="Cadastro">
   <br/>
-  <p-header class="controles">
-    <button
-      pButton
-      type="button"
-      icon="pi pi-search"
-      routerLink="/produto/pesquisa"
-    ></button>
-
-    <button
-      pButton
-      type="button"
-      (click)="excluir()"
-      icon="pi pi-trash"
-      *ngIf="editando"
-    ></button>
-  </p-header>
   <form [formGroup]="formProduto">
     <div class="ui-fluid">
       <div class="p-grid">
@@ -49,20 +39,4 @@
       </div>
     </div>
   </form>
-  <p-footer class="controles">
-    <button
-      pButton
-      type="button"
-      label="Salvar"
-      (click)="salvar()"
-      class="ui-button-success"
-    ></button>
-    <button
-      pButton
-      type="button"
-      label="Cancelar"
-      (click)="cancelar()"
-      class="ui-button-secondary"
-    ></button>
-  </p-footer>
 </p-card>

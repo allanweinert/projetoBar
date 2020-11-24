@@ -17,6 +17,7 @@ import { CardModule } from 'primeng/card';
 
 import { LocalArmazenamentoFormComponent } from './formulario/localarmazenamento-form.component';
 import { LocalArmazenamentoPesquisaComponent } from './pesquisa/localarmazenamento-pesquisa.component';
+import { BarraFerramentaModule } from 'src/app/shared/barraferramenta/barraferramenta.module';
 
 
 const routes: Routes = [
@@ -41,6 +42,7 @@ const routes: Routes = [
     AutoCompleteModule,
     InputMaskModule,
     CardModule,
+    BarraFerramentaModule,
 
   ]
 })

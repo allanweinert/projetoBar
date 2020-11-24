@@ -160,4 +160,8 @@ export class LocalArmazenamentoFormComponent implements OnInit {
     }
   }
 
+  pesquisar() {
+    this.router.navigate(['/localarmazenamento/pesquisa']);
+  }
+
 }

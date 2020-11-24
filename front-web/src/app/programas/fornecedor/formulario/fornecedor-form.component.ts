@@ -129,39 +129,6 @@ export class FornecedorFormComponent implements OnInit {
     return this.formFornecedor.valid;
   }
 
-  excluir() {
-    const id = this.formFornecedor.get('id').value;
-    const confirmacao = confirm('Deseja excluir este fornecedor ?');
-    if (confirmacao) {
-      this.fornecedorCrudService.deletar(id).subscribe(
-        resultado => {
-          this.messageService.add({
-            severity: 'success',
-            summary: 'Sucesso!',
-            detail: 'Fornecedor excluído com sucesso!'
-          });
-          this.novo();
-        }
-      );
-    }
-  }
-
-  novo() {
-    this.editando = false;
-    this.listaTelefones = [];
-    this.formFornecedor.reset();
-    this.router.navigate(['/fornecedor/novo']);
-  }
-
-  cancelar() {
-    const id = this.formFornecedor.get('id').value;
-    if (id) {
-      this.carregarFornecedor(id);
-    } else {
-      this.novo();
-    }
-  }
-
   // Início da integração com a receita federal
   pesquisaCnpjReceita() {
     this.fornecedorPesquisaComponent.pesquisaFornecedorReceita(this.formFornecedor.get('cnpj').value).subscribe(
@@ -215,5 +182,42 @@ export class FornecedorFormComponent implements OnInit {
         this.listaTelefones.push(t1);
       }
     });
+  }
+
+  novo() {
+    this.editando = false;
+    this.listaTelefones = [];
+    this.formFornecedor.reset();
+    this.router.navigate(['/fornecedor/novo']);
+  }
+
+  cancelar() {
+    const id = this.formFornecedor.get('id').value;
+    if (id) {
+      this.carregarFornecedor(id);
+    } else {
+      this.novo();
+    }
+  }
+
+  pesquisar() {
+    this.router.navigate(['/fornecedor/pesquisa']);
+  }
+
+  excluir() {
+    const id = this.formFornecedor.get('id').value;
+    const confirmacao = confirm('Deseja excluir este fornecedor ?');
+    if (confirmacao) {
+      this.fornecedorCrudService.deletar(id).subscribe(
+        resultado => {
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Sucesso!',
+            detail: 'Fornecedor excluído com sucesso!'
+          });
+          this.novo();
+        }
+      );
+    }
   }
 }

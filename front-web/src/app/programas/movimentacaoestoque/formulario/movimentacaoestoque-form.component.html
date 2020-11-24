@@ -1,22 +1,12 @@
+<app-barraferramenta
+  (onClickPesquisar)="pesquisar()"
+  (onClickSalvar)="salvar()"
+  (onClickCancelar)="cancelar()"
+  (onClickExcluir)="excluir()"
+></app-barraferramenta>
+
 <p-card header="Movimentação de Estoque" subheader="Cadastro">
   <br />
-  <p-header class="controles">
-    <button
-      pButton
-      type="button"
-      icon="pi pi-search"
-      routerLink="/movimentacaoestoque/pesquisa"
-    ></button>
-
-    <button
-      pButton
-      type="button"
-      (click)="excluir()"
-      icon="pi pi-trash"
-      *ngIf="editando"
-    ></button>
-  </p-header>
-
   <form [formGroup]="formMovimentacaoEstoque">
     <div class="ui-fluid">
       <div class="p-grid">
@@ -28,9 +18,7 @@
           ></p-dropdown>
         </div>
         <div class="p-col-2">
-          <app-calendario 
-            [form]="formMovimentacaoEstoque" 
-            param="data">
+          <app-calendario [form]="formMovimentacaoEstoque" param="data">
           </app-calendario>
         </div>
         <div class="p-col-12" *ngIf="tipo == TipoMovimentacao.ENTRADA">
@@ -70,35 +58,10 @@
 <app-entrada 
   [show]="showEntrada" 
   [itensEntrada]="listaEntrada"
-> 
-</app-entrada>
+></app-entrada>
 
 <app-saida
   [show]="showSaida"
   [itensSaida]="listaSaida"
   [localArmazenamento]="localArmazenamento"
->
-</app-saida>
-
-<br />
-<div
-  *ngIf="showEntrada || showSaida"
-  class="controles"
->
-  <div class="controles">
-    <button
-      pButton
-      type="button"
-      label="Salvar"
-      (click)="salvar()"
-      class="ui-button-success"
-    ></button>
-    <button
-      pButton
-      type="button"
-      label="Cancelar"
-      (click)="cancelar()"
-      class="ui-button-secondary"
-    ></button>
-  </div>
-</div>
+></app-saida>

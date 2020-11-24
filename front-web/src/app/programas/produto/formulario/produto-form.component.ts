@@ -173,4 +173,8 @@ export class ProdutoFormComponent implements OnInit {
     }
   }
 
+  pesquisar() {
+    this.router.navigate(['/produto/pesquisa']);
+  }
+
 }

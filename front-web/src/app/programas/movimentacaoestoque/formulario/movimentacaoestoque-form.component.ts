@@ -216,6 +216,10 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     }
   }
 
+  pesquisar() {
+    this.router.navigate(['/movimentacaoestoque/pesquisa']);
+  }
+
   onChangeTipo(): void {
     this.tipo = this.formMovimentacaoEstoque.get("tipo").value;
     this.showMovimentacao();

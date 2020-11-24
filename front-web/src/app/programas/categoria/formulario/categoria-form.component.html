@@ -1,17 +1,12 @@
-<app-barraferramenta></app-barraferramenta>
+<app-barraferramenta
+  (onClickPesquisar)="pesquisar()"
+  (onClickSalvar)="salvar()"
+  (onClickCancelar)="cancelar()"
+  (onClickExcluir)="excluir()"
+></app-barraferramenta>
 
 <p-card header="Categoria" subheader="Cadastro">
   <br />
-  <p-header class="controles">
-    <button
-      pButton
-      type="button"
-      (click)="excluir()"
-      icon="pi pi-trash"
-      *ngIf="editando"
-    ></button>
-  </p-header>
-
   <form [formGroup]="formCategoria">
     <div class="ui-fluid">
       <div class="p-grid">

@@ -15,6 +15,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CardModule } from 'primeng/card';
+import { BarraFerramentaModule } from 'src/app/shared/barraferramenta/barraferramenta.module';
 
 const routes: Routes = [
   { path: 'pesquisa',  component: ProdutoPesquisaComponent },
@@ -37,7 +38,8 @@ const routes: Routes = [
     CalendarModule,
     AutoCompleteModule,
     InputMaskModule,
-    CardModule
+    CardModule,
+    BarraFerramentaModule,
   ]
 })
 export class ProdutoModule { }
