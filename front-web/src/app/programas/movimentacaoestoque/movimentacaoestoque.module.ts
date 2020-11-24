@@ -20,6 +20,7 @@ import { MovimentacaoEstoquePesquisaComponent } from './pesquisa/movimentacaoest
 
 import { EntradaModule } from './item/entrada/entrada.module';
 import { SaidaModule } from './item/saida/saida.module';
+import { BarraFerramentaModule } from 'src/app/shared/barraferramenta/barraferramenta.module';
 
 
 
@@ -47,7 +48,8 @@ const routes: Routes = [
     EntradaModule,
     SaidaModule,
     CardModule,
-    CalendarioModule
+    CalendarioModule,
+    BarraFerramentaModule,
   ]
 })
 export class MovimentacaoEstoqueModule { }

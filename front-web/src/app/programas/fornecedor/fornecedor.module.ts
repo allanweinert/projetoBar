@@ -18,6 +18,7 @@ import { CardModule } from 'primeng/card';
 
 import { TelefoneModule } from 'src/app/shared/telefone/telefone.module';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import { BarraFerramentaModule } from 'src/app/shared/barraferramenta/barraferramenta.module';
 
 const routes: Routes = [
   { path: 'pesquisa',  component: FornecedorPesquisaComponent },
@@ -42,7 +43,8 @@ const routes: Routes = [
     InputMaskModule,
     TelefoneModule,
     CardModule,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    BarraFerramentaModule,
   ]
 })
 export class FornecedorModule { }
