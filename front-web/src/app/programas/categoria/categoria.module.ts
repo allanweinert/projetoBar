@@ -17,6 +17,7 @@ import { CardModule } from "primeng/card";
 import { CategoriaFormComponent } from "./formulario/categoria-form.component";
 import { CategoriaPesquisaComponent } from "./pesquisa/categoria-pesquisa.component";
 import { BarraFerramentaModule } from "src/app/shared/barraferramenta/barraferramenta.module";
+import { PesquisaModule } from 'src/app/shared/barraferramenta/pesquisa/pesquisa.module';
 
 const routes: Routes = [
   { path: "pesquisa", component: CategoriaPesquisaComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
     InputMaskModule,
     CardModule,
     BarraFerramentaModule,
+    PesquisaModule,
   ],
 })
 export class CategoriaModule {}

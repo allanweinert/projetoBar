@@ -1,40 +1,27 @@
-<h3>Categoria / Pesquisa</h3>
-<div>
-  <div class="p-grid">
-    <div class="p-col-fixed" style='width: 160px'>
-      <button pButton type="button" label="Incluir" routerLink='/categoria/novo' class="ui-button-success"></button>
-    </div>
-    <div class="p-col ui-fluid">
-      <form [formGroup]="formPesquisa">
-        <div class="ui-inputgroup">
-          <input type="text" pInputText formControlName="valorPesquisa" placeholder="pesquisar...">
-          <button pButton type="button" icon='pi pi-search' (click)='pesquisar()'></button>
-        </div>
-      </form>
-    </div>
-    <div class="p-col-fixed" style='width: 140px; text-align: right'>
-      <button pButton type="button" label="Limpar filtro" (click)='limparPesquisa()'
-              class="ui-button-secondary"></button>
-    </div>
-  </div>
-</div>
-<p-table [value]="categorias" autoLayout="true" [paginator]="true" [rows]="50" [loading]='pesquisando'>
+<app-pesquisa
+  [form]="formPesquisa"
+  param="valorPesquisa"
+  (onClickIncluir)="incluir()"
+  (onClickPesquisar)="pesquisar()"
+  (onClickLimparPesquisa)="limparPesquisa()"
+></app-pesquisa>
+<p-table [value]="categorias" autoLayout="true" [paginator]="true" [rows]="50">
   <ng-template pTemplate="header">
     <tr>
-      <th style='width: 60px'>Código</th>
+      <th style="width: 60px">Código</th>
       <th>Nome</th>
       <th>Situação</th>
-      <th style='width: 60px'>Ações</th>
+      <th style="width: 60px">Ações</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-categoria>
     <tr>
-      <td>{{categoria.id}}</td>
-      <td>{{categoria.nome}}</td>
-      <td>{{categoria.situacao}}</td>
-      <td style='text-align: center;'>
-        <a routerLink='/categoria/{{ categoria.id }}'>
-          <span class='pi pi-pencil' style='font-size: x-large'></span>
+      <td>{{ categoria.id }}</td>
+      <td>{{ categoria.nome }}</td>
+      <td>{{ categoria.situacao }}</td>
+      <td style="text-align: center">
+        <a routerLink="/categoria/{{ categoria.id }}">
+          <span class="pi pi-pencil" style="font-size: x-large"></span>
         </a>
       </td>
     </tr>
@@ -42,9 +29,7 @@
   <ng-template pTemplate="emptymessage">
     <tr>
       <td colspan="6">
-        <div style="padding: 20px">
-          Nenhum registro listado
-        </div>
+        <div style="padding: 20px">Nenhum registro listado</div>
       </td>
     </tr>
   </ng-template>
