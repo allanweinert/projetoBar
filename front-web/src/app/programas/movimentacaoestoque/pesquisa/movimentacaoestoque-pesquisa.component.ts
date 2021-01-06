@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
 import { MovimentacaoEstoquePesquisaService } from "../services/movimentacaoestoque-pesquisa.service";
 
 @Component({
@@ -15,7 +16,8 @@ export class MovimentacaoEstoquePesquisaComponent implements OnInit {
 
   constructor(
     private movimentaEstoquePesquisaService: MovimentacaoEstoquePesquisaService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
   ) {
     this.formPesquisa = this.formBuilder.group({
       valorPesquisa: [""],
@@ -24,6 +26,10 @@ export class MovimentacaoEstoquePesquisaComponent implements OnInit {
 
   ngOnInit() {
     this.pesquisar();
+  }
+
+  incluir() {
+    this.router.navigate(["/movimentacaoestoque/novo"]);
   }
 
   pesquisar() {

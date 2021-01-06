@@ -1,46 +1,11 @@
-<h3>Produto / Pesquisa</h3>
-<div>
-  <div class="p-grid">
-    <div class="p-col-fixed" style="width: 160px">
-      <button
-        class="ui-button-success"
-        label="Incluir"
-        pButton
-        routerLink="/produto/novo"
-        type="button"
-      ></button>
-    </div>
-    <div class="p-col ui-fluid">
-      <form [formGroup]="formPesquisa">
-        <div class="ui-inputgroup">
-          <input
-            formControlName="valorPesquisa"
-            pInputText
-            placeholder="pesquisar..."
-            type="text"
-          />
-          <button
-            (click)="pesquisar()"
-            icon="pi pi-search"
-            pButton
-            type="button"
-          ></button>
-        </div>
-      </form>
-    </div>
-    <div class="p-col-fixed" style="width: 140px; text-align: right">
-      <button
-        (click)="limparPesquisa()"
-        class="ui-button-secondary"
-        label="Limpar filtro"
-        pButton
-        type="button"
-      ></button>
-    </div>
-  </div>
-</div>
+<app-pesquisa
+  [form]="formPesquisa"
+  param="valorPesquisa"
+  (onClickIncluir)="incluir()"
+  (onClickPesquisar)="pesquisar()"
+  (onClickLimparPesquisa)="limparPesquisa()"
+></app-pesquisa>
 <p-table
-  [loading]="pesquisando"
   [paginator]="true"
   [rows]="50"
   [value]="produtos"

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder } from "@angular/forms";
-import { ActivatedRoute, Router } from "@angular/router";
+import { Router } from "@angular/router";
 
 import { CategoriaPesquisaService } from "../services/categoria-pesquisa.service";
 
@@ -13,7 +13,7 @@ import { CategoriaPesquisaService } from "../services/categoria-pesquisa.service
 export class CategoriaPesquisaComponent implements OnInit {
   formPesquisa: FormGroup;
   categorias: any;
-  editando: boolean;
+  pesquisando = false;
 
   constructor(
     private categoriaPesquisaService: CategoriaPesquisaService,

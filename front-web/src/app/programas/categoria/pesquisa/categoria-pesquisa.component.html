@@ -5,7 +5,13 @@
   (onClickPesquisar)="pesquisar()"
   (onClickLimparPesquisa)="limparPesquisa()"
 ></app-pesquisa>
-<p-table [value]="categorias" autoLayout="true" [paginator]="true" [rows]="50">
+<p-table 
+  [value]="categorias" 
+  autoLayout="true" 
+  [paginator]="true" 
+  [rows]="50"
+  [loading]="pesquisando"
+>
   <ng-template pTemplate="header">
     <tr>
       <th style="width: 60px">Código</th>

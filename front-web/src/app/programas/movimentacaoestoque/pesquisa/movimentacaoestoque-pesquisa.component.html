@@ -1,44 +1,10 @@
-<h3>Movimentação de Estoque / Pesquisa</h3>
-<div>
-  <div class="p-grid">
-    <div class="p-col-fixed" style="width: 160px;">
-      <button
-        pButton
-        type="button"
-        label="Incluir"
-        routerLink="/movimentacaoestoque/novo"
-        class="ui-button-success"
-      ></button>
-    </div>
-    <div class="p-col ui-fluid">
-      <form [formGroup]="formPesquisa">
-        <div class="ui-inputgroup">
-          <input
-            type="text"
-            pInputText
-            formControlName="valorPesquisa"
-            placeholder="pesquisar..."
-          />
-          <button
-            pButton
-            type="button"
-            icon="pi pi-search"
-            (click)="pesquisar()"
-          ></button>
-        </div>
-      </form>
-    </div>
-    <div class="p-col-fixed" style="width: 140px; text-align: right;">
-      <button
-        pButton
-        type="button"
-        label="Limpar filtro"
-        (click)="limparPesquisa()"
-        class="ui-button-secondary"
-      ></button>
-    </div>
-  </div>
-</div>
+<app-pesquisa
+  [form]="formPesquisa"
+  param="valorPesquisa"
+  (onClickIncluir)="incluir()"
+  (onClickPesquisar)="pesquisar()"
+  (onClickLimparPesquisa)="limparPesquisa()"
+></app-pesquisa>
 <p-table
   [value]="entradas"
   autoLayout="true"
@@ -48,12 +14,12 @@
 >
   <ng-template pTemplate="header">
     <tr>
-      <th style="width: 60px;">Código</th>
+      <th style="width: 60px">Código</th>
       <th>Data</th>
       <th>Tipo de Movimentação</th>
       <th>Fornecedor</th>
       <th>Destino</th>
-      <th style="width: 60px;">Ações</th>
+      <th style="width: 60px">Ações</th>
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-movimentaestoque>
@@ -76,9 +42,9 @@
         }}
       </td>
 
-      <td style="text-align: center;">
+      <td style="text-align: center">
         <a routerLink="/movimentacaoestoque/{{ movimentaestoque.id }}">
-          <span class="pi pi-pencil" style="font-size: x-large;"></span>
+          <span class="pi pi-pencil" style="font-size: x-large"></span>
         </a>
       </td>
     </tr>
@@ -86,9 +52,7 @@
   <ng-template pTemplate="emptymessage">
     <tr>
       <td colspan="6">
-        <div style="padding: 20px;">
-          Nenhum registro listado
-        </div>
+        <div style="padding: 20px">Nenhum registro listado</div>
       </td>
     </tr>
   </ng-template>
