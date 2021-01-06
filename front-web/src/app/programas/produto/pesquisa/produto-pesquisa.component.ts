@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
+
 import { ProdutoPesquisaService } from "../services/produto-pesquisa.service";
 
 @Component({
@@ -11,11 +13,11 @@ import { ProdutoPesquisaService } from "../services/produto-pesquisa.service";
 export class ProdutoPesquisaComponent implements OnInit {
   produtos: any;
   formPesquisa: FormGroup;
-  pesquisando = false;
 
   constructor(
     private produtoPesquisaService: ProdutoPesquisaService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
     this.formPesquisa = this.formBuilder.group({
       valorPesquisa: [""],
@@ -26,14 +28,16 @@ export class ProdutoPesquisaComponent implements OnInit {
     this.pesquisar();
   }
 
+  incluir() {
+    this.router.navigate(["/produto/novo"]);
+  }
+
   pesquisar() {
-    this.pesquisando = true;
     const valorPesquisa = this.formPesquisa.get("valorPesquisa").value;
     this.produtoPesquisaService
       .pesquisar(valorPesquisa)
       .subscribe((resultado) => {
         this.produtos = resultado.data;
-        this.pesquisando = false;
       });
   }
 
