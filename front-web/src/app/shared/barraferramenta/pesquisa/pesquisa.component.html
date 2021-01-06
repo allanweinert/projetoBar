@@ -1,0 +1,40 @@
+<div>
+  <div class="p-grid">
+    <div class="p-col-fixed">
+      <button
+        pButton
+        type="button"
+        label="Incluir"
+        (click)="incluir()"
+        class="ui-button-success"
+      ></button>
+    </div>
+    <div class="p-col ui-fluid">
+      <form [formGroup]="form">
+        <div class="ui-inputgroup">
+          <input
+            [formControlName]="param"
+            pInputText
+            placeholder="pesquisar..."
+            type="text"
+          />
+          <button
+            (click)="pesquisar()"
+            icon="pi pi-search"
+            pButton
+            type="button"
+          ></button>
+        </div>
+      </form>
+    </div>
+    <div class="p-col-fixed">
+      <button
+        pButton
+        type="button"
+        label="Limpar filtro"
+        (click)="limparPesquisa()"
+        class="ui-button"
+      ></button>
+    </div>
+  </div>
+</div>
