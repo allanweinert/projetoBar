@@ -16,7 +16,7 @@ export class BarraFerramentaComponent implements OnInit {
 
   // Input: Recebe eventos enviados pelo componente pai.
   
-  //@Input() editando: boolean;
+  @Input() editando: boolean;
 
   constructor() {}
 

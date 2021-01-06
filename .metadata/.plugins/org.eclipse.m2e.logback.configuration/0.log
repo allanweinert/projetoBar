@@ -4459,3 +4459,8 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact io.quarkus:qu
 2020-11-23 21:03:35,808 [Worker-6: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
 2020-11-23 21:03:35,908 [Worker-6: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-11-23 21:03:35,909 [Worker-6: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources
+2020-11-23 21:04:38,461 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-23 21:09:15,656 [Worker-11: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-23 21:09:15,660 [Worker-11: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2020-11-23 21:09:15,700 [Worker-11: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-23 21:09:15,700 [Worker-11: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources
