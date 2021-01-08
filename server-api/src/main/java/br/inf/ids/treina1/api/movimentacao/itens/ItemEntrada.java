@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -18,7 +19,6 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import br.inf.ids.treina1.api.categoria.Categoria;
 import br.inf.ids.treina1.api.movimentacao.MovimentacaoEstoque;
 import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque;
 import br.inf.ids.treina1.api.produto.Produto;
@@ -58,6 +58,7 @@ public class ItemEntrada {
 	private BigDecimal total;
 	
 	@ManyToOne
+	@Transient //Utilizado para não gravar em banco.
     @JoinColumn(name = "ITEMENTRADAID")
     private SaldoEstoque saldo;
 	

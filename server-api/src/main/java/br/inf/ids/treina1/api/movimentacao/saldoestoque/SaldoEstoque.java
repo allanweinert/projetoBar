@@ -13,10 +13,14 @@ import javax.validation.constraints.NotNull;
 
 import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "saldoestoque")
 @SequenceGenerator(name = "seq_saldoestoque", sequenceName = "seq_saldoestoque", allocationSize = 1)
+@Getter
+@Setter
 public class SaldoEstoque {
 
 	@Id
@@ -36,37 +40,5 @@ public class SaldoEstoque {
 	
 	@NotNull
 	private Integer restante;
-	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public LocalArmazenamento getLocalArmazenamento() {
-		return localArmazenamento;
-	}
-
-	public void setLocalArmazenamento(LocalArmazenamento localArmazenamento) {
-		this.localArmazenamento = localArmazenamento;
-	}
-
-	public ItemEntrada getItemEntrada() {
-		return itemEntrada;
-	}
-
-	public void setItemEntrada(ItemEntrada itemEntrada) {
-		this.itemEntrada = itemEntrada;
-	}
-
-	public Integer getRestante() {
-		return restante;
-	}
-
-	public void setRestante(Integer restante) {
-		this.restante = restante;
-	}
 	
 }
