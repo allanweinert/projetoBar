@@ -47,7 +47,7 @@ public class MovimentacaoEstoque {
 	
 	@ManyToOne
 	@JoinColumn(name = "fornecedorid")
-	@JsonIgnoreProperties({"nomeFantasia","razaoSocial","cnpj","cpf","telefones"})
+	@JsonIgnoreProperties({"cpf","telefones"})
 	private Fornecedor fornecedor;
 	
 	@NotNull
