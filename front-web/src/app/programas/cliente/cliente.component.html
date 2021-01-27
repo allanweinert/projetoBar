@@ -1,0 +1,40 @@
+<div class="p-grid">
+  <p-card class="p-col-4">
+    <h2>
+      <h1>100</h1>
+      compras no ano!
+    </h2>
+  </p-card>
+  <p-card class="p-col-4">
+    <h2>
+      <h1>50</h1>
+      compras no mês!
+    </h2>
+  </p-card>
+  <p-card class="p-col-4">
+    <h2>
+      <h1>10</h1>
+      compras no dia!
+    </h2>
+  </p-card>
+
+  <div class="p-col-8">
+    <p-card
+      class="p-col-3"
+      *ngFor="let produto of produtos"
+      (add)="carrinho.adicionaItem($event)"
+    >
+      <h2>{{ produto.nome }}</h2>
+      <h4>Categoria: {{ produto.categoria.nome }}</h4>
+      <a (click)="emitAddEvent()"
+        ><i class=""></i> Adicionar</a
+      >
+    </p-card>
+  </div>
+
+  <div class="p-col-4">
+    <p-card class="p-col-3">
+      <app-carrinho #carrinho></app-carrinho>
+    </p-card>
+  </div>
+</div>
