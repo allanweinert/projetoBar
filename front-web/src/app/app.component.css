@@ -1,8 +1,25 @@
 body {
   background-color: rgba(136, 133, 133, 0.815);
 }
-.app-body {
-    margin-left: 260px;
-    margin-top: 15px;
-    margin-right: 10px;
+.sidenav {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #2f373e;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding: 10px;
+}
+
+
+.main {
+  margin-left: 240px;
+  padding: 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
 }
