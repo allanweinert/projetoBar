@@ -2,7 +2,7 @@
   <form [formGroup]="formEntrada">
     <div class="ui-fluid">
       <div class="p-grid">
-        <div class="p-col-4">
+        <div class="p-col-12 p-md-12 p-lg-4">
           Produto
           <p-autoComplete
             formControlName="produto"
@@ -16,7 +16,7 @@
           </p-autoComplete>
         </div>
 
-        <div class="p-col-2">
+        <div class="p-col-6 p-md-4 p-lg-2">
           Quantidade
           <input
             type="number"
@@ -28,7 +28,7 @@
             (focusout)="totalItem()"
           />
         </div>
-        <div class="p-col-2">
+        <div class="p-col-6 p-md-4 p-lg-2">
           Valor Unitário
           <input
             currencyMask
@@ -39,7 +39,7 @@
             (focusout)="totalItem()"
           />
         </div>
-        <div class="p-col-2">
+        <div class="p-col-6 p-md-4 p-lg-2">
           Total do item
           <input
             currencyMask
@@ -51,7 +51,7 @@
             formControlName="total"
           />
         </div>
-        <div class="p-col-fixed" style="width: 100px;">
+        <div class="p-col-fixed" style="width: 100px">
           <br />
           <button
             pButton
@@ -65,16 +65,15 @@
     </div>
   </form>
   <br />
-  Lista de Itens:
   <br />
-  <p-table autoLayout="true" [value]="itensEntrada">
+  <p-table autoLayout="true" [value]="itensEntrada" *ngIf="itensEntrada.length !== 0">
     <ng-template pTemplate="header">
       <tr>
         <th>Nome</th>
-        <th style="width: 125px;">Quantidade</th>
-        <th style="width: 125px;">Valor Unitário</th>
-        <th style="width: 125px;">Valor Total</th>
-        <th style="width: 60px;">Ações</th>
+        <th style="width: 125px">Quantidade</th>
+        <th style="width: 125px">Valor Unitário</th>
+        <th style="width: 125px">Valor Total</th>
+        <th style="width: 60px">Ações</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-item>
@@ -94,12 +93,8 @@
         </td>
       </tr>
     </ng-template>
-    <ng-template pTemplate="emptymessage">
-      <tr>
-        <div *ngIf="itensEntrada.length === 0" style="padding: 16px;">
-          Nenhum item adicionado
-        </div>
-      </tr>
-    </ng-template>
   </p-table>
+    <div *ngIf="itensEntrada.length === 0" style="padding: 16px">
+      Nenhum item adicionado
+    </div>
 </p-card>

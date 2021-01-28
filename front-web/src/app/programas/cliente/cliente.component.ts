@@ -1,34 +1,29 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { Produto } from "../produto/modelos/produto";
-import { ProdutoPesquisaService } from "../produto/services/produto-pesquisa.service";
+import { Component, OnInit } from "@angular/core";
+import { CategoriaPesquisaService } from "../categoria/services/categoria-pesquisa.service";
 
 @Component({
   selector: "app-cliente",
   templateUrl: "./cliente.component.html",
   styleUrls: ["./cliente.component.css"],
-  providers: [ProdutoPesquisaService],
+  providers: [CategoriaPesquisaService],
 })
 export class ClienteComponent implements OnInit {
-  produtos = [];
+  categorias = [];
 
-  @Input() produto: Produto
-  @Output() add = new EventEmitter()
 
-  constructor(private produtoPesquisaService: ProdutoPesquisaService) {}
+  constructor(private categoriaPesquisaService: CategoriaPesquisaService) {}
 
   ngOnInit() {
-    this.pesquisar();
+    this.pesquisarCategorias();
   }
 
-  pesquisar() {
-    this.produtoPesquisaService
-      .pesquisar(this.produtos)
-      .subscribe((resultado) => {
-        this.produtos = resultado.data;
-      });
-  }
-
-  emitAddEvent(){
-    this.add.emit(this.produto)
+  pesquisarCategorias() {
+    this.categoriaPesquisaService
+    .pesquisar(this.categorias)
+    .subscribe(
+      resultado => {
+        this.categorias = resultado.data;
+      }
+    );
   }
 }

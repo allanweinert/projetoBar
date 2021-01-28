@@ -11,14 +11,14 @@
   <form [formGroup]="formMovimentacaoEstoque">
     <div class="ui-fluid">
       <div class="p-grid">
-        <div class="p-col-2">
+        <div class="p-col-12 p-lg-2 p-md-3">
           <p-dropdown
             [options]="tipoMovimentacoes"
             formControlName="tipo"
             (onChange)="onChangeTipo()"
           ></p-dropdown>
         </div>
-        <div class="p-col-2">
+        <div class="p-col-12 p-lg-2 p-md-3">
           <app-calendario [form]="formMovimentacaoEstoque" param="data">
           </app-calendario>
         </div>

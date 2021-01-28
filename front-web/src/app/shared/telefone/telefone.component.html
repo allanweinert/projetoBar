@@ -1,12 +1,12 @@
 <form [formGroup]="formTelefone">
   <div class="ui-fluid">
     <div class="p-grid">
-      <div class="p-col">
-        Telefone (obrigatório)
+      <div class="p-col-8">
+        Telefone
         <input type="text" pInputText formControlName="numero" />
       </div>
-      <div class="p-col-4">
-        Tipo (obrigatório)
+      <div class="p-col-8 p-lg-2">
+        Tipo
         <p-dropdown
           [options]="tiposTelefone"
           formControlName="tipo"
