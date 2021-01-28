@@ -5,9 +5,7 @@ import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.produto.enums.Situacao;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -39,7 +37,8 @@ public class Produto {
     @Enumerated(EnumType.STRING)
     private Situacao situacao;
     
-    @OneToMany(mappedBy = "produto", fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "itementradaid")
     private List<ItemEntrada> entradas;
 
 }

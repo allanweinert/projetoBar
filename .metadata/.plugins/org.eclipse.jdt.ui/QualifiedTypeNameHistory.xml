@@ -39,8 +39,6 @@
     <fullyQualifiedTypeName name="com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult"/>
     <fullyQualifiedTypeName name="br.inf.ids.treina1.api.produto.Produto_"/>
     <fullyQualifiedTypeName name="br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque_"/>
-    <fullyQualifiedTypeName name="lombok.Getter"/>
-    <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="javax.print.DocFlavor.STRING"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -56,4 +54,7 @@
     <fullyQualifiedTypeName name="br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada_"/>
     <fullyQualifiedTypeName name="br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque"/>
     <fullyQualifiedTypeName name="br.inf.ids.treina1.api.movimentacao.dto.ProdutoRestanteDTO"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="javax.persistence.Transient"/>
 </qualifiedTypeNameHistroy>

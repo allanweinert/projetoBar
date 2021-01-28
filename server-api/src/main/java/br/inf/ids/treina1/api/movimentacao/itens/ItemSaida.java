@@ -1,7 +1,6 @@
 package br.inf.ids.treina1.api.movimentacao.itens;
 
 import java.math.BigDecimal;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +13,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -100,10 +98,6 @@ public class ItemSaida {
 
 	public void setTotal(BigDecimal total) {
 		this.total = total;
-	}
-	
-	
-	
-	
+	}	
 	
 }

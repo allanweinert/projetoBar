@@ -4464,3 +4464,10 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact io.quarkus:qu
 2020-11-23 21:09:15,660 [Worker-11: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
 2020-11-23 21:09:15,700 [Worker-11: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-11-23 21:09:15,700 [Worker-11: Rebuilding] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources
+2021-01-07 10:16:18,215 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-01-07 10:18:02,538 [Worker-7: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-07 10:18:02,542 [Worker-7: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2021-01-07 10:18:02,694 [Worker-7: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-01-07 10:18:02,694 [Worker-7: Build Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources
+2021-01-07 14:17:23,456 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-01-07 14:18:26,580 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

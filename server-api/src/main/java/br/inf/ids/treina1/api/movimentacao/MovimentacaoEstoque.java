@@ -47,7 +47,7 @@ public class MovimentacaoEstoque {
 	
 	@ManyToOne
 	@JoinColumn(name = "fornecedorid")
-	@JsonIgnoreProperties({"cnpj","cpf","telefones"})
+	@JsonIgnoreProperties({"cpf","telefones"})
 	private Fornecedor fornecedor;
 	
 	@NotNull
@@ -66,7 +66,7 @@ public class MovimentacaoEstoque {
 	@Valid
 	@OneToMany(mappedBy = "movimentacaoEstoque", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItemSaida> itensSaida;
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -130,5 +130,4 @@ public class MovimentacaoEstoque {
 	public void setLocalArmazenamentoDestino(LocalArmazenamento localArmazenamentoDestino) {
 		this.localArmazenamentoDestino = localArmazenamentoDestino;
 	}
-
 }

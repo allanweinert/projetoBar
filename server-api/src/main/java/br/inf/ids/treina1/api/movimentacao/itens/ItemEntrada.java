@@ -1,7 +1,9 @@
 package br.inf.ids.treina1.api.movimentacao.itens;
 
 import java.math.BigDecimal;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.validation.Valid;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -18,7 +23,6 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import br.inf.ids.treina1.api.categoria.Categoria;
 import br.inf.ids.treina1.api.movimentacao.MovimentacaoEstoque;
 import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque;
 import br.inf.ids.treina1.api.produto.Produto;
@@ -58,8 +62,13 @@ public class ItemEntrada {
 	private BigDecimal total;
 	
 	@ManyToOne
+	@Transient //Utilizado para não gravar em banco.
     @JoinColumn(name = "ITEMENTRADAID")
     private SaldoEstoque saldo;
+	
+	@Valid
+	@OneToMany(mappedBy = "itemEntrada", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<SaldoEstoque> saldoEstoque;
 	
 
 	public Long getId() {
@@ -104,6 +113,22 @@ public class ItemEntrada {
 	
 	public BigDecimal getTotal() {
 		return valorUnitario;
+	}
+
+	public SaldoEstoque getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(SaldoEstoque saldo) {
+		this.saldo = saldo;
+	}
+
+	public List<SaldoEstoque> getSaldoEstoque() {
+		return saldoEstoque;
+	}
+
+	public void setSaldoEstoque(List<SaldoEstoque> saldoEstoque) {
+		this.saldoEstoque = saldoEstoque;
 	}
 
 	public void setTotal(BigDecimal total) {

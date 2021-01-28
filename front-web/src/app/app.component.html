@@ -1,6 +1,8 @@
-<app-top-menu></app-top-menu>
-<app-side-menu></app-side-menu>
-<div class='app-body'>
-    <router-outlet></router-outlet>
+<div class="sidenav">
+    <app-side-menu></app-side-menu>
 </div>
-<p-toast [style]="{width: '450px'}"></p-toast>
+
+<!-- Conteúdo da Página -->
+<div class="main">
+  <router-outlet></router-outlet>
+</div>

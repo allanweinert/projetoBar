@@ -196,6 +196,19 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
 
   excluir() {
     const id = this.formMovimentacaoEstoque.get("id").value;
+    const confirmacao = confirm('Deseja excluir esta movimentação?');
+    if(confirmacao) {
+      this.movimentacaoestoqueCrudService.deletar(id).subscribe(
+        resultado => {
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Sucesso!',
+            detail:'Movimentação excluída com sucesso!'
+          });
+          this.novo
+        }
+      )
+    }
   }
 
   novo() {

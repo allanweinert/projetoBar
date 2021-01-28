@@ -7,6 +7,10 @@ const routes: Routes = [
    * Component: Define o componente que o Angular deve usar para o caminho correspondente.
    */
   {
+    path: 'cliente',
+    loadChildren: () => import('./programas/cliente/cliente.module').then(mod => mod.ClienteModule),
+  },
+  {
     path: 'localarmazenamento',
     loadChildren: () => import('./programas/localarmazenamento/localarmazenamento.module').then(mod => mod.LocalArmazenamentoModule),
   },
