@@ -1,0 +1,1 @@
+ALTER TABLE itementrada ADD restante NUMERIC(20);
