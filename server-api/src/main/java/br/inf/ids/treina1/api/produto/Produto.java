@@ -5,10 +5,13 @@ import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.produto.enums.Situacao;
 import lombok.Getter;
 import lombok.Setter;
+
 import java.util.List;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
@@ -19,7 +22,7 @@ import javax.validation.constraints.Size;
 public class Produto {
 
     @Id
-    @Column(name = "PRODUTOID")
+    @Column(name = "produtoid")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PRODUTO")
     private Long id;
 
@@ -28,7 +31,7 @@ public class Produto {
     private String nome;
 
     @ManyToOne
-    @JoinColumn(name = "CATEGORIAID")
+    @JoinColumn(name = "categoriaid")
     private Categoria categoria;
 
     @NotNull
@@ -39,6 +42,7 @@ public class Produto {
     
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "itementradaid")
+    @JsonIgnore
     private List<ItemEntrada> entradas;
-
+    
 }
