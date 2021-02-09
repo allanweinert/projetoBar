@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { CarrinhoService } from "./carrinho.service";
+import { CarrinhoService } from "./services/carrinho.service";
 
 @Component({
   selector: "app-carrinho",
