@@ -16,12 +16,14 @@ import com.ordnaelmedeiros.jpafluidselect.querybuilder.QueryBuilder;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.ref.Ref;
 
-import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento_;
+import br.inf.ids.treina1.api.categoria.Categoria;
+import br.inf.ids.treina1.api.categoria.Categoria_;
+import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento;
+import br.inf.ids.treina1.api.movimentacao.MovimentacaoEstoque_;
 import br.inf.ids.treina1.api.movimentacao.dto.ProdutoRestanteDTO;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada_;
-import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque;
-import br.inf.ids.treina1.api.movimentacao.saldoestoque.SaldoEstoque_;
+import br.inf.ids.treina1.api.produto.dto.ProdutoPorCategoriaDTO;
 
 @RequestScoped
 public class ProdutoService {
@@ -90,44 +92,69 @@ public class ProdutoService {
 			
 	}
 	
+	public PaginationResult<ProdutoPorCategoriaDTO> produtoPorCategoria(Integer pagina, Long categoriaId) {
+		Ref<Produto> joinProduto = new Ref<Produto>();
+		Ref<Categoria> joinCategoria = new Ref<Categoria>();
+		
+		PaginationResult<ProdutoPorCategoriaDTO> retorno = new PaginationResult<ProdutoPorCategoriaDTO>();
+		
+		/*
+		 select
+			produto.produtoid,
+			produto.nome,
+			categoria.categoriaid,
+			categoria.nome
+		from
+			produto
+		inner join categoria on
+			categoria.categoriaid = produto.categoriaid
+
+		 */
+		List<ProdutoPorCategoriaDTO> produtos = new QueryBuilder(em)
+			.select(Produto.class)
+				.innerJoin(Produto_.categoria)
+					.ref(joinCategoria)
+				.end()
+				.innerJoin(Produto_.categoria)
+					.on()
+						.field(Categoria_.id).eq(categoriaId)
+			.fields()
+				.field(joinProduto.field(Produto_.id)).alias("id")
+				.field(joinProduto.field(Produto_.nome)).alias("nome")
+				.field(joinCategoria.field(Categoria_.id)).alias("categoriaId")
+				.field(joinCategoria.field(Categoria_.nome)).alias("categoriaNome")
+			.print()
+			.getResultListByConstructor(ProdutoPorCategoriaDTO.class);
+		
+		
+		retorno.setLastPage(0);
+		retorno.setPageNumber(0);
+		retorno.setPageSize(10);
+		retorno.setTotalRows(100l);
+		
+		return retorno;
+	}
+	
 	public PaginationResult<ProdutoRestanteDTO> produtoComSaldoPorLocalArmazenamento(Integer pagina, Long localArmazenamentoId) {
-		Ref<ItemEntrada> joinItem = new Ref<ItemEntrada>();
 		Ref<Produto> joinProduto = new Ref<Produto>();
 		
 		PaginationResult<ProdutoRestanteDTO> retorno = new PaginationResult<ProdutoRestanteDTO>();
 		
-		/*
-		 select 
-			produto.produtoid,
-			produto.nome,
-			saldoestoque.restante,
-			itementrada.valorunitario 
-		 from saldoestoque
-			inner join itementrada on itementrada.itementradaid = saldoestoque.itementradaid
-			inner join produto on produto.produtoid = itementrada.produtoid 
-			inner join localarmazenamento on localarmazenamento.localarmazenamentoid = saldoestoque .localarmazenamentoid 
-				and localarmazenamento.localarmazenamentoid = 1
-		 where 
-			saldoestoque.restante >= 0
-		*/
 		List<ProdutoRestanteDTO> produtos = new QueryBuilder(em)
-				.select(SaldoEstoque.class)
-					.innerJoin(SaldoEstoque_.itemEntrada)
-						.ref(joinItem)
-						.innerJoin(ItemEntrada_.produto)
-							.ref(joinProduto)
-						.end()
+				.select(ItemEntrada.class)
+					.innerJoin(ItemEntrada_.produto)
+						.ref(joinProduto)
 					.end()
-					.innerJoin(SaldoEstoque_.localArmazenamento)
+					.innerJoin(ItemEntrada_.movimentacaoEstoque)
 						.on()
-							.field(LocalArmazenamento_.id).eq(localArmazenamentoId)
+							.field(MovimentacaoEstoque_.localArmazenamento).eq(new LocalArmazenamento(localArmazenamentoId))
 				.fields()
 					.field(joinProduto.field(Produto_.id)).alias("id")
 					.field(joinProduto.field(Produto_.nome)).alias("nome")
-					.field(SaldoEstoque_.restante).alias("restante")
-					.field(joinItem.field(ItemEntrada_.valorUnitario)).alias("valorUnitario")
+					.field(ItemEntrada_.restante).alias("restante")
+					.field(ItemEntrada_.valorUnitario).alias("valorUnitario")
 				.where()
-					.field(SaldoEstoque_.restante).gt(0)
+					.field(ItemEntrada_.restante).gt(0)
 				.print()
 				.getResultListByConstructor(ProdutoRestanteDTO.class);
 		
@@ -182,14 +209,13 @@ public class ProdutoService {
 		Ref<Produto> joinProduto = new Ref<>();
 		return 
 				new QueryBuilder(em)
-				.select(SaldoEstoque.class)
-					.innerJoin(SaldoEstoque_.itemEntrada).ref(joinItemEntrada)
+				.select(ItemEntrada.class)
 					.innerJoin(ItemEntrada_.produto).ref(joinProduto)
 				.fields()
 					.field(joinProduto.field(Produto_.id)).alias("id")
 					.field(joinProduto.field(Produto_.nome)).alias("nome")
 				.where()
-					.field(SaldoEstoque_.restante).gt(0)
+					.field(ItemEntrada_.restante).gt(0)
 				.group()
 					.add(joinProduto.field(Produto_.id))
 				.getResultListByConstructor(ProdutoRestanteDTO.class);
