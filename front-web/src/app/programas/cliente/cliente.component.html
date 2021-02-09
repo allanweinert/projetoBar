@@ -18,7 +18,14 @@
     </h2>
   </p-card>
 
-    <p-card class="p-col-12 p-md-4 p-lg-4" *ngFor="let categoria of categorias">
-      <h2>{{ categoria.nome }}</h2>
-    </p-card>
+  <p-card class="p-col-12 p-md-4 p-lg-4" *ngFor="let categoria of categorias">
+    <a routerLink="/produto/produto"
+      ><img
+        alt="Card"
+        style="width: 50px"
+        src="../../../assets/img/cerveja.svg"
+      />
+      <p>{{ categoria.nome }}</p></a
+    >
+  </p-card>
 </div>

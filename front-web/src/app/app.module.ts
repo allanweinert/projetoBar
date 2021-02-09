@@ -16,7 +16,6 @@ import StockModule from 'highcharts/modules/stock';
 import { BarraFerramentaModule } from './shared/barraferramenta/barraferramenta.module';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
-import { LOCALE_ID } from '@angular/core';
 StockModule(Highcharts);
 
 @NgModule({
