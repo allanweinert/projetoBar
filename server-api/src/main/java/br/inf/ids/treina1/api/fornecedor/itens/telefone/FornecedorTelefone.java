@@ -20,18 +20,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "FORNECEDORTELEFONE")
+@Table(name = "fornecedortelefone")
 @Getter @Setter
 @SequenceGenerator(name = "SEQ_FORNECEDORTELEFONE", sequenceName = "SEQ_FORNECEDORTELEFONE", allocationSize = 1)
 public class FornecedorTelefone {
 
 	@Id
-	@Column(name = "FORNECEDORTELEFONEID")
+	@Column(name = "fornecedortelefoneid")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_FORNECEDORTELEFONE")
 	private Long id;
 	
 	@ManyToOne
-	@JoinColumn(name = "FORNECEDORID")
+	@JoinColumn(name = "fornecedorid")
 	@JsonIgnore
 	private Fornecedor fornecedor;
 	
