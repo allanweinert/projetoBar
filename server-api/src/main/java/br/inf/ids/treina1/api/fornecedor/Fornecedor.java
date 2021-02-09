@@ -26,7 +26,7 @@ import br.inf.ids.treina1.api.fornecedor.itens.telefone.FornecedorTelefone;
 public class Fornecedor {
 	
 	@Id
-	@Column(name = "FORNECEDORID")
+	@Column(name = "fornecedorid")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_FORNECEDOR")
 	private Long id;
 	

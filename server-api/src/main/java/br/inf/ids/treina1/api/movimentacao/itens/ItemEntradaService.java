@@ -1,4 +1,4 @@
-package br.inf.ids.treina1.api.movimentacao.saldoestoque;
+package br.inf.ids.treina1.api.movimentacao.itens;
 
 import java.util.List;
 import java.util.Set;
@@ -14,7 +14,7 @@ import javax.validation.Validator;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.QueryBuilder;
 
 @RequestScoped
-public class SaldoEstoqueService {
+public class ItemEntradaService {
 
 	@Inject
 	EntityManager em;
@@ -22,34 +22,34 @@ public class SaldoEstoqueService {
 	@Inject
 	Validator validator;
 	
-	public List<SaldoEstoque> todas() {
+	public List<ItemEntrada> todas() {
 		return new QueryBuilder(em)
-			.select(SaldoEstoque.class)
+			.select(ItemEntrada.class)
 			.getResultList();
 	}
 	
-	private void validar(SaldoEstoque SaldoEstoque) {
-		Set<ConstraintViolation<Object>> validate = validator.validate(SaldoEstoque);
+	private void validar(ItemEntrada itemEntrada) {
+		Set<ConstraintViolation<Object>> validate = validator.validate(itemEntrada);
 		if (!validate.isEmpty()) {
 			throw new ConstraintViolationException(validate);
 		}
 	}
 	
 	@Transactional
-	public Long gravar(SaldoEstoque SaldoEstoque) {
-		this.validar(SaldoEstoque);
-		em.persist(SaldoEstoque);
-		return SaldoEstoque.getId();
+	public Long gravar(ItemEntrada itemEntrada) {
+		this.validar(itemEntrada);
+		em.persist(itemEntrada);
+		return itemEntrada.getId();
 	}
 
-	public SaldoEstoque busca(Long id) {
-		return em.find(SaldoEstoque.class, id);
+	public ItemEntrada busca(Long id) {
+		return em.find(ItemEntrada.class, id);
 	}
 
 	@Transactional
-	public void atualizar(SaldoEstoque SaldoEstoque) {
-		this.validar(SaldoEstoque);
-		em.merge(SaldoEstoque);
+	public void atualizar(ItemEntrada itemEntrada) {
+		this.validar(itemEntrada);
+		em.merge(itemEntrada);
 	}
 	
 	@Transactional

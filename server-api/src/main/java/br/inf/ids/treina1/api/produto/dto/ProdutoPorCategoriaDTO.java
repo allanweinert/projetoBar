@@ -1,4 +1,6 @@
-package br.inf.ids.treina1.api.movimentacao.dto;
+package br.inf.ids.treina1.api.produto.dto;
+
+import java.math.BigDecimal;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,9 +11,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SaldoEstoqueDTO {
+public class ProdutoPorCategoriaDTO {
 	
-	String produto;
+	Long id;
+	String nome;
 	Integer restante;
+	BigDecimal valorUnitario;
 
 }

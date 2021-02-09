@@ -16,6 +16,7 @@ import { TipoMovimentacao } from "../modelos/tipo-movimentacao.enum";
 import { SaidaComponent } from "../item/saida/saida.component";
 import { LocalArmazenamento } from "../../localarmazenamento/modelos/localarmazenamento";
 import { Fornecedor } from "../../fornecedor/modelos/fornecedor";
+import { Produto } from "../../produto/modelos/produto";
 
 @Component({
   selector: "app-movimentacaoestoque-form",
@@ -122,6 +123,17 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   salvar() {
     if (this.validarFormulario()) {
       const movimentacaoestoque: MovimentacaoEstoque = this.getMovimentacaoEstoqueDoForm();
+      
+      if(movimentacaoestoque.tipo === 'SAIDA'){
+        
+        movimentacaoestoque.itensSaida.forEach(t2 => {
+          let produto:Produto = {};
+          produto.id = t2.produto.id;
+          produto.nome = t2.produto.nome;
+          t2.produto = produto;
+        });
+
+      }
       if (movimentacaoestoque.id) {
         this.atualizarMovimentacaoEstoque(movimentacaoestoque);
       } else {

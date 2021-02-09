@@ -20,6 +20,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
 import br.inf.ids.treina1.api.movimentacao.dto.ProdutoRestanteDTO;
+import br.inf.ids.treina1.api.produto.dto.ProdutoPorCategoriaDTO;
 
 @Tag(name = "Produto", description = "É o produto uai")
 @Path("/produto")
@@ -79,6 +80,14 @@ public class ProdutoResource {
 			@QueryParam("pagina") Integer pagina,
 			@Parameter(required = true, name = "localArmazenamentoId") @QueryParam("localArmazenamentoId") Long localArmazenamentoId) {
 		return produtoService.produtoComSaldoPorLocalArmazenamento(pagina, localArmazenamentoId);
+	}
+	
+	@GET
+	@Path("/pesquisaprodutoporcategoria")
+	public PaginationResult<ProdutoPorCategoriaDTO> produtoPorCategoria(
+			@QueryParam("pagina") Integer pagina,
+			@Parameter(required = true, name = "categoriaId") @QueryParam("categoriaId") Long categoriaId) {
+		return produtoService.produtoPorCategoria(pagina, categoriaId);
 	}
 	
 }

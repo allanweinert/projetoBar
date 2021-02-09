@@ -1,4 +1,4 @@
-# Treina1Web
+# Projeto Bar
 
 ## Ferramentas
 
@@ -184,5 +184,3 @@ http://localhost:4200/
 
 Primeiramente, tente pesquisar no Google...
 <br>É importante aprender a encontrar as respostas...
-
-Se o problema persistir, entre em contato: eduardo.bastian@gmail.com
