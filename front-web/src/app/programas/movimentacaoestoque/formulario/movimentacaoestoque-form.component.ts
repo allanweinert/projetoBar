@@ -159,6 +159,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
           detail:
             "Entrada " + movimentacaoestoque.id + " alterado com sucesso!",
         });
+        this.pesquisar();
       });
   }
 
@@ -178,6 +179,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
           summary: "Não foi possível salvar a entrada!",
           detail: error.error.mensagens,
         });
+        this.pesquisar();
       }
     );
   }

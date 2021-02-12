@@ -96,6 +96,7 @@ export class LocalArmazenamentoFormComponent implements OnInit {
           summary: 'Sucesso!',
           detail: 'Local ' + armazenamento.nome + ' alterado com sucesso!'
         });
+        this.pesquisar();
       }
     );
   }
@@ -108,7 +109,7 @@ export class LocalArmazenamentoFormComponent implements OnInit {
           summary: 'Sucesso!',
           detail: 'Local ' + armazenamento.nome + ' incluído com sucesso!'
         });
-        this.novo();
+        this.pesquisar();
       },
       error => {
         this.messageService.add({

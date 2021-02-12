@@ -84,7 +84,7 @@ export class CategoriaFormComponent implements OnInit {
           summary: "Sucesso!",
           detail: "Categoria " + categoria.nome + " incluída com sucesso!",
         });
-        this.novo();
+        this.pesquisar();
       },
       (error) => {
         this.messageService.add({
