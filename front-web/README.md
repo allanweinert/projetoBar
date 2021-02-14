@@ -157,6 +157,9 @@ A definição de todas dependências do projeto estão no arquivo: `package.json
 Para executar o projeto em modo desenvolvimento, execute o comando:
 ```
 ng serve
+
+Devido a integração com a Receita, é necessário executar o seguinte comando:
+ng serve --proxy-config proxy.config.json
 ```
 
 O resultado deste comando no console, deve exibir algo semelhante a:
