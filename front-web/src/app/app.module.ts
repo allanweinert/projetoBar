@@ -9,14 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopMenuModule } from './top-menu/top-menu.module';
 import { SideMenuModule } from './side-menu/side-menu.module';
+import { BarraFerramentaModule } from './shared/barraferramenta/barraferramenta.module';
+
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
+
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { HighchartsChartModule } from 'highcharts-angular';
 import * as Highcharts from 'highcharts';
 import StockModule from 'highcharts/modules/stock';
-import { BarraFerramentaModule } from './shared/barraferramenta/barraferramenta.module';
-import { ToolbarModule } from 'primeng/toolbar';
-import { ButtonModule } from 'primeng/button';
-import { LOCALE_ID } from '@angular/core';
 StockModule(Highcharts);
 
 @NgModule({
