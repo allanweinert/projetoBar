@@ -67,18 +67,19 @@ export class CategoriaFormComponent implements OnInit {
   }
 
   atualizarCategoria(categoria: Categoria) {
-    this.categoriaCrudService.atualizar(categoria).subscribe((produtoId) => {
-      this.messageService.add({
-        severity: "success",
-        summary: "Sucesso!",
-        detail: "Categoria " + categoria.nome + " alterada com sucesso!",
-      });
+    this.categoriaCrudService.atualizar(categoria).subscribe(
+      categoriaId => {
+        this.messageService.add({
+          severity: "success",
+          summary: "Sucesso!",
+          detail: "Categoria " + categoria.nome + " alterada com sucesso!",
+        });
     });
   }
 
   incluirCategoria(categoria: Categoria) {
     this.categoriaCrudService.incluir(categoria).subscribe(
-      (categoriaId) => {
+      categoriaId => {
         this.messageService.add({
           severity: "success",
           summary: "Sucesso!",
@@ -86,7 +87,7 @@ export class CategoriaFormComponent implements OnInit {
         });
         this.pesquisar();
       },
-      (error) => {
+      error => {
         this.messageService.add({
           severity: "warn",
           summary: "Não foi possível salvar a categoria!",
@@ -137,7 +138,7 @@ export class CategoriaFormComponent implements OnInit {
           summary: "Sucesso!",
           detail: "Categoria excluída com sucesso!",
         });
-        this.novo();
+        this.pesquisar();
       });
     }
   }
