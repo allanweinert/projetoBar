@@ -123,7 +123,7 @@ public class ProdutoService {
 				.field(joinProduto.field(Produto_.nome)).alias("nome")
 				.field(joinCategoria.field(Categoria_.id)).alias("categoriaId")
 				.field(joinCategoria.field(Categoria_.nome)).alias("categoriaNome")
-			.print()
+			//.print()
 			.getResultListByConstructor(ProdutoPorCategoriaDTO.class);
 		
 		
