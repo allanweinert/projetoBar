@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-
 import { MessageService } from 'primeng/api';
 
-
-import { LocalArmazenamentoCrudService } from '../services/localarmazenamento-crud.service';
 import { LocalArmazenamento } from '../modelos/localarmazenamento';
+import { LocalArmazenamentoCrudService } from '../services/localarmazenamento-crud.service';
 import { LocalArmazenamentoPesquisaService } from '../services/localarmazenamento-pesquisa.service';
+
 
 @Component({
   selector: 'app-localarmazenamento-form',
