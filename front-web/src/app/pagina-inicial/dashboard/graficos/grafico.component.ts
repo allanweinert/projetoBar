@@ -12,7 +12,7 @@ import { DashboardPesquisaService } from "../services/dashboard-pesquisa.service
 export class GraficoComponent implements OnInit {
   data: any = [];
   labels: any = [];
-
+  graficos: any = [];
   Highcharts: typeof Highcharts = Highcharts;
   grafico: Highcharts.Options = {
     chart: {
@@ -68,23 +68,28 @@ export class GraficoComponent implements OnInit {
 
   ngOnInit() {
     //inicio grafico de quantia de produtos
-    this.dashboardPesquisaService.graficoSaidas().subscribe(
-      (data) => {
+    this.dashboardPesquisaService.todosOsGraficos().subscribe(
+      (dados) => {
         // Success
-        this.data = data["dados"];
-        this.labels = data["labels"];
-        const dadosGrafico = this.data;
-        const nome = this.labels;
-
-        //Highcharts
-        this.grafico.series[0]["data"] = dadosGrafico;
-        this.grafico.xAxis["categories"] = nome;
-        Highcharts.chart("MediosdPPrincipal", this.grafico);
+        dados.forEach(data => {
+          this.data = data["dados"];
+          this.labels = data["labels"];
+          const dadosGrafico = this.data;
+          const nome = this.labels;
+  
+          //Highcharts
+          this.grafico.series[0]["data"] = dadosGrafico;
+          this.grafico.xAxis["categories"] = nome;
+          this.graficos.push(this.grafico);
+          Highcharts.chart("MediosdPPrincipal", this.grafico);
+        });
+       
       },
       (err) => {
         console.error(err);
       }
     );
+    
     //fim do gráfico de quantia de produtos
   }
 }

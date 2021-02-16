@@ -46,9 +46,9 @@ export class DashboardPesquisaService {
     );
   }
 
-  graficoSaidas() {
-    const url = `${environment.apiURL}/grafico/saidas`;
-    return this.http.get<Grafico>(url).pipe(
+  todosOsGraficos() {
+    const url = `${environment.apiURL}/grafico/todos`;
+    return this.http.get<any>(url).pipe(
       tap(
         resultado => {
           //console.log("graficoSaidas",resultado);
