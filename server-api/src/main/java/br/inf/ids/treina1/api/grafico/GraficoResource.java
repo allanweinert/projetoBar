@@ -1,5 +1,7 @@
 package br.inf.ids.treina1.api.grafico;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -20,9 +22,9 @@ public class GraficoResource {
 	GraficoService graficoService;
 		
 	@GET
-	@Path("/saidas")
-	public Grafico getSaidas() {
-		return graficoService.saidas();
+	@Path("/todos")
+	public List<Grafico> getTodos() {
+		return graficoService.todos();
 	}
 
 }
