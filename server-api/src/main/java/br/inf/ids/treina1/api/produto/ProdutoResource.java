@@ -19,6 +19,9 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.pagination.PaginationResult;
 
+import br.inf.ids.treina1.api.movimentacao.dto.ProdutoRestanteDTO;
+import br.inf.ids.treina1.api.produto.dto.ProdutoPorCategoriaDTO;
+
 @Tag(name = "Produto", description = "É o produto uai")
 @Path("/produto")
 @Produces(MediaType.APPLICATION_JSON)
@@ -66,18 +69,25 @@ public class ProdutoResource {
 	
 	@GET
 	@Path("/pesquisacomsaldo")
-	public PaginationResult<Produto> pesquisaComSaldo(
-			@QueryParam("pagina") Integer pagina,
-			@Parameter(required = false, name = "valor") @QueryParam("valor") String valor) {
-		return produtoService.comSaldo(pagina, valor);
+	public List<ProdutoRestanteDTO> pesquisaComSaldo(
+		@Parameter(required = false, name = "valor") @QueryParam("valor") String valor) {
+		return produtoService.comSaldo(valor);
 	}
 	
 	@GET
 	@Path("/pesquisaprodutocomsaldoporlocalarmazenamento")
-	public PaginationResult<Produto> produtoComSaldoPorLocalArmazenamento(
+	public PaginationResult<ProdutoRestanteDTO> produtoComSaldoPorLocalArmazenamento(
 			@QueryParam("pagina") Integer pagina,
 			@Parameter(required = true, name = "localArmazenamentoId") @QueryParam("localArmazenamentoId") Long localArmazenamentoId) {
 		return produtoService.produtoComSaldoPorLocalArmazenamento(pagina, localArmazenamentoId);
+	}
+	
+	@GET
+	@Path("/pesquisaprodutoporcategoria")
+	public PaginationResult<ProdutoPorCategoriaDTO> produtoPorCategoria(
+			@QueryParam("pagina") Integer pagina,
+			@Parameter(required = true, name = "categoriaId") @QueryParam("categoriaId") Long categoriaId) {
+		return produtoService.produtoPorCategoria(pagina, categoriaId);
 	}
 	
 }

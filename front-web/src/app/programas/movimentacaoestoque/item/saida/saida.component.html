@@ -2,7 +2,7 @@
   <form [formGroup]="formSaida">
     <div class="ui-fluid">
       <div class="p-grid">
-        <div class="p-col-4">
+        <div class="p-col-12 p-md-12 p-lg-4">
           Produto
           <p-autoComplete
             formControlName="produto"
@@ -15,7 +15,7 @@
           >
           </p-autoComplete>
         </div>
-        <div class="p-col-2">
+        <div class="p-col-6 p-md-4 p-lg-2">
           Quantidade
           <input
             type="number"
@@ -27,20 +27,19 @@
             (focusout)="totalItem()"
           />
         </div>
-        <div class="p-col-2">
+        <div class="p-col-6 p-md-4 p-lg-2">
           Valor
           <input
             currencyMask
             maxlength="9"
             type="text"
             pInputText
-            disabled
             [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
             formControlName="valorUnitario"
             (focusout)="totalItem()"
           />
         </div>
-        <div class="p-col-2">
+        <div class="p-col-6 p-md-4 p-lg-2">
           Total do item
           <input
             currencyMask
@@ -66,9 +65,8 @@
     </div>
   </form>
   <br />
-  Lista de Itens:
   <br />
-  <p-table autoLayout="true" [value]="itensSaida">
+  <p-table autoLayout="true" [value]="itensSaida" *ngIf="itensSaida.length !== 0">
     <ng-template pTemplate="header">
       <tr>
         <th>Nome</th>
@@ -95,12 +93,8 @@
         </td>
       </tr>
     </ng-template>
-    <ng-template pTemplate="emptymessage">
-      <tr>
-        <div *ngIf="itensSaida.length === 0" style="padding: 16px;">
-          Nenhum item adicionado
-        </div>
-      </tr>
-    </ng-template>
   </p-table>
+  <div *ngIf="itensSaida.length === 0" style="padding: 16px;">
+    Nenhum item adicionado
+  </div>
 </p-card>

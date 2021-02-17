@@ -1,25 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
 
-import { CategoriaPesquisaService } from '../services/categoria-pesquisa.service';
+import { CategoriaPesquisaService } from "../services/categoria-pesquisa.service";
 
 @Component({
-  selector: 'app-categoria-pesquisa',
-  templateUrl: './categoria-pesquisa.component.html',
-  styleUrls: ['./categoria-pesquisa.component.css'],
-  providers: [
-    CategoriaPesquisaService
-  ]
+  selector: "app-categoria-pesquisa",
+  templateUrl: "./categoria-pesquisa.component.html",
+  styleUrls: ["./categoria-pesquisa.component.css"],
+  providers: [CategoriaPesquisaService],
 })
 export class CategoriaPesquisaComponent implements OnInit {
-
-  categorias: any;
   formPesquisa: FormGroup;
+  categorias: any;
   pesquisando = false;
 
-  constructor(private categoriaPesquisaService: CategoriaPesquisaService, private formBuilder: FormBuilder) {
+  constructor(
+    private categoriaPesquisaService: CategoriaPesquisaService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {
     this.formPesquisa = this.formBuilder.group({
-      valorPesquisa: ['']
+      valorPesquisa: [""],
     });
   }
 
@@ -27,20 +29,21 @@ export class CategoriaPesquisaComponent implements OnInit {
     this.pesquisar();
   }
 
+  incluir() {
+    this.router.navigate(["/categoria/novo"]);
+  }
+
   pesquisar() {
-    this.pesquisando = true;
-    const valorPesquisa = this.formPesquisa.get('valorPesquisa').value;
-    this.categoriaPesquisaService.pesquisar(valorPesquisa).subscribe(
-      resultado => {
+    const valorPesquisa = this.formPesquisa.get("valorPesquisa").value;
+    this.categoriaPesquisaService
+      .pesquisar(valorPesquisa)
+      .subscribe((resultado) => {
         this.categorias = resultado.data;
-        this.pesquisando = false;
-      }
-    );
+      });
   }
 
   limparPesquisa() {
-    this.formPesquisa.get('valorPesquisa').setValue('');
+    this.formPesquisa.get("valorPesquisa").setValue("");
     this.pesquisar();
   }
-
 }

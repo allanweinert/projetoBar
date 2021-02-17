@@ -10,7 +10,7 @@
 	<properties>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<surefire-plugin.version>2.22.0</surefire-plugin.version>
-		<quarkus.version>0.21.2</quarkus.version>
+		<quarkus.version>1.11.3.Final</quarkus.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<hibernate-orm.version>5.4.4.Final</hibernate-orm.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -75,7 +75,7 @@
 		<dependency>
 			<groupId>com.github.ordnaelmedeiros</groupId>
 			<artifactId>jpa-fluid-select</artifactId>
-			<version>2.0.0</version>
+			<version>2.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>

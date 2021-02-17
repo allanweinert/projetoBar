@@ -11,7 +11,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class SaldoEstoqueDTO {
 	
-	String localArmazenamento;
 	String produto;
 	Integer restante;
 

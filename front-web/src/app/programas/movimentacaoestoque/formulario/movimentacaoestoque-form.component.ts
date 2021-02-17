@@ -12,11 +12,11 @@ import { LocalArmazenamentoPesquisaService } from "../../localarmazenamento/serv
 import { MovimentacaoEstoque } from "../modelos/movimentacaoestoque";
 import { ItemEntrada } from "../modelos/item-entrada";
 import { ItemSaida } from "../modelos/item-saida";
-import { CalendarioComponent } from "src/app/shared/calendario/calendario.component";
 import { TipoMovimentacao } from "../modelos/tipo-movimentacao.enum";
 import { SaidaComponent } from "../item/saida/saida.component";
 import { LocalArmazenamento } from "../../localarmazenamento/modelos/localarmazenamento";
 import { Fornecedor } from "../../fornecedor/modelos/fornecedor";
+import { Produto } from "../../produto/modelos/produto";
 
 @Component({
   selector: "app-movimentacaoestoque-form",
@@ -123,6 +123,17 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   salvar() {
     if (this.validarFormulario()) {
       const movimentacaoestoque: MovimentacaoEstoque = this.getMovimentacaoEstoqueDoForm();
+      
+      if(movimentacaoestoque.tipo === 'SAIDA'){
+        
+        movimentacaoestoque.itensSaida.forEach(t2 => {
+          let produto:Produto = {};
+          produto.id = t2.produto.id;
+          produto.nome = t2.produto.nome;
+          t2.produto = produto;
+        });
+
+      }
       if (movimentacaoestoque.id) {
         this.atualizarMovimentacaoEstoque(movimentacaoestoque);
       } else {
@@ -148,6 +159,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
           detail:
             "Entrada " + movimentacaoestoque.id + " alterado com sucesso!",
         });
+        this.pesquisar();
       });
   }
 
@@ -165,8 +177,9 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
         this.messageService.add({
           severity: "warn",
           summary: "Não foi possível salvar a entrada!",
-          detail: JSON.stringify(error),
+          detail: error.error.mensagens,
         });
+        this.pesquisar();
       }
     );
   }
@@ -197,6 +210,19 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
 
   excluir() {
     const id = this.formMovimentacaoEstoque.get("id").value;
+    const confirmacao = confirm('Deseja excluir esta movimentação?');
+    if(confirmacao) {
+      this.movimentacaoestoqueCrudService.deletar(id).subscribe(
+        resultado => {
+          this.messageService.add({
+            severity: 'success',
+            summary: 'Sucesso!',
+            detail:'Movimentação excluída com sucesso!'
+          });
+          this.novo
+        }
+      )
+    }
   }
 
   novo() {
@@ -215,6 +241,10 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
     } else {
       this.novo();
     }
+  }
+
+  pesquisar() {
+    this.router.navigate(['/movimentacaoestoque/pesquisa']);
   }
 
   onChangeTipo(): void {

@@ -34,11 +34,11 @@ export class GraficoComponent implements OnInit {
     title: {
       text: 'Gráfico de teste'
     },
-    plotOptions: {
+    /*plotOptions: {
       column: {
           borderRadius: 5
       }
-    },
+    },*/
     noData: {
         style: {
             fontWeight: 'bold',

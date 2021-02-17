@@ -1,4 +1,4 @@
-# Treina1Web
+# Projeto Bar
 
 ## Ferramentas
 
@@ -157,6 +157,9 @@ A definição de todas dependências do projeto estão no arquivo: `package.json
 Para executar o projeto em modo desenvolvimento, execute o comando:
 ```
 ng serve
+
+Devido a integração com a Receita, é necessário executar o seguinte comando:
+ng serve --proxy-config proxy.config.json
 ```
 
 O resultado deste comando no console, deve exibir algo semelhante a:
@@ -184,5 +187,3 @@ http://localhost:4200/
 
 Primeiramente, tente pesquisar no Google...
 <br>É importante aprender a encontrar as respostas...
-
-Se o problema persistir, entre em contato: eduardo.bastian@gmail.com

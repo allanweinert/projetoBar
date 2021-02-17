@@ -1,0 +1,24 @@
+<div class="p-grid">
+  <p-card class="p-col-12 p-md-4 p-lg-4">
+    <h2>
+      <h1>100</h1>
+      compras no ano!
+    </h2>
+  </p-card>
+  <p-card class="p-col-12 p-md-4 p-lg-4">
+    <h2>
+      <h1>50</h1>
+      compras no mês!
+    </h2>
+  </p-card>
+  <p-card class="p-col-12 p-md-4 p-lg-4">
+    <h2>
+      <h1>10</h1>
+      compras no dia!
+    </h2>
+  </p-card>
+
+    <p-card class="p-col-12 p-md-4 p-lg-4" *ngFor="let categoria of categorias">
+      <h2>{{ categoria.nome }}</h2>
+    </p-card>
+</div>

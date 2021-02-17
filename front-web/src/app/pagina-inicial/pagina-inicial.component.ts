@@ -11,18 +11,16 @@ import { FormGroupName, FormBuilder } from '@angular/forms';
   ]
 })
 export class PaginaInicialComponent implements OnInit {
-  saldos: any
+  //saldos: any
 
   constructor(private dashboardPesquisaService: DashboardPesquisaService) {}
 
-  ngOnInit() {
-    this.carregarSaldo();
-  }
+  ngOnInit() {}
 
-  carregarSaldo() {
+  /*carregarSaldo() {
     this.dashboardPesquisaService.saldoEstoque().subscribe((saldos: any) =>{
       this.saldos = saldos;
     });
-  }
+  }*/
 
 }

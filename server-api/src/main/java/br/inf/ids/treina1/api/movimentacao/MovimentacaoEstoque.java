@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,19 +20,18 @@ import javax.persistence.Table;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import br.inf.ids.treina1.api.fornecedor.Fornecedor;
 import br.inf.ids.treina1.api.localarmazenamento.LocalArmazenamento;
 import br.inf.ids.treina1.api.movimentacao.enums.MovimentacaoEstoqueTipo;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemSaida;
-
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-
 @SequenceGenerator(name = "seq_movimentacao", sequenceName = "seq_movimentacao", allocationSize = 1)
 @Table(name = "movimentacaoestoque")
+@Getter @Setter
 public class MovimentacaoEstoque {
 	
 	@Id
@@ -45,17 +45,16 @@ public class MovimentacaoEstoque {
 	@NotNull
 	private LocalDate data;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "fornecedorid")
-	@JsonIgnoreProperties({"cnpj","cpf","telefones"})
 	private Fornecedor fornecedor;
 	
 	@NotNull
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "localarmazenamentoid")
 	private LocalArmazenamento localArmazenamento;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "localarmazenamentodestinoid")
 	private LocalArmazenamento localArmazenamentoDestino;
 	
@@ -66,69 +65,5 @@ public class MovimentacaoEstoque {
 	@Valid
 	@OneToMany(mappedBy = "movimentacaoEstoque", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItemSaida> itensSaida;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public MovimentacaoEstoqueTipo getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(MovimentacaoEstoqueTipo tipo) {
-		this.tipo = tipo;
-	}
-
-	public LocalDate getData() {
-		return data;
-	}
-
-	public void setData(LocalDate data) {
-		this.data = data;
-	}
-
-	public Fornecedor getFornecedor() {
-		return fornecedor;
-	}
-
-	public void setFornecedor(Fornecedor fornecedor) {
-		this.fornecedor = fornecedor;
-	}
-
-	public List<ItemEntrada> getItensEntrada() {
-		return itensEntrada;
-	}
-
-	public void setItensEntrada(List<ItemEntrada> itensEntrada) {
-		this.itensEntrada = itensEntrada;
-	}
-
-	public List<ItemSaida> getItensSaida() {
-		return itensSaida;
-	}
-
-	public void setItensSaida(List<ItemSaida> itensSaida) {
-		this.itensSaida = itensSaida;
-	}
-
-	public LocalArmazenamento getLocalArmazenamento() {
-		return localArmazenamento;
-	}
-
-	public void setLocalArmazenamento(LocalArmazenamento localArmazenamento) {
-		this.localArmazenamento = localArmazenamento;
-	}
-
-	public LocalArmazenamento getLocalArmazenamentoDestino() {
-		return localArmazenamentoDestino;
-	}
-
-	public void setLocalArmazenamentoDestino(LocalArmazenamento localArmazenamentoDestino) {
-		this.localArmazenamentoDestino = localArmazenamentoDestino;
-	}
-
+	
 }

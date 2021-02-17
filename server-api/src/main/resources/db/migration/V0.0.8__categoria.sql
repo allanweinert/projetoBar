@@ -6,10 +6,3 @@ CREATE TABLE CATEGORIA (
 	
 	CONSTRAINT PK_CATEGORIA PRIMARY KEY (CATEGORIAID)
 );
-
-INSERT INTO categoria (categoriaid, nome, situacao) VALUES
-(1, 'Refrigerantes', 'ATIVO')
-,(2, 'Chocolates', 'ATIVO')
-,(3, 'Cervejas', 'ATIVO')
-,(4, 'Energéticos', 'ATIVO')
-,(5, 'Salgadinhos', 'ATIVO');

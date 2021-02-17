@@ -1,26 +1,17 @@
+<app-barraferramenta
+  (onClickPesquisar)="pesquisar()"
+  (onClickSalvar)="salvar()"
+  (onClickCancelar)="cancelar()"
+  (onClickExcluir)="excluir()"
+  [editando] = "editando"
+></app-barraferramenta>
+
 <p-card header="Fornecedor" subheader="Cadastro">
   <br />
-  <p-header class="controles">
-    <button
-      pButton
-      type="button"
-      icon="pi pi-search"
-      routerLink="/fornecedor/pesquisa"
-    ></button>
-
-    <button
-      pButton
-      type="button"
-      (click)="excluir()"
-      icon="pi pi-trash"
-      *ngIf="editando"
-    ></button>
-  </p-header>
-
   <form [formGroup]="formFornecedor">
     <div class="ui-fluid">
       <div class="p-grid">
-        <div class="p-col-4 ui-inputgroup">
+        <div class="p-col-10 p-lg-3 ui-inputgroup">
           <p-inputMask
             formControlName="cnpj"
             mask="99.999.999/9999-99"
@@ -30,10 +21,10 @@
           <button
             pButton
             type="button"
-            icon='pi pi-search'
-            (click)='pesquisaCnpjReceita()'>
-          </button>
-          </div>
+            icon="pi pi-search"
+            (click)="pesquisaCnpjReceita()"
+          ></button>
+        </div>
         <div class="p-col-10">
           Razão Social
           <input type="text" pInputText formControlName="razaoSocial" />
@@ -50,20 +41,3 @@
 <p-card header="Contato">
   <app-telefone [telefones]="listaTelefones"></app-telefone>
 </p-card>
-<br />
-<div class="controles">
-  <button
-    pButton
-    type="button"
-    label="Salvar"
-    (click)="salvar()"
-    class="ui-button-success"
-  ></button>
-  <button
-    pButton
-    type="button"
-    label="Cancelar"
-    (click)="cancelar()"
-    class="ui-button-secondary"
-  ></button>
-</div>

@@ -42,6 +42,20 @@ export class ProdutoPesquisaService {
     );
   }
 
+  pesquisaComSaldo(valor: any): Observable<any> {
+    const url = `${environment.apiURL}/produto/pesquisacomsaldo`;
+    const options = {
+      params: new HttpParams().set('valor', valor)
+    };
+    return this.http.get<any>(url, options).pipe(
+      tap(
+        resultado => {
+          return of(resultado);
+        }
+      )
+    );
+  }
+
   pesquisaProdutoComSaldoPorLocalArmazenamento(localArmazenamentoId: number, pagina = 1): Observable<any> {
     const url = `${environment.apiURL}/produto/pesquisaprodutocomsaldoporlocalarmazenamento`;
     const options = {

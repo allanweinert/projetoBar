@@ -4269,3 +4269,20 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact xmlpull:xmlpu
 2021-02-16 16:21:54,691 [Worker-438: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 20 resources
 2021-02-16 16:21:54,693 [Worker-438: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-02-16 16:21:54,693 [Worker-438: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources
+2021-02-16 20:33:26,832 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-16 20:33:26,833 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2021-02-16 20:33:26,835 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-16 20:33:26,835 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources
+2021-02-16 20:33:38,356 [Worker-430: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.inf.ids:api:1.0-SNAPSHOT @ D:\projetos\projetoBar\server-api\pom.xml.
+2021-02-16 20:33:48,749 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-16 20:33:48,751 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2021-02-16 20:33:48,860 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-16 20:33:48,860 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources
+2021-02-16 20:33:50,775 [Worker-418: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-16 20:33:50,776 [Worker-418: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2021-02-16 20:33:50,810 [Worker-418: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-16 20:33:50,810 [Worker-418: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources
+2021-02-16 20:33:53,121 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-16 20:33:53,122 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2021-02-16 20:33:53,165 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-02-16 20:33:53,165 [Worker-430: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\projetos\projetoBar\server-api\src\test\resources

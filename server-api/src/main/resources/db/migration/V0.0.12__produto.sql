@@ -10,8 +10,3 @@ CREATE TABLE PRODUTO (
 	CONSTRAINT PK_PRODUTO PRIMARY KEY (PRODUTOID),
 	CONSTRAINT FK_PRODUTO1 FOREIGN KEY (CATEGORIAID) REFERENCES CATEGORIA(CATEGORIAID)
 );
-INSERT INTO produto (produtoid, nome, estoque_minimo, situacao, categoriaid) VALUES
-(3, 'Coca - Cola', 5.00, 'ATIVO', 1)
-,(4, 'Heineken', 5.00, 'ATIVO', 3)
-,(1, 'Chokito', 10.00, 'ATIVO', 2)
-,(2, 'Corona', 5.00, 'ATIVO', 3)
