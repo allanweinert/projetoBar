@@ -68,7 +68,7 @@ public class MovimentacaoEstoqueService {
 			this.validar(movimentacaoEstoque);
 			em.persist(movimentacaoEstoque);
 			
-			//Percore os itens de saída
+			//Percorre os itens de saída
 			for (ItemSaida itemSaida : movimentacaoEstoque.getItensSaida()) {
 
 				//Localiza item entrada em que esta sendo realizada a saída

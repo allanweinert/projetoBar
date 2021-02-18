@@ -18,6 +18,7 @@
       <th>Data</th>
       <th>Tipo de Movimentação</th>
       <th>Fornecedor</th>
+      <th>Origem</th>
       <th>Destino</th>
       <th style="width: 60px">Ações</th>
     </tr>
@@ -31,6 +32,13 @@
         {{
           movimentaestoque.fornecedor
             ? movimentaestoque.fornecedor.razaoSocial
+            : ""
+        }}
+      </td>
+      <td>
+        {{
+          movimentaestoque.localArmazenamento
+            ? movimentaestoque.localArmazenamento.nome
             : ""
         }}
       </td>

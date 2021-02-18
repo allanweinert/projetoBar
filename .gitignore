@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+/.metadata/
+.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+=======
 .metadata/
 .metadata/.log
 front-web/projeto-workspace.code-workspace
@@ -65,3 +72,5 @@ e2e/*.map
 
 # System Files
 .DS_Store/
+>>>>>>> Develop-21
+*.log

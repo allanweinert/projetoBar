@@ -109,6 +109,7 @@ export class ProdutoFormComponent implements OnInit {
           summary: 'Sucesso!',
           detail: 'Produto ' + produto.nome + ' alterada com sucesso!'
         });
+        this.pesquisar();
       }
     );
   }
@@ -121,7 +122,7 @@ export class ProdutoFormComponent implements OnInit {
           summary: 'Sucesso!',
           detail: 'Produto ' + produto.nome + ' incluído com sucesso!'
         });
-        this.novo();
+        this.pesquisar();
       },
       error => {
         this.messageService.add({

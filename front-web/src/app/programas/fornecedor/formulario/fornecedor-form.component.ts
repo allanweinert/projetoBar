@@ -99,6 +99,7 @@ export class FornecedorFormComponent implements OnInit {
           summary: 'Sucesso!',
           detail: 'Fornecedor ' + fornecedor.razaoSocial + ' alterado com sucesso!'
         });
+        this.pesquisar();
       }
     );
   }
@@ -111,7 +112,7 @@ export class FornecedorFormComponent implements OnInit {
           summary: 'Sucesso!',
           detail: 'Fornecedor ' + fornecedor.razaoSocial + ' incluído com sucesso!'
         });
-        this.novo();
+        this.pesquisar();
       },
       error => {
         this.messageService.add({
