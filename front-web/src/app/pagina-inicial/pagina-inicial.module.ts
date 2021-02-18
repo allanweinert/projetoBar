@@ -1,3 +1,4 @@
+import { TableModule } from 'primeng/table';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginaInicialComponent } from './pagina-inicial.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    HighchartsChartModule
+    HighchartsChartModule,
+    TableModule
   ]
 })
 export class PaginaInicialModule { }

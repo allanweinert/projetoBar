@@ -18,9 +18,9 @@ import com.ordnaelmedeiros.jpafluidselect.querybuilder.select.ref.Ref;
 import br.inf.ids.treina1.api.movimentacao.dto.SaldoEstoqueDTO;
 import br.inf.ids.treina1.api.movimentacao.enums.MovimentacaoEstoqueTipo;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada;
-import br.inf.ids.treina1.api.movimentacao.itens.ItemEntradaService;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemEntrada_;
 import br.inf.ids.treina1.api.movimentacao.itens.ItemSaida;
+import br.inf.ids.treina1.api.movimentacao.processos.AtualizaEntradasCampoRestante;
 import br.inf.ids.treina1.api.movimentacao.validacao.MovimentacaoEstoqueValidaItemComTipo;
 import br.inf.ids.treina1.api.produto.Produto;
 import br.inf.ids.treina1.api.produto.Produto_;
@@ -37,9 +37,8 @@ public class MovimentacaoEstoqueService {
 	@Inject
 	MovimentacaoEstoqueValidaItemComTipo movimentacaoEstoqueValidaItemComTipo;
 
-	@Inject
-	ItemEntradaService itemEntradaService;
-
+	@Inject AtualizaEntradasCampoRestante atualizaEntradasCampoRestante;
+	
 	private void validar(MovimentacaoEstoque movimentacaoEstoque) {
 		Set<ConstraintViolation<Object>> validate = validator.validate(movimentacaoEstoque);
 		if (!validate.isEmpty()) {
@@ -54,8 +53,10 @@ public class MovimentacaoEstoqueService {
 
 	@Transactional
 	public Long gravar(MovimentacaoEstoque movimentacaoEstoque) {
+
 		//Grava movimentação de estoque
 		if (MovimentacaoEstoqueTipo.ENTRADA.equals(movimentacaoEstoque.getTipo())) {
+			
 			//Se tipo entrada o valor informado em quantidade será setado em campo restante
 			for (ItemEntrada itemEntrada : movimentacaoEstoque.getItensEntrada()) {
 				itemEntrada.setRestante(itemEntrada.getQuantidade());
@@ -63,6 +64,11 @@ public class MovimentacaoEstoqueService {
 			//valida e grava movimentação
 			this.validar(movimentacaoEstoque);
 			em.persist(movimentacaoEstoque);
+			
+			//Seta movimentacaoestoqueid na tabela itementrada.
+			for (ItemEntrada itemEntrada : movimentacaoEstoque.getItensEntrada()) {
+				itemEntrada.setMovimentacaoEstoque(new MovimentacaoEstoque(movimentacaoEstoque.getId()));
+			}
 		} else if (MovimentacaoEstoqueTipo.SAIDA.equals(movimentacaoEstoque.getTipo())) {
 			//valida e grava movimentação
 			this.validar(movimentacaoEstoque);
@@ -70,24 +76,17 @@ public class MovimentacaoEstoqueService {
 			
 			//Percorre os itens de saída
 			for (ItemSaida itemSaida : movimentacaoEstoque.getItensSaida()) {
-
-				//Localiza item entrada em que esta sendo realizada a saída
-				ItemEntrada entradaQueEstaFazendoASaida = new QueryBuilder(em)
-						.select(ItemEntrada.class)
-						.where()
-								.field(ItemEntrada_.produto).eq(itemSaida.getProduto())
-								.field(ItemEntrada_.valorUnitario).eq(itemSaida.getValorUnitario())
-							.getSingleResult();
-
-				//atualiza campo restante em item entrada
-				entradaQueEstaFazendoASaida.setRestante(entradaQueEstaFazendoASaida.getRestante() - itemSaida.getQuantidade());				
-				itemEntradaService.atualizar(entradaQueEstaFazendoASaida);
+				//Seta movimentacaoestoqueid na tabela itemsaida.
+				itemSaida.setMovimentacaoEstoque(new MovimentacaoEstoque(movimentacaoEstoque.getId()));
+				//Atualiza as entradas correspondentes a essa saída campo reste
+				atualizaEntradasCampoRestante.atualizar(itemSaida);
 				
 			}
 			
 		}
-		
+			
 		return movimentacaoEstoque.getId();
+
 	}
 
 	public MovimentacaoEstoque busca(Long id) {
