@@ -1,10 +1,10 @@
 .sidebar a {
-    padding: 6px 8px 6px 16px;
     font-size: 14px;
     text-decoration: none;
-    display: block;
     color: white;
-    padding: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar a:hover {
@@ -26,4 +26,9 @@
 .img a {
     color: white;
     text-decoration: none;
+}
+
+.icon {
+    width: 25px;
+    margin-right: 10px;
 }
