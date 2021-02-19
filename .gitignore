@@ -65,3 +65,4 @@ e2e/*.map
 
 # System Files
 .DS_Store/
+server-api/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
