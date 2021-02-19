@@ -66,4 +66,10 @@ public class MovimentacaoEstoque {
 	@OneToMany(mappedBy = "movimentacaoEstoque", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<ItemSaida> itensSaida;
 	
+	MovimentacaoEstoque() {
+	}
+	
+	MovimentacaoEstoque(Long id) {
+		this.id = id;
+	}
 }

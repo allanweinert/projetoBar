@@ -1,7 +1,9 @@
+import { Grafico } from './../modelos/grafico';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
+
 import { environment } from 'src/environments/environment';
 
 @Injectable()
@@ -25,6 +27,7 @@ export class DashboardPesquisaService {
     return this.http.get<any>(url, options).pipe(
       tap(
         resultado => {
+          console.log("graficoMovimentação",resultado);
           return of(resultado);
         }
       )
@@ -36,14 +39,22 @@ export class DashboardPesquisaService {
     return this.http.get<any>(url).pipe(
       tap(
         resultado => {
+          console.log("graficoSaldoEstoque",resultado);
           return of(resultado);
         }
       )
     );
   }
 
-  //teste de gráficos
-  getUsers() {
-    return this.http.get('https://randomuser.me/api/?results=25');
+  todosOsGraficos() {
+    const url = `${environment.apiURL}/grafico/todos`;
+    return this.http.get<any>(url).pipe(
+      tap(
+        resultado => {
+          //console.log("graficoSaidas",resultado);
+          return of(resultado);
+        }
+      )
+    );
   }
 }
