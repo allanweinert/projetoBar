@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\projetos\projetoBar\server-api"/>
 			<item value="D:\projetos\projetoBar"/>
 			<item value="C:\Projetos\projetoBar\server-api"/>
 			<item value="D:\Projetos\projetoBar\server-api"/>
