@@ -1,4 +1,4 @@
-import { Produto } from "../../produto/modelos/produto";
+import { Produto } from "../../../produto/modelos/produto";
 
 export class ItemCarrinho {
     constructor (public produto: Produto,

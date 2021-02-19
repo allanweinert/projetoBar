@@ -1,5 +1,5 @@
-import { Produto } from "../../produto/modelos/produto"
-import { ItemCarrinho } from "./carrinho.model"
+import { Produto } from "../../../produto/modelos/produto"
+import { ItemCarrinho } from "../modelos/carrinho.model"
 
 
 export class CarrinhoService {

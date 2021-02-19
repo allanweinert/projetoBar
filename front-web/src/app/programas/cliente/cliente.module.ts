@@ -7,6 +7,7 @@ import { Routes } from '@angular/router';
 import { CardModule } from 'primeng/card';
 
 import { CarrinhoModule } from './carrinho/carrinho.module';
+import { ListaProdutoModule } from './lista-produto/lista-produto.module';
 
 const routes: Routes = [
   { path: '',  component: ClienteComponent }
@@ -19,6 +20,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CardModule,
     CarrinhoModule,
+    ListaProdutoModule,
   ]
 })
 export class ClienteModule { }
