@@ -1,68 +1,69 @@
-<app-barraferramenta
-  (onClickPesquisar)="pesquisar()"
-  (onClickSalvar)="salvar()"
-  (onClickCancelar)="cancelar()"
-  (onClickExcluir)="excluir()"
-  [editando] = "editando"
-></app-barraferramenta>
-
-<p-card header="Movimentação de Estoque" subheader="Cadastro">
-  <br />
-  <form [formGroup]="formMovimentacaoEstoque">
-    <div class="ui-fluid">
-      <div class="p-grid">
-        <div class="p-col-12 p-lg-2 p-md-3">
-          <p-dropdown
-            [options]="tipoMovimentacoes"
-            formControlName="tipo"
-            (onChange)="onChangeTipo()"
-          ></p-dropdown>
-        </div>
-        <div class="p-col-12 p-lg-2 p-md-3">
-          <app-calendario [form]="formMovimentacaoEstoque" param="data">
-          </app-calendario>
-        </div>
-        <div class="p-col-12" *ngIf="tipo == TipoMovimentacao.ENTRADA">
-          Fornecedor
-          <p-autoComplete
-            formControlName="fornecedor"
-            (onSelect)="onChangeFornecedor()"
-            forceSelection="true"
-            field="razaoSocial"
-            dropdown="true"
-            dataKey="id"
-            [suggestions]="fornecedores"
-            (completeMethod)="pesquisarFornecedores($event)"
-          >
-          </p-autoComplete>
-        </div>
-        <div class="p-col-12" *ngIf="tipo == TipoMovimentacao.SAIDA">
-          Local de Armazenamento
-          <p-autoComplete
-            formControlName="localArmazenamento"
-            (onSelect)="onChangeLocalArmazenamento()"
-            forceSelection="true"
-            field="nome"
-            dropdown="true"
-            dataKey="id"
-            [suggestions]="armazenamentos"
-            (completeMethod)="pesquisarLocalArmazenamento($event)"
-          >
-          </p-autoComplete>
+<section [@exibeComponente]="estadoComponente">
+  <app-barraferramenta
+    (onClickPesquisar)="pesquisar()"
+    (onClickSalvar)="salvar()"
+    (onClickCancelar)="cancelar()"
+    (onClickExcluir)="excluir()"
+    [editando]="editando"
+  ></app-barraferramenta>
+</section>
+<section [@exibeComponente]="estadoComponente">
+  <p-card header="Movimentação de Estoque" subheader="Cadastro">
+    <br />
+    <form [formGroup]="formMovimentacaoEstoque">
+      <div class="ui-fluid">
+        <div class="p-grid">
+          <div class="p-col-12 p-lg-2 p-md-3">
+            <p-dropdown
+              [options]="tipoMovimentacoes"
+              formControlName="tipo"
+              (onChange)="onChangeTipo()"
+            ></p-dropdown>
+          </div>
+          <div class="p-col-12 p-lg-2 p-md-3">
+            <app-calendario [form]="formMovimentacaoEstoque" param="data">
+            </app-calendario>
+          </div>
+          <div class="p-col-12" *ngIf="tipo == TipoMovimentacao.ENTRADA">
+            Fornecedor
+            <p-autoComplete
+              formControlName="fornecedor"
+              (onSelect)="onChangeFornecedor()"
+              forceSelection="true"
+              field="razaoSocial"
+              dropdown="true"
+              dataKey="id"
+              [suggestions]="fornecedores"
+              (completeMethod)="pesquisarFornecedores($event)"
+            >
+            </p-autoComplete>
+          </div>
+          <div class="p-col-12" *ngIf="tipo == TipoMovimentacao.SAIDA">
+            Local de Armazenamento
+            <p-autoComplete
+              formControlName="localArmazenamento"
+              (onSelect)="onChangeLocalArmazenamento()"
+              forceSelection="true"
+              field="nome"
+              dropdown="true"
+              dataKey="id"
+              [suggestions]="armazenamentos"
+              (completeMethod)="pesquisarLocalArmazenamento($event)"
+            >
+            </p-autoComplete>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-</p-card>
-<br />
+    </form>
+  </p-card>
+  <br />
+</section>
 
-<app-entrada 
-  [show]="showEntrada" 
-  [itensEntrada]="listaEntrada"
-></app-entrada>
+  <app-entrada [show]="showEntrada" [itensEntrada]="listaEntrada"></app-entrada>
 
-<app-saida
-  [show]="showSaida"
-  [itensSaida]="listaSaida"
-  [localArmazenamento]="localArmazenamento"
-></app-saida>
+  <app-saida
+    [show]="showSaida"
+    [itensSaida]="listaSaida"
+    [localArmazenamento]="localArmazenamento"
+  ></app-saida>
+

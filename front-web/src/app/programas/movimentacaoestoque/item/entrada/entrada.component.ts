@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-
 import { MessageService } from "primeng/api";
 
 import { ProdutoPesquisaService } from "../../../produto/services/produto-pesquisa.service";

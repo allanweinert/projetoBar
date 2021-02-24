@@ -1,27 +1,29 @@
-<app-barraferramenta
-  (onClickPesquisar)="pesquisar()"
-  (onClickSalvar)="salvar()"
-  (onClickCancelar)="cancelar()"
-  (onClickExcluir)="excluir()"
-  [editando] = "editando"
-></app-barraferramenta>
-<p-card header="Categoria" subheader="Cadastro">
-  <br />
-  <form [formGroup]="formCategoria">
-    <div class="ui-fluid">
-      <div class="p-grid">
-        <div class="p-col-10">
-          Nome*
-          <input type="text" pInputText formControlName="nome" />
-        </div>
-        <div class="p-col-10 p-lg-2">
-          Situação
-          <p-dropdown
-            [options]="situacao"
-            formControlName="situacao"
-          ></p-dropdown>
+<section [@exibeComponente]="estadoComponente">
+  <app-barraferramenta
+    (onClickPesquisar)="pesquisar()"
+    (onClickSalvar)="salvar()"
+    (onClickCancelar)="cancelar()"
+    (onClickExcluir)="excluir()"
+    [editando]="editando"
+  ></app-barraferramenta>
+  <p-card header="Categoria" subheader="Cadastro">
+    <br />
+    <form [formGroup]="formCategoria">
+      <div class="ui-fluid">
+        <div class="p-grid">
+          <div class="p-col-10">
+            Nome*
+            <input type="text" pInputText formControlName="nome" />
+          </div>
+          <div class="p-col-10 p-lg-2">
+            Situação
+            <p-dropdown
+              [options]="situacao"
+              formControlName="situacao"
+            ></p-dropdown>
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-</p-card>
+    </form>
+  </p-card>
+</section>

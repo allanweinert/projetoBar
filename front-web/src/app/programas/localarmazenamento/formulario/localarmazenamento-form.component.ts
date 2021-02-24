@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
+import { trigger, state, style, transition, animate } from "@angular/animations"
 
 import { LocalArmazenamento } from '../modelos/localarmazenamento';
 import { LocalArmazenamentoCrudService } from '../services/localarmazenamento-crud.service';
@@ -15,6 +16,15 @@ import { LocalArmazenamentoPesquisaService } from '../services/localarmazenament
   providers: [
     LocalArmazenamentoCrudService,
     LocalArmazenamentoPesquisaService
+  ],
+  animations: [
+    trigger('exibeComponente', [
+      state('ready', style({opacity: 1})),
+      transition('void => ready', [
+        style({opacity: 0, transform: 'translate(-30px, -10px'}),
+        animate('300ms 0s ease-in-out')
+      ])
+    ])
   ]
 })
 
@@ -22,6 +32,7 @@ export class LocalArmazenamentoFormComponent implements OnInit {
   situacao = [];
   formArmazenamento: FormGroup;
   editando = false;
+  estadoComponente = 'ready'
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
