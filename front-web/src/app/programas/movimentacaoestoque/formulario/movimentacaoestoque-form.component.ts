@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
+import { trigger, state, style, transition, animate } from "@angular/animations"
 
 import { MessageService } from "primeng/api";
 
@@ -28,6 +29,15 @@ import { Produto } from "../../produto/modelos/produto";
     FornecedorPesquisaService,
     LocalArmazenamentoPesquisaService,
   ],
+  animations: [
+    trigger("exibeComponente", [
+      state("ready", style({ opacity: 1 })),
+      transition("void => ready", [
+        style({ opacity: 0, transform: "translate(-30px, -10px" }),
+        animate("300ms 0s ease-in-out"),
+      ]),
+    ]),
+  ],
 })
 export class MovimentacaoEstoqueFormComponent implements OnInit {
   formMovimentacaoEstoque: FormGroup;
@@ -37,6 +47,7 @@ export class MovimentacaoEstoqueFormComponent implements OnInit {
   armazenamentos = [];
   listaEntrada: ItemEntrada[];
   listaSaida: ItemSaida[];
+  estadoComponente = 'ready'
 
   TipoMovimentacao: typeof TipoMovimentacao = TipoMovimentacao;
 

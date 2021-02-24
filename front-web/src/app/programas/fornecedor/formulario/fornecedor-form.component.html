@@ -1,43 +1,48 @@
-<app-barraferramenta
-  (onClickPesquisar)="pesquisar()"
-  (onClickSalvar)="salvar()"
-  (onClickCancelar)="cancelar()"
-  (onClickExcluir)="excluir()"
-  [editando] = "editando"
-></app-barraferramenta>
-
+<section [@exibeComponente]="estadoComponente">
+  <app-barraferramenta
+    (onClickPesquisar)="pesquisar()"
+    (onClickSalvar)="salvar()"
+    (onClickCancelar)="cancelar()"
+    (onClickExcluir)="excluir()"
+    [editando]="editando"
+  ></app-barraferramenta>
+</section>
+<section [@exibeComponente]="estadoComponente">
 <p-card header="Fornecedor" subheader="Cadastro">
-  <br />
-  <form [formGroup]="formFornecedor">
-    <div class="ui-fluid">
-      <div class="p-grid">
-        <div class="p-col-10 p-lg-3 ui-inputgroup">
-          <p-inputMask
-            formControlName="cnpj"
-            mask="99.999.999/9999-99"
-            unmask="true"
-            placeholder="Pequise pelo cnpj"
-          ></p-inputMask>
-          <button
-            pButton
-            type="button"
-            icon="pi pi-search"
-            (click)="pesquisaCnpjReceita()"
-          ></button>
-        </div>
-        <div class="p-col-10">
-          Razão Social
-          <input type="text" pInputText formControlName="razaoSocial" />
-        </div>
-        <div class="p-col-10">
-          Nome Fantasia
-          <input type="text" pInputText formControlName="nomeFantasia" />
+    <br />
+    <form [formGroup]="formFornecedor">
+      <div class="ui-fluid">
+        <div class="p-grid">
+          <div class="p-col-10 p-lg-3 ui-inputgroup">
+            <p-inputMask
+              formControlName="cnpj"
+              mask="99.999.999/9999-99"
+              unmask="true"
+              placeholder="Pequise pelo cnpj"
+            ></p-inputMask>
+            <button
+              pButton
+              type="button"
+              icon="pi pi-search"
+              (click)="pesquisaCnpjReceita()"
+            ></button>
+          </div>
+          <div class="p-col-10">
+            Razão Social
+            <input type="text" pInputText formControlName="razaoSocial" />
+          </div>
+          <div class="p-col-10">
+            Nome Fantasia
+            <input type="text" pInputText formControlName="nomeFantasia" />
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-</p-card>
-<br />
-<p-card header="Contato">
-  <app-telefone [telefones]="listaTelefones"></app-telefone>
-</p-card>
+    </form>
+  </p-card>
+  <br />
+</section>
+<section [@exibeComponente]="estadoComponente">
+  <p-card header="Contato">
+    <app-telefone [telefones]="listaTelefones"></app-telefone>
+  </p-card>
+</section>

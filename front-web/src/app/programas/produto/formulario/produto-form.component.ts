@@ -1,38 +1,55 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
-import {MessageService} from 'primeng/api';
-import {ProdutoCrudService} from '../services/produto-crud.service';
-import {Produto} from '../modelos/produto';
-import {ProdutoPesquisaService} from '../services/produto-pesquisa.service';
-import {CategoriaPesquisaService} from '../../categoria/services/categoria-pesquisa.service';
+import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { ActivatedRoute, Router } from "@angular/router";
+import { MessageService } from "primeng/api";
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from "@angular/animations";
+
+import { Produto } from "../modelos/produto";
+
+import { ProdutoCrudService } from "../services/produto-crud.service";
+import { ProdutoPesquisaService } from "../services/produto-pesquisa.service";
+import { CategoriaPesquisaService } from "../../categoria/services/categoria-pesquisa.service";
 
 @Component({
-  selector: 'app-produto-form',
-  templateUrl: './produto-form.component.html',
-  styleUrls: ['./produto-form.component.css'],
+  selector: "app-produto-form",
+  templateUrl: "./produto-form.component.html",
+  styleUrls: ["./produto-form.component.css"],
   providers: [
     ProdutoCrudService,
     ProdutoPesquisaService,
-    CategoriaPesquisaService
-  ]
+    CategoriaPesquisaService,
+  ],
+  animations: [
+    trigger("exibeComponente", [
+      state("ready", style({ opacity: 1 })),
+      transition("void => ready", [
+        style({ opacity: 0, transform: "translate(-30px, -10px" }),
+        animate("300ms 0s ease-in-out"),
+      ]),
+    ]),
+  ],
 })
 export class ProdutoFormComponent implements OnInit {
-
-  ptBR;
-
   situacao = [];
   categorias = [];
   formProduto: FormGroup;
   editando = false;
+  estadoComponente = "ready";
 
-  constructor(private formBuilder: FormBuilder,
-              private router: Router,
-              private route: ActivatedRoute,
-              private messageService: MessageService,
-              private produtoPesquisaService: ProdutoPesquisaService,
-              private produtoCrudService: ProdutoCrudService,
-              public categoriaPesquisaService: CategoriaPesquisaService
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute,
+    private messageService: MessageService,
+    private produtoPesquisaService: ProdutoPesquisaService,
+    private produtoCrudService: ProdutoCrudService,
+    public categoriaPesquisaService: CategoriaPesquisaService
   ) {
     this.configurarFormulario();
   }
@@ -44,25 +61,25 @@ export class ProdutoFormComponent implements OnInit {
 
   configurarFormulario() {
     this.formProduto = this.formBuilder.group({
-      id: '',
-      nome: ['', Validators.required],
-      categoria: '',
-      estoque_minimo: '',
-      situacao: ''
+      id: "",
+      nome: ["", Validators.required],
+      categoria: "",
+      estoque_minimo: "",
+      situacao: "",
     });
-    this.formProduto.get('id').disable();
+    this.formProduto.get("id").disable();
   }
 
   pesquisarCategorias(pesquisa) {
-    this.categoriaPesquisaService.pesquisar(pesquisa.query).subscribe(
-      resultadoado => {
+    this.categoriaPesquisaService
+      .pesquisar(pesquisa.query)
+      .subscribe((resultadoado) => {
         this.categorias = resultadoado.data;
-      }
-    );
+      });
   }
 
   verificarParametroRota(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
+    const id = +this.route.snapshot.paramMap.get("id");
     if (id) {
       this.carregarProduto(id);
     } else {
@@ -71,12 +88,10 @@ export class ProdutoFormComponent implements OnInit {
   }
 
   carregarProduto(id: number) {
-    this.produtoCrudService.carregar(id).subscribe(
-      produto => {
-        this.formProduto.patchValue(produto);
-        this.editando = true;
-      }
-    );
+    this.produtoCrudService.carregar(id).subscribe((produto) => {
+      this.formProduto.patchValue(produto);
+      this.editando = true;
+    });
   }
 
   getProdutoDoForm(): Produto {
@@ -94,41 +109,39 @@ export class ProdutoFormComponent implements OnInit {
       }
     } else {
       this.messageService.add({
-        severity: 'warn',
-        summary: 'Não é possível salvar o produto!',
-        detail: 'Verifique o preenchimento dos campos e tente novamente.'
+        severity: "warn",
+        summary: "Não é possível salvar o produto!",
+        detail: "Verifique o preenchimento dos campos e tente novamente.",
       });
     }
   }
 
   atualizarProduto(produto: Produto) {
-    this.produtoCrudService.atualizar(produto).subscribe(
-      produtoId => {
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Sucesso!',
-          detail: 'Produto ' + produto.nome + ' alterada com sucesso!'
-        });
-        this.pesquisar();
-      }
-    );
+    this.produtoCrudService.atualizar(produto).subscribe((produtoId) => {
+      this.messageService.add({
+        severity: "success",
+        summary: "Sucesso!",
+        detail: "Produto " + produto.nome + " alterada com sucesso!",
+      });
+      this.pesquisar();
+    });
   }
 
   incluirProduto(produto: Produto) {
     this.produtoCrudService.incluir(produto).subscribe(
-      produtoId => {
+      (produtoId) => {
         this.messageService.add({
-          severity: 'success',
-          summary: 'Sucesso!',
-          detail: 'Produto ' + produto.nome + ' incluído com sucesso!'
+          severity: "success",
+          summary: "Sucesso!",
+          detail: "Produto " + produto.nome + " incluído com sucesso!",
         });
         this.pesquisar();
       },
-      error => {
+      (error) => {
         this.messageService.add({
-          severity: 'warn',
-          summary: 'Não foi possível salvar o Produto!',
-          detail: JSON.stringify(error)
+          severity: "warn",
+          summary: "Não foi possível salvar o Produto!",
+          detail: JSON.stringify(error),
         });
       }
     );
@@ -141,32 +154,30 @@ export class ProdutoFormComponent implements OnInit {
   }
 
   excluir() {
-    const id = this.formProduto.get('id').value;
-    const confirmacao = confirm('Deseja excluir este produto ?');
+    const id = this.formProduto.get("id").value;
+    const confirmacao = confirm("Deseja excluir este produto ?");
     if (confirmacao) {
-      this.produtoCrudService.deletar(id).subscribe(
-        resultado => {
-          this.messageService.add({
-            severity: 'success',
-            summary: 'Sucesso!',
-            detail: 'Produto excluído com sucesso!'
-          });
-          this.novo();
-        }
-      );
+      this.produtoCrudService.deletar(id).subscribe((resultado) => {
+        this.messageService.add({
+          severity: "success",
+          summary: "Sucesso!",
+          detail: "Produto excluído com sucesso!",
+        });
+        this.novo();
+      });
     }
   }
 
   novo() {
     this.editando = false;
     this.formProduto.reset({
-      situacao: 'ATIVO'
+      situacao: "ATIVO",
     });
-    this.router.navigate(['/produto/novo']);
+    this.router.navigate(["/produto/novo"]);
   }
 
   cancelar() {
-    const id = this.formProduto.get('id').value;
+    const id = this.formProduto.get("id").value;
     if (id) {
       this.carregarProduto(id);
     } else {
@@ -175,7 +186,6 @@ export class ProdutoFormComponent implements OnInit {
   }
 
   pesquisar() {
-    this.router.navigate(['/produto/pesquisa']);
+    this.router.navigate(["/produto/pesquisa"]);
   }
-
 }

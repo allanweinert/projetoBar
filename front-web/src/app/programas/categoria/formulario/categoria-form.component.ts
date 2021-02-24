@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
+import { trigger, state, style, transition, animate } from "@angular/animations"
+
 
 import { MessageService } from "primeng/api";
 
@@ -13,12 +15,22 @@ import { CategoriaPesquisaService } from "../services/categoria-pesquisa.service
   templateUrl: "./categoria-form.component.html",
   styleUrls: ["./categoria-form.component.css"],
   providers: [CategoriaCrudService, CategoriaPesquisaService],
+  animations: [
+    trigger('exibeComponente', [
+      state('ready', style({opacity: 1})),
+      transition('void => ready', [
+        style({opacity: 0, transform: 'translate(-30px, -10px'}),
+        animate('300ms 0s ease-in-out')
+      ])
+    ])
+  ]
 })
 export class CategoriaFormComponent implements OnInit {
   situacao = [];
   unidademedida = [];
   formCategoria: FormGroup;
   editando = false;
+  estadoComponente = 'ready'
 
   constructor(
     private formBuilder: FormBuilder,
