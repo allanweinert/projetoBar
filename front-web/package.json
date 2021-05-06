@@ -23,7 +23,7 @@
     "@angular/router": "^11.2.0",
     "angular-material": "^1.2.2",
     "chart.js": "^2.9.4",
-    "highcharts": "^8.2.2",
+    "highcharts": "^9.0.0",
     "highcharts-angular": "^2.10.0",
     "moment": "^2.29.1",
     "ng2-currency-mask": "^9.0.2",
